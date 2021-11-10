@@ -1,0 +1,7 @@
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\ProyectoOOPcristian\ProyectoP0010112021\bin\Debug\ProyectoP0010112021.exe.config
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\ProyectoOOPcristian\ProyectoP0010112021\bin\Debug\ProyectoP0010112021.exe
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\ProyectoOOPcristian\ProyectoP0010112021\bin\Debug\ProyectoP0010112021.pdb
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\ProyectoOOPcristian\ProyectoP0010112021\obj\Debug\ProyectoP0010112021.csprojAssemblyReference.cache
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\ProyectoOOPcristian\ProyectoP0010112021\obj\Debug\ProyectoP0010112021.csproj.CoreCompileInputs.cache
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\ProyectoOOPcristian\ProyectoP0010112021\obj\Debug\ProyectoP0010112021.exe
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\ProyectoOOPcristian\ProyectoP0010112021\obj\Debug\ProyectoP0010112021.pdb
