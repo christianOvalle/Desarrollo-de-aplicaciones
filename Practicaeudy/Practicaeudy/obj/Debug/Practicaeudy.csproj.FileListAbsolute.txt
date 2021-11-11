@@ -1,0 +1,7 @@
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Practicaeudy\Practicaeudy\bin\Debug\Practicaeudy.exe.config
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Practicaeudy\Practicaeudy\bin\Debug\Practicaeudy.exe
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Practicaeudy\Practicaeudy\bin\Debug\Practicaeudy.pdb
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Practicaeudy\Practicaeudy\obj\Debug\Practicaeudy.csprojAssemblyReference.cache
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Practicaeudy\Practicaeudy\obj\Debug\Practicaeudy.csproj.CoreCompileInputs.cache
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Practicaeudy\Practicaeudy\obj\Debug\Practicaeudy.exe
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Practicaeudy\Practicaeudy\obj\Debug\Practicaeudy.pdb
