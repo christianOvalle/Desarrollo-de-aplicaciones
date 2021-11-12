@@ -1,0 +1,16 @@
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\practicas\practicas\bin\Debug\net5.0\practicas.exe
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\practicas\practicas\bin\Debug\net5.0\practicas.deps.json
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\practicas\practicas\bin\Debug\net5.0\practicas.runtimeconfig.json
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\practicas\practicas\bin\Debug\net5.0\practicas.runtimeconfig.dev.json
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\practicas\practicas\bin\Debug\net5.0\practicas.dll
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\practicas\practicas\bin\Debug\net5.0\ref\practicas.dll
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\practicas\practicas\bin\Debug\net5.0\practicas.pdb
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\practicas\practicas\obj\Debug\net5.0\practicas.csproj.AssemblyReference.cache
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\practicas\practicas\obj\Debug\net5.0\practicas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\practicas\practicas\obj\Debug\net5.0\practicas.AssemblyInfoInputs.cache
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\practicas\practicas\obj\Debug\net5.0\practicas.AssemblyInfo.cs
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\practicas\practicas\obj\Debug\net5.0\practicas.csproj.CoreCompileInputs.cache
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\practicas\practicas\obj\Debug\net5.0\practicas.dll
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\practicas\practicas\obj\Debug\net5.0\ref\practicas.dll
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\practicas\practicas\obj\Debug\net5.0\practicas.pdb
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\practicas\practicas\obj\Debug\net5.0\practicas.genruntimeconfig.cache
