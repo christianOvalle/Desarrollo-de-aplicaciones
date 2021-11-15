@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "vlY9YvLxB0gQBcrJAvNc7bJONPlQx/HOJ1KLdtaZrNsGtpmDJU2dlQcBus26tZ9y0GKfss2kJ050Ymk6RD6kcQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\infotep\\Documents\\Diagrama cristian\\PracticasPOO\\practicaspoo2021\\programa de carlos1\\programa de carlos1\\programa de carlos1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\infotep\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\infotep\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\infotep\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

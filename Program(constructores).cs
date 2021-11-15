@@ -1,38 +1,20 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace practicas
 {
     class Program
     {
+
         static void Main(string[] args)
         {
 
-            Computadora computador = new Computadora();
+
+            Console.WriteLine("ingrese ina cantidad");
             
-
-            computador = new Computadora("HP");
-            
-
-            computador = new Computadora("HP",3);
-           
-
-            computador = new Computadora("HP",3,"azul");
-            
-
-            computador = new Computadora("HP", 3, "azul","2");
-         
-
-            computador = new Computadora("HP", 3, "azul", "2","8 GB");
-           
-
-            computador = new Computadora("HP", 3, "azul", "2", "8 GB",12000);
-            computador.Mostrar();
-
-           
-
-
-
-
 
 
 
