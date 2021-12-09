@@ -1,0 +1,12 @@
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\login\login\bin\Debug\login.exe.config
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\login\login\bin\Debug\login.exe
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\login\login\bin\Debug\login.pdb
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\login\login\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\login\login\obj\Debug\login.csproj.AssemblyReference.cache
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\login\login\obj\Debug\login.Logeo.resources
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\login\login\obj\Debug\login.Properties.Resources.resources
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\login\login\obj\Debug\login.csproj.GenerateResource.cache
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\login\login\obj\Debug\login.csproj.CoreCompileInputs.cache
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\login\login\obj\Debug\login.csproj.CopyComplete
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\login\login\obj\Debug\login.exe
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\login\login\obj\Debug\login.pdb
