@@ -1,0 +1,12 @@
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\PracticaConArreglos\PracticaConArreglos\bin\Debug\PracticaConArreglos.exe.config
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\PracticaConArreglos\PracticaConArreglos\bin\Debug\PracticaConArreglos.exe
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\PracticaConArreglos\PracticaConArreglos\bin\Debug\PracticaConArreglos.pdb
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\PracticaConArreglos\PracticaConArreglos\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\PracticaConArreglos\PracticaConArreglos\obj\Debug\PracticaConArreglos.csproj.AssemblyReference.cache
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\PracticaConArreglos\PracticaConArreglos\obj\Debug\PracticaConArreglos.Form1.resources
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\PracticaConArreglos\PracticaConArreglos\obj\Debug\PracticaConArreglos.Properties.Resources.resources
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\PracticaConArreglos\PracticaConArreglos\obj\Debug\PracticaConArreglos.csproj.GenerateResource.cache
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\PracticaConArreglos\PracticaConArreglos\obj\Debug\PracticaConArreglos.csproj.CoreCompileInputs.cache
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\PracticaConArreglos\PracticaConArreglos\obj\Debug\PracticaConArreglos.csproj.CopyComplete
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\PracticaConArreglos\PracticaConArreglos\obj\Debug\PracticaConArreglos.exe
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\PracticaConArreglos\PracticaConArreglos\obj\Debug\PracticaConArreglos.pdb
