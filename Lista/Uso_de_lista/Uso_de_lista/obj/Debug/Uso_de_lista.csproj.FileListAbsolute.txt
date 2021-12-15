@@ -1,0 +1,12 @@
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Lista\Uso_de_lista\Uso_de_lista\bin\Debug\Uso_de_lista.exe.config
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Lista\Uso_de_lista\Uso_de_lista\bin\Debug\Uso_de_lista.exe
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Lista\Uso_de_lista\Uso_de_lista\bin\Debug\Uso_de_lista.pdb
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Lista\Uso_de_lista\Uso_de_lista\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Lista\Uso_de_lista\Uso_de_lista\obj\Debug\Uso_de_lista.csproj.AssemblyReference.cache
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Lista\Uso_de_lista\Uso_de_lista\obj\Debug\Uso_de_lista.Form1.resources
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Lista\Uso_de_lista\Uso_de_lista\obj\Debug\Uso_de_lista.Properties.Resources.resources
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Lista\Uso_de_lista\Uso_de_lista\obj\Debug\Uso_de_lista.csproj.GenerateResource.cache
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Lista\Uso_de_lista\Uso_de_lista\obj\Debug\Uso_de_lista.csproj.CoreCompileInputs.cache
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Lista\Uso_de_lista\Uso_de_lista\obj\Debug\Uso_de_lista.csproj.CopyComplete
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Lista\Uso_de_lista\Uso_de_lista\obj\Debug\Uso_de_lista.exe
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Lista\Uso_de_lista\Uso_de_lista\obj\Debug\Uso_de_lista.pdb

@@ -1,0 +1,12 @@
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Lista\CrudLista\CrudLista\bin\Debug\CrudLista.exe.config
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Lista\CrudLista\CrudLista\bin\Debug\CrudLista.exe
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Lista\CrudLista\CrudLista\bin\Debug\CrudLista.pdb
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Lista\CrudLista\CrudLista\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Lista\CrudLista\CrudLista\obj\Debug\CrudLista.csproj.AssemblyReference.cache
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Lista\CrudLista\CrudLista\obj\Debug\CrudLista.Form1.resources
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Lista\CrudLista\CrudLista\obj\Debug\CrudLista.Properties.Resources.resources
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Lista\CrudLista\CrudLista\obj\Debug\CrudLista.csproj.GenerateResource.cache
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Lista\CrudLista\CrudLista\obj\Debug\CrudLista.csproj.CoreCompileInputs.cache
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Lista\CrudLista\CrudLista\obj\Debug\CrudLista.csproj.CopyComplete
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Lista\CrudLista\CrudLista\obj\Debug\CrudLista.exe
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Lista\CrudLista\CrudLista\obj\Debug\CrudLista.pdb
