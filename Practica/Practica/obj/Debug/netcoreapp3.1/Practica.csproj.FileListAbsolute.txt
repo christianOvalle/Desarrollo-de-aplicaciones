@@ -11,3 +11,5 @@ C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Pract
 C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Practica\Practica\obj\Debug\netcoreapp3.1\Practica.dll
 C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Practica\Practica\obj\Debug\netcoreapp3.1\Practica.pdb
 C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Practica\Practica\obj\Debug\netcoreapp3.1\Practica.genruntimeconfig.cache
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Practica\Practica\obj\Debug\netcoreapp3.1\Practica.csproj.AssemblyReference.cache
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Practica\Practica\obj\Debug\netcoreapp3.1\Practica.GeneratedMSBuildEditorConfig.editorconfig

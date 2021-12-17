@@ -69,3 +69,4 @@ C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Lista
 C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Lista\Reporte\Reporte\obj\Debug\Reporte.csproj.CopyComplete
 C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Lista\Reporte\Reporte\obj\Debug\Reporte.exe
 C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Lista\Reporte\Reporte\obj\Debug\Reporte.pdb
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Lista\Reporte\Reporte\bin\Debug\Report1.rdlc
