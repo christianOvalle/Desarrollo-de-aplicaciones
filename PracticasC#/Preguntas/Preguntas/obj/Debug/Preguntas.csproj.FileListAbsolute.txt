@@ -1,0 +1,10 @@
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\PracticasC#\Preguntas\Preguntas\bin\Debug\Preguntas.exe.config
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\PracticasC#\Preguntas\Preguntas\bin\Debug\Preguntas.exe
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\PracticasC#\Preguntas\Preguntas\bin\Debug\Preguntas.pdb
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\PracticasC#\Preguntas\Preguntas\obj\Debug\Preguntas.csproj.AssemblyReference.cache
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\PracticasC#\Preguntas\Preguntas\obj\Debug\Preguntas.Form1.resources
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\PracticasC#\Preguntas\Preguntas\obj\Debug\Preguntas.Properties.Resources.resources
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\PracticasC#\Preguntas\Preguntas\obj\Debug\Preguntas.csproj.GenerateResource.cache
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\PracticasC#\Preguntas\Preguntas\obj\Debug\Preguntas.csproj.CoreCompileInputs.cache
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\PracticasC#\Preguntas\Preguntas\obj\Debug\Preguntas.exe
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\PracticasC#\Preguntas\Preguntas\obj\Debug\Preguntas.pdb

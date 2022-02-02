@@ -1,0 +1,15 @@
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\PracticasC#\conector\conector\bin\Debug\conector.exe.config
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\PracticasC#\conector\conector\bin\Debug\conector.exe
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\PracticasC#\conector\conector\bin\Debug\conector.pdb
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\PracticasC#\conector\conector\bin\Debug\EntityFramework.dll
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\PracticasC#\conector\conector\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\PracticasC#\conector\conector\bin\Debug\EntityFramework.xml
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\PracticasC#\conector\conector\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\PracticasC#\conector\conector\obj\Debug\conector.csproj.AssemblyReference.cache
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\PracticasC#\conector\conector\obj\Debug\conector.Form1.resources
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\PracticasC#\conector\conector\obj\Debug\conector.Properties.Resources.resources
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\PracticasC#\conector\conector\obj\Debug\conector.csproj.GenerateResource.cache
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\PracticasC#\conector\conector\obj\Debug\conector.csproj.CoreCompileInputs.cache
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\PracticasC#\conector\conector\obj\Debug\conector.csproj.CopyComplete
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\PracticasC#\conector\conector\obj\Debug\conector.exe
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\PracticasC#\conector\conector\obj\Debug\conector.pdb
