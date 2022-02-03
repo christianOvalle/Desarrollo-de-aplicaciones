@@ -13,3 +13,4 @@ C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Pract
 C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\PracticasC#\conector\conector\obj\Debug\conector.csproj.CopyComplete
 C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\PracticasC#\conector\conector\obj\Debug\conector.exe
 C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\PracticasC#\conector\conector\obj\Debug\conector.pdb
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\PracticasC#\conector\conector\obj\Debug\conector.Insertar.resources
