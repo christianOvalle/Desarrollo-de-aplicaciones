@@ -1,0 +1,15 @@
+C:\Users\Cristhian\Documents\practicaspoo2021\PracticasEnCasa\RegistroDePersona\RegistroDePersona\bin\Debug\RegistroDePersona.exe.config
+C:\Users\Cristhian\Documents\practicaspoo2021\PracticasEnCasa\RegistroDePersona\RegistroDePersona\bin\Debug\RegistroDePersona.exe
+C:\Users\Cristhian\Documents\practicaspoo2021\PracticasEnCasa\RegistroDePersona\RegistroDePersona\bin\Debug\RegistroDePersona.pdb
+C:\Users\Cristhian\Documents\practicaspoo2021\PracticasEnCasa\RegistroDePersona\RegistroDePersona\bin\Debug\EntityFramework.dll
+C:\Users\Cristhian\Documents\practicaspoo2021\PracticasEnCasa\RegistroDePersona\RegistroDePersona\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Cristhian\Documents\practicaspoo2021\PracticasEnCasa\RegistroDePersona\RegistroDePersona\bin\Debug\EntityFramework.xml
+C:\Users\Cristhian\Documents\practicaspoo2021\PracticasEnCasa\RegistroDePersona\RegistroDePersona\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Cristhian\Documents\practicaspoo2021\PracticasEnCasa\RegistroDePersona\RegistroDePersona\obj\Debug\RegistroDePersona.csproj.AssemblyReference.cache
+C:\Users\Cristhian\Documents\practicaspoo2021\PracticasEnCasa\RegistroDePersona\RegistroDePersona\obj\Debug\RegistroDePersona.Form1.resources
+C:\Users\Cristhian\Documents\practicaspoo2021\PracticasEnCasa\RegistroDePersona\RegistroDePersona\obj\Debug\RegistroDePersona.Properties.Resources.resources
+C:\Users\Cristhian\Documents\practicaspoo2021\PracticasEnCasa\RegistroDePersona\RegistroDePersona\obj\Debug\RegistroDePersona.csproj.GenerateResource.cache
+C:\Users\Cristhian\Documents\practicaspoo2021\PracticasEnCasa\RegistroDePersona\RegistroDePersona\obj\Debug\RegistroDePersona.csproj.CoreCompileInputs.cache
+C:\Users\Cristhian\Documents\practicaspoo2021\PracticasEnCasa\RegistroDePersona\RegistroDePersona\obj\Debug\RegistroDePersona.csproj.CopyComplete
+C:\Users\Cristhian\Documents\practicaspoo2021\PracticasEnCasa\RegistroDePersona\RegistroDePersona\obj\Debug\RegistroDePersona.exe
+C:\Users\Cristhian\Documents\practicaspoo2021\PracticasEnCasa\RegistroDePersona\RegistroDePersona\obj\Debug\RegistroDePersona.pdb
