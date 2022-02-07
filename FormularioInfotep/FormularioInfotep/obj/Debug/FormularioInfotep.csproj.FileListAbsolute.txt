@@ -1,0 +1,10 @@
+C:\Users\Cristhian\Documents\practicaspoo2021\FormularioInfotep\FormularioInfotep\bin\Debug\FormularioInfotep.exe.config
+C:\Users\Cristhian\Documents\practicaspoo2021\FormularioInfotep\FormularioInfotep\bin\Debug\FormularioInfotep.exe
+C:\Users\Cristhian\Documents\practicaspoo2021\FormularioInfotep\FormularioInfotep\bin\Debug\FormularioInfotep.pdb
+C:\Users\Cristhian\Documents\practicaspoo2021\FormularioInfotep\FormularioInfotep\obj\Debug\FormularioInfotep.csproj.AssemblyReference.cache
+C:\Users\Cristhian\Documents\practicaspoo2021\FormularioInfotep\FormularioInfotep\obj\Debug\FormularioInfotep.Form1.resources
+C:\Users\Cristhian\Documents\practicaspoo2021\FormularioInfotep\FormularioInfotep\obj\Debug\FormularioInfotep.Properties.Resources.resources
+C:\Users\Cristhian\Documents\practicaspoo2021\FormularioInfotep\FormularioInfotep\obj\Debug\FormularioInfotep.csproj.GenerateResource.cache
+C:\Users\Cristhian\Documents\practicaspoo2021\FormularioInfotep\FormularioInfotep\obj\Debug\FormularioInfotep.csproj.CoreCompileInputs.cache
+C:\Users\Cristhian\Documents\practicaspoo2021\FormularioInfotep\FormularioInfotep\obj\Debug\FormularioInfotep.exe
+C:\Users\Cristhian\Documents\practicaspoo2021\FormularioInfotep\FormularioInfotep\obj\Debug\FormularioInfotep.pdb
