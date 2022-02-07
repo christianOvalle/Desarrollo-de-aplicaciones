@@ -96,5 +96,10 @@ namespace conector
         }
 
        
+
+        private void textBox5_KeyUp(object sender, KeyEventArgs e)
+        {
+            List<coneccion.persona> personas = db_ProbandoEntities.persona.Where(x => x.nombre.Contains(this.textBox5.Text)).ToList();
+        }
     }
 }

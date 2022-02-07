@@ -1,0 +1,10 @@
+C:\Users\infotep\source\repos\Modelo_vista_\Modelo_vista_\bin\Debug\Modelo_vista_.exe.config
+C:\Users\infotep\source\repos\Modelo_vista_\Modelo_vista_\bin\Debug\Modelo_vista_.exe
+C:\Users\infotep\source\repos\Modelo_vista_\Modelo_vista_\bin\Debug\Modelo_vista_.pdb
+C:\Users\infotep\source\repos\Modelo_vista_\Modelo_vista_\obj\Debug\Modelo_vista_.csproj.AssemblyReference.cache
+C:\Users\infotep\source\repos\Modelo_vista_\Modelo_vista_\obj\Debug\Modelo_vista_.Form1.resources
+C:\Users\infotep\source\repos\Modelo_vista_\Modelo_vista_\obj\Debug\Modelo_vista_.Properties.Resources.resources
+C:\Users\infotep\source\repos\Modelo_vista_\Modelo_vista_\obj\Debug\Modelo_vista_.csproj.GenerateResource.cache
+C:\Users\infotep\source\repos\Modelo_vista_\Modelo_vista_\obj\Debug\Modelo_vista_.csproj.CoreCompileInputs.cache
+C:\Users\infotep\source\repos\Modelo_vista_\Modelo_vista_\obj\Debug\Modelo_vista_.exe
+C:\Users\infotep\source\repos\Modelo_vista_\Modelo_vista_\obj\Debug\Modelo_vista_.pdb
