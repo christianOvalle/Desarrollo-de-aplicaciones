@@ -1,0 +1,12 @@
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\MSI\MSI\bin\Debug\MSI.exe.config
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\MSI\MSI\bin\Debug\MSI.exe
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\MSI\MSI\bin\Debug\MSI.pdb
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\MSI\MSI\obj\Debug\MSI.csproj.AssemblyReference.cache
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\MSI\MSI\obj\Debug\MSI.Form1.resources
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\MSI\MSI\obj\Debug\MSI.Form2.resources
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\MSI\MSI\obj\Debug\MSI.Form3.resources
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\MSI\MSI\obj\Debug\MSI.Properties.Resources.resources
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\MSI\MSI\obj\Debug\MSI.csproj.GenerateResource.cache
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\MSI\MSI\obj\Debug\MSI.csproj.CoreCompileInputs.cache
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\MSI\MSI\obj\Debug\MSI.exe
+C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\MSI\MSI\obj\Debug\MSI.pdb
