@@ -1,0 +1,49 @@
+h1 {
+
+background-color: #1696fa;
+border: hidden;
+text-align: center;
+
+}
+a{
+
+text-decoration: none;
+color: white;
+
+
+}
+
+
+section{
+
+background-color: #d9f9fc;
+padding-bottom: 50px;
+padding-left: 50px;
+padding-right: 50px;
+
+
+}
+
+article{
+color: white;
+background-color: #1696fa;
+border: 2px black hidden;
+padding: 20px;
+margin-bottom: 5px;
+
+
+}
+
+p,h3{
+
+border: hidden;
+
+
+}
+
+body{
+width: 650px;
+margin: auto;
+
+
+}
