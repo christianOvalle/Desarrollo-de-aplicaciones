@@ -1,0 +1,39 @@
+
+
+ul {
+
+list-style-type: none;
+width: 200px;
+margin: 0px;
+padding: 0px;
+background-color: blue;
+
+
+
+}
+
+ul li{
+
+margin: 0px;
+padding: 0px;
+
+}
+
+
+ul li a {
+
+color: white;
+text-decoration:none;
+padding: 10px;
+border-bottom: 3px solid aqua;
+display: block;
+
+}
+
+ul li a:hover{
+
+background-color:#1085f1;
+
+
+
+}
