@@ -1,0 +1,22 @@
+div a{
+color: red;
+display: block;
+margin-bottom: 20px;
+
+}
+
+.subrayado:hover{
+
+color: white;
+background-color: red;
+
+
+}
+
+.visitado:visited{
+
+    color: grey;
+   
+    
+    
+    }
