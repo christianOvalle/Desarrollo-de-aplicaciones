@@ -1,0 +1,29 @@
+#principal {
+    background-color: blue;
+    padding-bottom: 2cm;
+}
+
+#izquierda {
+    padding: 1em 1em;
+    float: left;
+    color: whitesmoke;
+}
+
+#derecha {
+    padding: 1em 1em;
+    color: whitesmoke;
+    float: right;
+}
+
+a.boton {
+    border: solid 1em black;
+    background-color: red;
+    padding: 1em 1em;
+    color: whitesmoke;
+    display: inline-block;
+    margin-top: 1em;
+}
+
+a.boton:hover {
+    background-color: blueviolet;
+}

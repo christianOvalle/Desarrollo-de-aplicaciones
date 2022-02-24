@@ -1,0 +1,19 @@
+#menu{
+    
+    
+}
+#menu p{
+    border: solid 1px black;
+    display: block;
+    margin: 0em;
+    width: 200px;
+    padding-left: 0.5em;
+}
+
+#menu a{
+    border-image: auto;
+}
+
+#menu p:hover{
+    background-color: #E4E4E4;
+}

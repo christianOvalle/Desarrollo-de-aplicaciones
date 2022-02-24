@@ -1,0 +1,16 @@
+#tabla .titulo {
+    background-color: rgb(196, 196, 196);
+}
+
+#tabla .moneda {
+    background-color: lightcyan;
+}
+
+#tabla .yellow {
+    background-color: rgb(241, 241, 172);
+}
+
+#tabla {
+    border: solid 1.5px;
+    border-spacing: 0px;
+}

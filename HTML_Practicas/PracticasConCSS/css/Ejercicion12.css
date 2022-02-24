@@ -1,0 +1,92 @@
+
+fieldset {
+    width: 900px; 
+    height: 300px;
+    border: none; 
+    border-bottom: solid gray 1px;
+}
+
+h1{
+
+border-top: SOLID gray 1PX;
+margin-bottom: 10PX;
+
+}
+.izquierda {}
+
+.izquierda input {padding-bottom: 5px;}
+
+
+.izquierda label{display: block; padding-bottom: 10px;}
+
+
+
+#email input{
+
+margin-top: 50px;    
+    
+}
+
+.Derecha{
+
+float: right;
+position: relative;
+bottom: 290px;
+
+
+}
+.Derecha input{
+
+    padding-bottom: 5px;
+    
+}
+    
+    
+.Derecha label{
+    
+display: block;
+padding-bottom: 10px;
+    
+}
+    
+    
+    
+    
+.Codigos {
+
+position: relative;
+left: 150px;
+bottom: 53px;
+
+
+}    
+.Provin{
+
+    position: relative;
+    bottom: 50PX;
+    height: 28PX;
+}
+.Pais {
+
+    position: relative;
+    left: 33px;
+    bottom: 50px;
+    height: 28px;
+    width: 140PX;
+    
+}
+
+.Movil{
+
+    position: relative;
+    
+    bottom: px;
+}
+
+#telefono{
+
+position: relative;
+left: 150PX;
+bottom: 52px;
+
+}

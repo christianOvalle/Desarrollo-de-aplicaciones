@@ -8,8 +8,27 @@ ul, ul li { margin: 0; padding: 0; list-style: none; }
 h1, h2, h3, p, form { margin: 0; padding: 0; }
 .clear { clear: both; }
 img { border: none; }
-
 /*-- Layout ----------------------------------------------------------*/
+
+*{
+
+font: size 0.9em;
+color: black;
+font-family: Arial;
+line-height: 1.4;
+}
+.articulo h2 {
+
+color: #CC6600;
+font-size: 1.6em;
+font-style: inherit 1.2em;
+margin-top: 1.3em;
+
+
+
+}
+
+
 #contenedor {
   width: 90%;
   max-width: 900px;
@@ -22,6 +41,7 @@ img { border: none; }
     
     clear: both; 
     padding: 1em 1em;
+    
 }
 
 #cabecera h1{
@@ -46,12 +66,7 @@ color: white;
 
 }
 
-#menu_principal li a{
 
-    color: white;
-
-
-}
 
 #noticias{
 

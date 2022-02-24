@@ -1,0 +1,23 @@
+div {
+    width: 300px;
+}
+
+a {
+    color: #CC0000;
+    display: block;
+}
+
+a:hover {
+    background-color: #CC0000;
+}
+
+a.subra:hover {
+    background-color: #CC0000;
+    color: #FFF;
+    text-decoration: none;
+}
+
+a.visited:visited {
+    background-color: #CC0000;
+    color: lightgrey;
+}
