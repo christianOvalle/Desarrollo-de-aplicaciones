@@ -1,0 +1,15 @@
+C:\Users\Cristhian\Documents\practicasencasa\Curiculum\Curiculum\bin\Debug\Curiculum.exe.config
+C:\Users\Cristhian\Documents\practicasencasa\Curiculum\Curiculum\bin\Debug\Curiculum.exe
+C:\Users\Cristhian\Documents\practicasencasa\Curiculum\Curiculum\bin\Debug\Curiculum.pdb
+C:\Users\Cristhian\Documents\practicasencasa\Curiculum\Curiculum\bin\Debug\EntityFramework.dll
+C:\Users\Cristhian\Documents\practicasencasa\Curiculum\Curiculum\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Cristhian\Documents\practicasencasa\Curiculum\Curiculum\bin\Debug\EntityFramework.xml
+C:\Users\Cristhian\Documents\practicasencasa\Curiculum\Curiculum\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Cristhian\Documents\practicasencasa\Curiculum\Curiculum\obj\Debug\Curiculum.csproj.AssemblyReference.cache
+C:\Users\Cristhian\Documents\practicasencasa\Curiculum\Curiculum\obj\Debug\Curiculum.Properties.Resources.resources
+C:\Users\Cristhian\Documents\practicasencasa\Curiculum\Curiculum\obj\Debug\Curiculum.Form1.resources
+C:\Users\Cristhian\Documents\practicasencasa\Curiculum\Curiculum\obj\Debug\Curiculum.csproj.GenerateResource.cache
+C:\Users\Cristhian\Documents\practicasencasa\Curiculum\Curiculum\obj\Debug\Curiculum.csproj.CoreCompileInputs.cache
+C:\Users\Cristhian\Documents\practicasencasa\Curiculum\Curiculum\obj\Debug\Curiculum.csproj.CopyComplete
+C:\Users\Cristhian\Documents\practicasencasa\Curiculum\Curiculum\obj\Debug\Curiculum.exe
+C:\Users\Cristhian\Documents\practicasencasa\Curiculum\Curiculum\obj\Debug\Curiculum.pdb

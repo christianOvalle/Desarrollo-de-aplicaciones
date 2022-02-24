@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CurriculumModelStoreContainer" CdmEntityContainer="CurriculumEntities">
+    <EntitySetMapping Name="DatosPersonales">
+      <EntityTypeMapping TypeName="CurriculumModel.DatosPersonales">
+        <MappingFragment StoreEntitySet="DatosPersonales">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="FechaDeNacimiento" ColumnName="FechaDeNacimiento" />
+          <ScalarProperty Name="LugarDeNacimineto" ColumnName="LugarDeNacimineto" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Localidad" ColumnName="Localidad" />
+          <ScalarProperty Name="Provincia" ColumnName="Provincia" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="TelefonoCelular" ColumnName="TelefonoCelular" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExperienciaLaboral">
+      <EntityTypeMapping TypeName="CurriculumModel.ExperienciaLaboral">
+        <MappingFragment StoreEntitySet="ExperienciaLaboral">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Empresa" ColumnName="Empresa" />
+          <ScalarProperty Name="Puesto" ColumnName="Puesto" />
+          <ScalarProperty Name="FechaDeEntrada" ColumnName="FechaDeEntrada" />
+          <ScalarProperty Name="FechaDeSalida" ColumnName="FechaDeSalida" />
+          <ScalarProperty Name="DatosComplementarios" ColumnName="DatosComplementarios" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Formacion_Y_estudios">
+      <EntityTypeMapping TypeName="CurriculumModel.Formacion_Y_estudios">
+        <MappingFragment StoreEntitySet="Formacion_Y_estudios">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="TitulosUniversitarios" ColumnName="TitulosUniversitarios" />
+          <ScalarProperty Name="CualCarrera" ColumnName="CualCarrera" />
+          <ScalarProperty Name="Idiomas" ColumnName="Idiomas" />
+          <ScalarProperty Name="CualesIdiomas" ColumnName="CualesIdiomas" />
+          <ScalarProperty Name="ConocimientosInformaticos" ColumnName="ConocimientosInformaticos" />
+          <ScalarProperty Name="CursosRealizados" ColumnName="CursosRealizados" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fotos">
+      <EntityTypeMapping TypeName="CurriculumModel.Fotos">
+        <MappingFragment StoreEntitySet="Fotos">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Fotos1" ColumnName="Fotos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CurriculumModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="DatosPersonales">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombres" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Apellidos" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Cedula" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="FechaDeNacimiento" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="LugarDeNacimineto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Direccion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Localidad" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Provincia" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Telefono" Type="Int32" />
+    <Property Name="TelefonoCelular" Type="Int32" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ExperienciaLaboral">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Empresa" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Puesto" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FechaDeEntrada" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="FechaDeSalida" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="DatosComplementarios" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Formacion_Y_estudios">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TitulosUniversitarios" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CualCarrera" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Idiomas" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CualesIdiomas" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="ConocimientosInformaticos" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="CursosRealizados" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Fotos">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Fotos1" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityContainer Name="CurriculumEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DatosPersonales" EntityType="Self.DatosPersonales" />
+    <EntitySet Name="ExperienciaLaboral" EntityType="Self.ExperienciaLaboral" />
+    <EntitySet Name="Formacion_Y_estudios" EntityType="Self.Formacion_Y_estudios" />
+    <EntitySet Name="Fotos" EntityType="Self.Fotos" />
+  </EntityContainer>
+</Schema>
