@@ -8,31 +8,38 @@ fieldset {
 
 h1{
 
-border-top: SOLID gray 1PX;
-margin-bottom: 10PX;
+    border-top: SOLID gray 1PX;
+    margin-bottom: 10PX;
 
 }
-.izquierda {}
+.izquierda:hover {
 
-.izquierda input {padding-bottom: 5px;}
+    background-color: yellow;
+
+}
+
+.izquierda input {
+    padding-bottom: 5px;
+}
 
 
-.izquierda label{display: block; padding-bottom: 10px;}
+
+.izquierda label{
+    display: block; 
+    padding-bottom: 10px;}
 
 
 
 #email input{
 
-margin-top: 50px;    
-    
+    margin-top: 50px;      
 }
 
 .Derecha{
 
-float: right;
-position: relative;
-bottom: 290px;
-
+    float: right;
+    position: relative;
+    bottom: 290px;
 
 }
 .Derecha input{
@@ -44,19 +51,17 @@ bottom: 290px;
     
 .Derecha label{
     
-display: block;
-padding-bottom: 10px;
+    display: block;
+    padding-bottom: 10px;
     
 }
     
     
-    
-    
 .Codigos {
 
-position: relative;
-left: 150px;
-bottom: 53px;
+    position: relative;
+    left: 150px;
+    bottom: 53px;
 
 
 }    
@@ -85,8 +90,8 @@ bottom: 53px;
 
 #telefono{
 
-position: relative;
-left: 150PX;
-bottom: 52px;
+    position: relative;
+    left: 150PX;
+    bottom: 52px;
 
 }

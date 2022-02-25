@@ -1,0 +1,73 @@
+form{
+margin-left: 5px;
+width: 832PX;
+
+
+}
+
+header{
+margin-top: 5px;
+margin-bottom: 1px;
+display: inline-block;
+
+}
+
+.fecha{
+color: blue;
+border: none;
+display: inline-block;
+float: right;
+position:relative;
+top: 30px;
+
+}
+.fecha label{
+display:block ;
+}
+
+.fecha input{
+border-color: lightskyblue;
+}
+
+h2{
+margin-top: 1px;
+color: rgb(2, 4, 116);
+margin-bottom: 0px;
+
+}
+
+h3{
+margin-top: 0px;
+color: white;
+background-color:  rgb(5, 8, 187);
+inline-size: 22cm;
+
+}
+
+.DatosServicios {
+
+padding-bottom: 8px;   
+color:  rgb(5, 8, 187);
+
+}
+.DatosServicios input{
+
+   border-top: none;
+   border-left: none;
+   border-right: none;
+   border-bottom: 1px solid rgb(6, 6, 155);
+}
+.DatosPersonales input{
+   color:  rgb(5, 8, 187);
+   border-top: none;
+   border-left: none;
+   border-right: none;
+   border-bottom: 1px solid rgb(6, 6, 155);
+   outline: none;
+
+}
+.DatosPersonales label{
+
+color:  rgb(5, 8, 187);
+
+}
