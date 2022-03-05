@@ -50,8 +50,8 @@
 <label for="Cedula">6-Cedula o Pasaporte</label>
 <input type="text" id ="Cedula" size="33cm"><br>
 <label>7-Sexo</label>
-<label>&nbsp;M</label><input type="checkbox">&nbsp;
-<label>&nbsp;F</label><input type="checkbox"><br>
+<label>&nbsp;M</label><input type="radio" name="Radio">&nbsp;
+<label>&nbsp;F</label><input type="radio" name="Radio"><br>
 </span>
 
 <label>8-Estado Civil:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
@@ -75,16 +75,16 @@
 <input type="text" id ="Resindencial" size="21cm">
 <label for="Movil">Movil</label>
 <input type="text" id ="Movil" size="21cm">
-<label for="Movil">Otro</label>
-<input type="text" id ="Movil" size="21cm">
+<label for="Otro">Otro</label>
+<input type="text" id ="Otro" size="21cm">
 <label for="Fecha">15-Fecha de nacimiento</label>
 <input type="text" id ="Fecha" size="35cm">
 <label for="Edad">16-Edad</label>
 <input type="text" id ="Edad" size="42.5cm">
-<label for="Direccion">17-Lugar de Nacimiento</label>
-<input type="text" id ="Direccion" size="90cm"><br/>
-<label for="Direccion">18-Correo Eletronico</label>
-<input type="text" id ="Direccion" size="93cm"><br/><br/>
+<label for="Lugar">17-Lugar de Nacimiento</label>
+<input type="text" id ="Lugar" size="90cm"><br/>
+<label for="Correo">18-Correo Eletronico</label>
+<input type="text" id ="Correo" size="93cm"><br/><br/>
 <label for="Direccion">19-¿Es usted una persona con discapacidad?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
 <input type="radio" name="Discapacidad"><LAbel>Si&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</LAbel>
 <input type="radio" name="Discapacidad"><LAbel>No&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</LAbel><br/>
@@ -99,9 +99,22 @@
 </div>
 
 
+<h3><strong>&nbsp;&nbsp;Datos Educacionales</strong></h3>
+
+<div class="Datos Educacionales">
+<label for="Estudios">20-Estudia En La Actualidad:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+<LAbel>Si</LAbel><input type="radio" name="Estudio" id="especifique">
+<label>&nbsp;&nbsp;&nbsp;En que horario:</label>
+<input type="text" id ="especifique" size="23cm">
+<LAbel>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No</LAbel><input type="radio" name="Estudio"><br/>
+<label for="Estudios">21-Nivel de educacion:</label><LAbel>&nbsp;&nbsp;(Marcar El Ultimo Curso Aprobado en la educacion formal)</LAbel><br>
+<label>Sabe leer y Escribir&nbsp;</label><input type="checkbox"><br>
+<label>Educacion Basica</label> <input type="checkbox"> <label>&nbsp;&nbsp;&nbsp;&nbsp;Grado&nbsp;</label> <input type="text" size="20cm"><br>
+<label>Educacion Media</label> <input type="checkbox"> <label>&nbsp;&nbsp;&nbsp;&nbsp;Grado&nbsp;</label> <input type="text" size="20cm"><br>
+<label>Universitario Incompleto</label> <input type="checkbox"> <label>&nbsp;&nbsp;&nbsp;&nbsp;Nivel&nbsp;</label> <input type="text" size="20cm"><label>&nbsp;&nbsp;Carrera&nbsp;</label><input type="text" size="44cm">
 
 
-
+</div>
 
 </div>
 </form> 
