@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    </head>
+    <body>
+    <script>
+
+      var v1 =prompt("v1");
+      var v2 = prompt("v2");
+
+      var respuesta = confirm("desea sumar los valores?");
+      
+      var respuesta1 = confirm("Desea restar los valores?");
+
+      var respuesta2 = confirm("Desea dividir los valores?");
+
+      var respuesta4= confirm("desea multiplicar los valores")
+
+      if(respuesta)
+      {
+
+      sumas();
+      
+
+      }
+      if(respuesta1){
+
+      resta();
+      
+
+      }
+      if(respuesta2){
+
+      dividir();
+     
+
+      }
+      if(respuesta4){
+
+      multiplicar();
+
+
+      }
+
+
+
+
+
+         function sumas(){
+         v1 =parseInt(v1);
+         v2 = parseInt(v2);
+
+         var resultado = v1 + v2;
+         alert(`El resultado de la suma es: ${resultado}`);
+     
+      }
+
+      function multiplicar(){
+
+
+         v1 =parseInt(v1);
+         v2 = parseInt(v2);
+
+         var resultado = v1 * v2;
+         alert(`El resultado de la multiplicacion es: ${resultado}`);
+
+
+      }
+
+      function resta(){
+
+
+         v1 =parseInt(v1);
+         v2 = parseInt(v2);
+
+         var resultado = v1 - v2;
+         alert(`El resultado de la resta es: ${resultado}`);
+
+
+      }
+
+      function dividir(){
+
+
+          v1 =parseInt(v1);
+         v2 = parseInt(v2);
+
+         var resultado = v1 / v2;
+         alert(`El resultado de la divicion es: ${resultado}`);
+
+
+      }
+
+
+         if(isNaN(resultado)){
+
+      alert("Favor solo ingresar numero");
+
+         }
+    </script>
+  
+  </body>
+</html>
