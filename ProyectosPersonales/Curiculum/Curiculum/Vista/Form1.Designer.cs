@@ -93,7 +93,9 @@ namespace Curiculum
             this.label35 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -141,6 +143,7 @@ namespace Curiculum
             this.button1.Size = new System.Drawing.Size(90, 87);
             this.button1.TabIndex = 4;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label4
             // 
@@ -585,7 +588,7 @@ namespace Curiculum
             this.textBox20.Location = new System.Drawing.Point(242, 763);
             this.textBox20.Multiline = true;
             this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(658, 170);
+            this.textBox20.Size = new System.Drawing.Size(626, 143);
             this.textBox20.TabIndex = 56;
             // 
             // label32
@@ -599,7 +602,7 @@ namespace Curiculum
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(94, 970);
+            this.button2.Location = new System.Drawing.Point(94, 929);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 43);
             this.button2.TabIndex = 57;
@@ -652,11 +655,21 @@ namespace Curiculum
             this.panel1.Size = new System.Drawing.Size(159, 31);
             this.panel1.TabIndex = 62;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(677, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(117, 87);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 63;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 1037);
+            this.ClientSize = new System.Drawing.Size(995, 984);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label36);
             this.Controls.Add(this.label35);
@@ -723,6 +736,7 @@ namespace Curiculum
             this.Text = "Formulario para Curriculum";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -792,6 +806,7 @@ namespace Curiculum
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

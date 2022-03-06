@@ -13,10 +13,10 @@ namespace Curiculum.Modelo
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class CurriculumEntities : DbContext
+    public partial class CurriculumEntities1 : DbContext
     {
-        public CurriculumEntities()
-            : base("name=CurriculumEntities")
+        public CurriculumEntities1()
+            : base("name=CurriculumEntities1")
         {
         }
     

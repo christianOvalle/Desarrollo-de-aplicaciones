@@ -14,12 +14,15 @@ namespace Curiculum.Modelo
     
     public partial class Formacion_Y_estudios
     {
-        public int id { get; set; }
+        public int id_estudios { get; set; }
         public string TitulosUniversitarios { get; set; }
         public string CualCarrera { get; set; }
         public string Idiomas { get; set; }
         public string CualesIdiomas { get; set; }
         public string ConocimientosInformaticos { get; set; }
         public string CursosRealizados { get; set; }
+        public Nullable<int> id_persona { get; set; }
+    
+        public virtual DatosPersonales DatosPersonales { get; set; }
     }
 }
