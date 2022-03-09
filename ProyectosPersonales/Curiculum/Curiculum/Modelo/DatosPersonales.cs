@@ -14,7 +14,15 @@ namespace Curiculum.Modelo
     
     public partial class DatosPersonales
     {
-        public int id { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public DatosPersonales()
+        {
+            this.ExperienciaLaboral = new HashSet<ExperienciaLaboral>();
+            this.Formacion_Y_estudios = new HashSet<Formacion_Y_estudios>();
+            this.Fotos = new HashSet<Fotos>();
+        }
+    
+        public int id_persona { get; set; }
         public string Nombres { get; set; }
         public string Apellidos { get; set; }
         public string Cedula { get; set; }
@@ -23,8 +31,15 @@ namespace Curiculum.Modelo
         public string Direccion { get; set; }
         public string Localidad { get; set; }
         public string Provincia { get; set; }
-        public Nullable<int> Telefono { get; set; }
-        public Nullable<int> TelefonoCelular { get; set; }
+        public string Telefono { get; set; }
+        public string TelefonoCelular { get; set; }
         public string Email { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ExperienciaLaboral> ExperienciaLaboral { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Formacion_Y_estudios> Formacion_Y_estudios { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Fotos> Fotos { get; set; }
     }
 }

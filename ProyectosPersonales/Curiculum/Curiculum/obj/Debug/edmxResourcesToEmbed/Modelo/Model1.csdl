@@ -2,9 +2,9 @@
 <Schema Namespace="CurriculumModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="DatosPersonales">
     <Key>
-      <PropertyRef Name="id" />
+      <PropertyRef Name="id_persona" />
     </Key>
-    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_persona" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Nombres" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
     <Property Name="Apellidos" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
     <Property Name="Cedula" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
@@ -13,44 +13,101 @@
     <Property Name="Direccion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
     <Property Name="Localidad" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="Provincia" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="Telefono" Type="Int32" />
-    <Property Name="TelefonoCelular" Type="Int32" />
+    <Property Name="Telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TelefonoCelular" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ExperienciaLaboral" Relationship="Self.FK__Experienc__id_pe__2C3393D0" FromRole="DatosPersonales" ToRole="ExperienciaLaboral" />
+    <NavigationProperty Name="Formacion_Y_estudios" Relationship="Self.FK__Formacion__id_pe__29572725" FromRole="DatosPersonales" ToRole="Formacion_Y_estudios" />
+    <NavigationProperty Name="Fotos" Relationship="Self.FK__Fotos__id_person__267ABA7A" FromRole="DatosPersonales" ToRole="Fotos" />
   </EntityType>
   <EntityType Name="ExperienciaLaboral">
     <Key>
-      <PropertyRef Name="id" />
+      <PropertyRef Name="id_Experiencia" />
     </Key>
-    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_Experiencia" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Empresa" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="Puesto" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="FechaDeEntrada" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
     <Property Name="FechaDeSalida" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
     <Property Name="DatosComplementarios" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="id_persona" Type="Int32" />
+    <NavigationProperty Name="DatosPersonales" Relationship="Self.FK__Experienc__id_pe__2C3393D0" FromRole="ExperienciaLaboral" ToRole="DatosPersonales" />
   </EntityType>
   <EntityType Name="Formacion_Y_estudios">
     <Key>
-      <PropertyRef Name="id" />
+      <PropertyRef Name="id_estudios" />
     </Key>
-    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_estudios" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="TitulosUniversitarios" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
     <Property Name="CualCarrera" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
     <Property Name="Idiomas" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
     <Property Name="CualesIdiomas" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
     <Property Name="ConocimientosInformaticos" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
     <Property Name="CursosRealizados" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="id_persona" Type="Int32" />
+    <NavigationProperty Name="DatosPersonales" Relationship="Self.FK__Formacion__id_pe__29572725" FromRole="Formacion_Y_estudios" ToRole="DatosPersonales" />
   </EntityType>
   <EntityType Name="Fotos">
     <Key>
-      <PropertyRef Name="id" />
+      <PropertyRef Name="id_fotos" />
     </Key>
-    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_fotos" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Fotos1" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="id_persona" Type="Int32" />
+    <NavigationProperty Name="DatosPersonales" Relationship="Self.FK__Fotos__id_person__267ABA7A" FromRole="Fotos" ToRole="DatosPersonales" />
   </EntityType>
-  <EntityContainer Name="CurriculumEntities" annotation:LazyLoadingEnabled="true">
+  <Association Name="FK__Experienc__id_pe__2C3393D0">
+    <End Role="DatosPersonales" Type="Self.DatosPersonales" Multiplicity="0..1" />
+    <End Role="ExperienciaLaboral" Type="Self.ExperienciaLaboral" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DatosPersonales">
+        <PropertyRef Name="id_persona" />
+      </Principal>
+      <Dependent Role="ExperienciaLaboral">
+        <PropertyRef Name="id_persona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Formacion__id_pe__29572725">
+    <End Role="DatosPersonales" Type="Self.DatosPersonales" Multiplicity="0..1" />
+    <End Role="Formacion_Y_estudios" Type="Self.Formacion_Y_estudios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DatosPersonales">
+        <PropertyRef Name="id_persona" />
+      </Principal>
+      <Dependent Role="Formacion_Y_estudios">
+        <PropertyRef Name="id_persona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Fotos__id_person__267ABA7A">
+    <End Role="DatosPersonales" Type="Self.DatosPersonales" Multiplicity="0..1" />
+    <End Role="Fotos" Type="Self.Fotos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DatosPersonales">
+        <PropertyRef Name="id_persona" />
+      </Principal>
+      <Dependent Role="Fotos">
+        <PropertyRef Name="id_persona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CurriculumEntities1" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="DatosPersonales" EntityType="Self.DatosPersonales" />
     <EntitySet Name="ExperienciaLaboral" EntityType="Self.ExperienciaLaboral" />
     <EntitySet Name="Formacion_Y_estudios" EntityType="Self.Formacion_Y_estudios" />
     <EntitySet Name="Fotos" EntityType="Self.Fotos" />
+    <AssociationSet Name="FK__Experienc__id_pe__2C3393D0" Association="Self.FK__Experienc__id_pe__2C3393D0">
+      <End Role="DatosPersonales" EntitySet="DatosPersonales" />
+      <End Role="ExperienciaLaboral" EntitySet="ExperienciaLaboral" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Formacion__id_pe__29572725" Association="Self.FK__Formacion__id_pe__29572725">
+      <End Role="DatosPersonales" EntitySet="DatosPersonales" />
+      <End Role="Formacion_Y_estudios" EntitySet="Formacion_Y_estudios" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Fotos__id_person__267ABA7A" Association="Self.FK__Fotos__id_person__267ABA7A">
+      <End Role="DatosPersonales" EntitySet="DatosPersonales" />
+      <End Role="Fotos" EntitySet="Fotos" />
+    </AssociationSet>
   </EntityContainer>
 </Schema>

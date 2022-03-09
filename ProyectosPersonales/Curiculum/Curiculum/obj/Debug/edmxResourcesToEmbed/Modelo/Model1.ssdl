@@ -2,9 +2,9 @@
 <Schema Namespace="CurriculumModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="DatosPersonales">
     <Key>
-      <PropertyRef Name="id" />
+      <PropertyRef Name="id_persona" />
     </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_persona" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Nombres" Type="varchar" MaxLength="150" />
     <Property Name="Apellidos" Type="varchar" MaxLength="150" />
     <Property Name="Cedula" Type="varchar" MaxLength="20" />
@@ -13,44 +13,95 @@
     <Property Name="Direccion" Type="varchar" MaxLength="200" />
     <Property Name="Localidad" Type="varchar" MaxLength="100" />
     <Property Name="Provincia" Type="varchar" MaxLength="100" />
-    <Property Name="Telefono" Type="int" />
-    <Property Name="TelefonoCelular" Type="int" />
+    <Property Name="Telefono" Type="varchar" MaxLength="20" />
+    <Property Name="TelefonoCelular" Type="varchar" MaxLength="20" />
     <Property Name="Email" Type="varchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="ExperienciaLaboral">
     <Key>
-      <PropertyRef Name="id" />
+      <PropertyRef Name="id_Experiencia" />
     </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_Experiencia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Empresa" Type="varchar" MaxLength="100" />
     <Property Name="Puesto" Type="varchar" MaxLength="100" />
     <Property Name="FechaDeEntrada" Type="varchar" MaxLength="12" />
     <Property Name="FechaDeSalida" Type="varchar" MaxLength="12" />
     <Property Name="DatosComplementarios" Type="varchar" MaxLength="1000" />
+    <Property Name="id_persona" Type="int" />
   </EntityType>
   <EntityType Name="Formacion_Y_estudios">
     <Key>
-      <PropertyRef Name="id" />
+      <PropertyRef Name="id_estudios" />
     </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_estudios" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TitulosUniversitarios" Type="varchar" MaxLength="10" />
     <Property Name="CualCarrera" Type="varchar" MaxLength="150" />
     <Property Name="Idiomas" Type="varchar" MaxLength="10" />
     <Property Name="CualesIdiomas" Type="varchar" MaxLength="150" />
     <Property Name="ConocimientosInformaticos" Type="varchar" MaxLength="300" />
     <Property Name="CursosRealizados" Type="varchar" MaxLength="300" />
+    <Property Name="id_persona" Type="int" />
   </EntityType>
   <EntityType Name="Fotos">
     <Key>
-      <PropertyRef Name="id" />
+      <PropertyRef Name="id_fotos" />
     </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_fotos" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Fotos" Type="image" />
+    <Property Name="id_persona" Type="int" />
   </EntityType>
+  <Association Name="FK__Experienc__id_pe__2C3393D0">
+    <End Role="DatosPersonales" Type="Self.DatosPersonales" Multiplicity="0..1" />
+    <End Role="ExperienciaLaboral" Type="Self.ExperienciaLaboral" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DatosPersonales">
+        <PropertyRef Name="id_persona" />
+      </Principal>
+      <Dependent Role="ExperienciaLaboral">
+        <PropertyRef Name="id_persona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Formacion__id_pe__29572725">
+    <End Role="DatosPersonales" Type="Self.DatosPersonales" Multiplicity="0..1" />
+    <End Role="Formacion_Y_estudios" Type="Self.Formacion_Y_estudios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DatosPersonales">
+        <PropertyRef Name="id_persona" />
+      </Principal>
+      <Dependent Role="Formacion_Y_estudios">
+        <PropertyRef Name="id_persona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Fotos__id_person__267ABA7A">
+    <End Role="DatosPersonales" Type="Self.DatosPersonales" Multiplicity="0..1" />
+    <End Role="Fotos" Type="Self.Fotos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DatosPersonales">
+        <PropertyRef Name="id_persona" />
+      </Principal>
+      <Dependent Role="Fotos">
+        <PropertyRef Name="id_persona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="CurriculumModelStoreContainer">
     <EntitySet Name="DatosPersonales" EntityType="Self.DatosPersonales" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ExperienciaLaboral" EntityType="Self.ExperienciaLaboral" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Formacion_Y_estudios" EntityType="Self.Formacion_Y_estudios" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Fotos" EntityType="Self.Fotos" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Experienc__id_pe__2C3393D0" Association="Self.FK__Experienc__id_pe__2C3393D0">
+      <End Role="DatosPersonales" EntitySet="DatosPersonales" />
+      <End Role="ExperienciaLaboral" EntitySet="ExperienciaLaboral" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Formacion__id_pe__29572725" Association="Self.FK__Formacion__id_pe__29572725">
+      <End Role="DatosPersonales" EntitySet="DatosPersonales" />
+      <End Role="Formacion_Y_estudios" EntitySet="Formacion_Y_estudios" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Fotos__id_person__267ABA7A" Association="Self.FK__Fotos__id_person__267ABA7A">
+      <End Role="DatosPersonales" EntitySet="DatosPersonales" />
+      <End Role="Fotos" EntitySet="Fotos" />
+    </AssociationSet>
   </EntityContainer>
 </Schema>

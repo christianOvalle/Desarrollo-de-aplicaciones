@@ -14,7 +14,10 @@ namespace Curiculum.Modelo
     
     public partial class Fotos
     {
-        public int id { get; set; }
+        public int id_fotos { get; set; }
         public byte[] Fotos1 { get; set; }
+        public Nullable<int> id_persona { get; set; }
+    
+        public virtual DatosPersonales DatosPersonales { get; set; }
     }
 }

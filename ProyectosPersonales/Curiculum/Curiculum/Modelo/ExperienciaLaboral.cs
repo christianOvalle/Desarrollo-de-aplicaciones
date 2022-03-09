@@ -14,11 +14,14 @@ namespace Curiculum.Modelo
     
     public partial class ExperienciaLaboral
     {
-        public int id { get; set; }
+        public int id_Experiencia { get; set; }
         public string Empresa { get; set; }
         public string Puesto { get; set; }
         public string FechaDeEntrada { get; set; }
         public string FechaDeSalida { get; set; }
         public string DatosComplementarios { get; set; }
+        public Nullable<int> id_persona { get; set; }
+    
+        public virtual DatosPersonales DatosPersonales { get; set; }
     }
 }
