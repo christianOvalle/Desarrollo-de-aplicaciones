@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="db_periodicoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="categoria">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="noticias" Relationship="Self.FK__noticias__catego__267ABA7A" FromRole="categorias" ToRole="noticias" />
+  </EntityType>
+  <EntityType Name="noticia">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="categoria_id" Type="Int32" />
+    <Property Name="titulo" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="detale_completo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="detalle_corto" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="fecha" Type="DateTime" Precision="3" />
+    <Property Name="imagen" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="ruta_imagen" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="categoria" Relationship="Self.FK__noticias__catego__267ABA7A" FromRole="noticias" ToRole="categorias" />
+  </EntityType>
+  <Association Name="FK__noticias__catego__267ABA7A">
+    <End Role="categorias" Type="Self.categoria" Multiplicity="0..1" />
+    <End Role="noticias" Type="Self.noticia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="categorias">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="noticias">
+        <PropertyRef Name="categoria_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="db_periodicoEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="categorias" EntityType="Self.categoria" />
+    <EntitySet Name="noticias" EntityType="Self.noticia" />
+    <AssociationSet Name="FK__noticias__catego__267ABA7A" Association="Self.FK__noticias__catego__267ABA7A">
+      <End Role="categorias" EntitySet="categorias" />
+      <End Role="noticias" EntitySet="noticias" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

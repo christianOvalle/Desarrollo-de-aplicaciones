@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="db_periodicoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="categorias">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" />
+    <Property Name="descripcion" Type="text" />
+  </EntityType>
+  <EntityType Name="noticias">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="categoria_id" Type="int" />
+    <Property Name="titulo" Type="varchar" MaxLength="255" />
+    <Property Name="detale_completo" Type="text" />
+    <Property Name="detalle_corto" Type="text" />
+    <Property Name="fecha" Type="datetime" />
+    <Property Name="imagen" Type="image" />
+    <Property Name="ruta_imagen" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <Association Name="FK__noticias__catego__267ABA7A">
+    <End Role="categorias" Type="Self.categorias" Multiplicity="0..1" />
+    <End Role="noticias" Type="Self.noticias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="categorias">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="noticias">
+        <PropertyRef Name="categoria_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="db_periodicoModelStoreContainer">
+    <EntitySet Name="categorias" EntityType="Self.categorias" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="noticias" EntityType="Self.noticias" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__noticias__catego__267ABA7A" Association="Self.FK__noticias__catego__267ABA7A">
+      <End Role="categorias" EntitySet="categorias" />
+      <End Role="noticias" EntitySet="noticias" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
