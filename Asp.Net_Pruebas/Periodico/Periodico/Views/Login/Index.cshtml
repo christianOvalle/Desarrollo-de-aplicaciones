@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<form action="@Url.Action("ProcesarLogin","Login")" method="post">
+
+    Usuario<br /><br />
+    <input type="text" name="Usuario" />
+    Clave<br /><br />
+    <input type="password" name="Clave" />
+
+    <input type="submit" value="Entrar" />
+
+</form>
+
