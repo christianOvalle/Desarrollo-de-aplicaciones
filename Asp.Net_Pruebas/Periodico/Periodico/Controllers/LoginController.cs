@@ -26,13 +26,13 @@ namespace Periodico.Controllers
                 return RedirectToAction("Index", "Usuario");
 
             }
-            else if (UsuarioAux == null) {
+          
 
                 return Content("No a ingresado");
             
-            }
+            
 
-            return View();
+          
         
         
         }

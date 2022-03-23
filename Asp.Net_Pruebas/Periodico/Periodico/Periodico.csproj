@@ -130,6 +130,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\categoriasController.cs" />
+    <Compile Include="Controllers\EnviarArchivosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\noticiasController.cs" />
@@ -232,6 +233,10 @@
     <Content Include="Views\Usuarios\Edit.cshtml" />
     <Content Include="Views\Usuarios\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\EnviarArchivos\Index.cshtml" />
+    <Content Include="Views\EnviarArchivos\Prueba.cshtml" />
+    <Content Include="Views\noticias\MostarNoticias.cshtml" />
+    <Content Include="Views\noticias\DetalleNoticia.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
