@@ -128,5 +128,23 @@ namespace Periodico.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult MostarNoticias() {
+
+            List<Models.noticia> noticias = new List<Models.noticia>();
+            noticias = db.noticias.ToList();
+            return View(noticias);
+
+
+            
+        }
+
+        public ActionResult DetalleNoticia(int id) {    
+        noticia item = db.noticias.Find(id);
+            return View(item);
+        
+        }
+
+
     }
 }
