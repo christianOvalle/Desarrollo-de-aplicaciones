@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<form action="@Url.Action("InteresesYopciones","IntereseConOpciones")" method="post">
+    Que tiempo va a invertir su dinero<br /><br />
+
+    <input type="number" name="Years" /> <br /><br />   
+
+    <strong>Desea sumar al capital?</strong><br /><br />
+
+    <select name="Opcion">
+
+        <option value="Si">Si</option>
+        <option value="No">No</option>
+
+    </select>
+
+
+
+    <input type="submit" value="Calcular" />
+
+
+
+
+</form>
+
