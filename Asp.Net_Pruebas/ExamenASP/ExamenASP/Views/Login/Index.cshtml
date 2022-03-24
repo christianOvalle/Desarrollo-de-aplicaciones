@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Login</h2>
+<form action="@Url.Action("Logeo","Login")" method="post">
+    Ingrese Su Usuario<br />
+    <input type="text" name="Nombre" /><br />
+    Ingrese Su Clave<br />
+    <input type="text" name="Clave" /><br />
+
+    <input type="submit" value="Entrar" />
+</form>
+

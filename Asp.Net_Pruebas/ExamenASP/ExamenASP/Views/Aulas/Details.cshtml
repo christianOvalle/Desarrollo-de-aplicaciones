@@ -1,0 +1,50 @@
+﻿@model ExamenASP.Models.Aula
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Aula</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreAula)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreAula)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoAula)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoAula)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CantidadDeEstudiante)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CantidadDeEstudiante)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.taller.NombreDeTaller)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.taller.NombreDeTaller)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

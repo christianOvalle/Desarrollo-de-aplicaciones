@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<form action="@Url.Action("AproboOno","NotasParciales")" method="post">
+    Ingrese Su Nombre<br />
+    <input type="text" name="Nombre" /><br />
+
+    Ingrese Primera nota1<br />
+    <input type="text" name="Nota" /><br />
+    Ingrese Segunda nota2<br />
+    <input type="text" name="Nota2" /><br />
+    Ingrese Segunda nota3<br />
+    <input type="text" name="Nota3" /><br />
+
+    <input type="submit" value="Calcular" />
+
+
+</form>
+

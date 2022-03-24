@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Resto de division</h2>
+<form action="@Url.Action("RestoMetodo","Resto")" method="post">
+    Ingrese Primer numero<br />
+    <input type="text" name="Num1" />
+    Ingrese Segundo numero<br />
+    <input type="text" name="Num2" />
+
+    <input type="submit" value="Calcular" />
+
+
+</form>
+
