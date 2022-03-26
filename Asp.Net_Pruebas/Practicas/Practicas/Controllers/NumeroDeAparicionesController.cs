@@ -42,7 +42,7 @@ namespace Practicas.Controllers
 
                   
                 }
-                if (Numero.ToString() == ViewBag.numero)
+                if (ViewBag.numero == Numero.ToString() )
                 {
                     int contador = 0;
                     contador = contador + 1;
