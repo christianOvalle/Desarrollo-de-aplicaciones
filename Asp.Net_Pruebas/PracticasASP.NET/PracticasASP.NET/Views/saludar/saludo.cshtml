@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "saludo";
+}
+
+<h2>saludo</h2>
+
+<form action="@Url.Action("Hola","saludar")" method="post">
+
+    Nombre <br />
+    <input type="text" name="nombre" />
+    <br />
+    <input type="submit" value="Saludame" />
+
+</form>

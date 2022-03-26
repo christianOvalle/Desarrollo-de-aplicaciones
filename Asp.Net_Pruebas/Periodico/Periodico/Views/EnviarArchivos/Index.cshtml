@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<form action="@Url.Action("RecibirUnArchivo","EnviarArchivos")" method="post" enctype="multipart/form-data" >
+
+    <input type="file" name="Archivo" /><br /><br />
+
+    <input type="submit" value="Enviar" />
+
+
+
+
+
+</form>

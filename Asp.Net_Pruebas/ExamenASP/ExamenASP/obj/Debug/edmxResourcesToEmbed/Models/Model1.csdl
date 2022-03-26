@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="db_CursosModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Aula">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="taller_id" Type="Int32" />
+    <Property Name="NombreAula" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TipoAula" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CantidadDeEstudiante" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="taller" Relationship="Self.FK__Aulas__taller_id__267ABA7A" FromRole="Aulas" ToRole="taller" />
+  </EntityType>
+  <EntityType Name="taller">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NombreDeTaller" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Aulas" Relationship="Self.FK__Aulas__taller_id__267ABA7A" FromRole="taller" ToRole="Aulas" />
+  </EntityType>
+  <Association Name="FK__Aulas__taller_id__267ABA7A">
+    <End Role="taller" Type="Self.taller" Multiplicity="0..1" />
+    <End Role="Aulas" Type="Self.Aula" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="taller">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Aulas">
+        <PropertyRef Name="taller_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="db_CursosEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Aulas" EntityType="Self.Aula" />
+    <EntitySet Name="tallers" EntityType="Self.taller" />
+    <AssociationSet Name="FK__Aulas__taller_id__267ABA7A" Association="Self.FK__Aulas__taller_id__267ABA7A">
+      <End Role="taller" EntitySet="tallers" />
+      <End Role="Aulas" EntitySet="Aulas" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

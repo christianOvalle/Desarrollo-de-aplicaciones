@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Practicas</h2>
+
+<h3>Elija Su Practica</h3> <br /><br />
+
+<form action="@Url.Action("SelectPruebas","TodasLasPracticas")" method="post">
+
+Seleccione La Prueba que desea ver:<br /><br />
+
+    <select name="Decision">
+        <option value="1">Hola Mundo</option>
+         <option value="2">Saludo</option>
+          <option value="3">Recibe 4 Notas y confirma si paso de prueba(70)</option>
+           <option value="4">Saber si calificacion es A,B,C,D</option>
+            <option value="5">Recibir 4 notas, sacar promedio y saber si tiene A,B,C,D</option>
+             <option value="6">Login</option>
+               <option value="7">Mostar los numeros de 600 hasta 800 (10 en 10)</option>
+                <option value="8">Mostar los numeros de 2022 hasta 1991</option>
+                 <option value="9">Tabla del 6</option>
+                  <option value="10">Tabla de multiplicar ingresando un numero</option>
+                    <option value="11">Calcular Interese generados en 8 años</option>
+                     <option value="12">Calcular Interese generados en los años que desee</option>
+                      <option value="13">Numero Aleatorio del 1 al 100</option>
+                       <option value="14">"Llenar un arreglo de 15 elementos"</option>
+                         <option value="15">"Llenar un arreglo de 30 elementos y recibir un numero entre 50 y 100"</option>
+                             <option value="16">"Llenar un arreglo de 30 elementos y recibir un numero entre 50 y 100 y verificar si esta ese numero"</option>
+                               <option value="17">Ejercicios con lista</option>
+    </select>
+
+    <input type="submit" value="Ver Practica Seleccionada" />
+
+</form>
+
+
+

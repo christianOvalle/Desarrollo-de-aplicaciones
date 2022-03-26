@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Calificacion Por Nota</h2>
+
+<form action="@Url.Action("TuLetraPorNota", "CalificacionPorTuNota")" method="post">
+
+    <label for="Notas1">Nota1</label>
+    <input type="text" name="nota1" id="Notas1" />
+    <label for="Notas2">Nota2</label>
+    <input type="text" name="nota2" id="Notas2" />
+    <label for="Notas3">Nota3</label>
+    <input type="text" name="nota3" id="Notas3" />
+    <label for="Notas4">Nota4</label>
+    <input type="text" name="nota4" id="Notas4" />
+
+    <input type="submit" value="Vefificar" />
+
+
+</form>
+
