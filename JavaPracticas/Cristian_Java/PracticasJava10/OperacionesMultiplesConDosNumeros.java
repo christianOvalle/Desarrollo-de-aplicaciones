@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.lang.Math;
+
 
 class OperacionesMultiplesConDosNumeros{
 
@@ -9,9 +11,9 @@ Scanner Obj = new Scanner(System.in);
 
 
 System.out.print("Ingrese Primera Cantidad ");		
-int Numero1 = Obj.nextInt();
+double Numero1 = Obj.nextInt();
 System.out.print("Ingrese Segunda Cantidad ");	
-int Numero2 = Obj.nextInt();
+double Numero2 = Obj.nextInt();
 
 
 System.out.println("1.Suma");
@@ -36,10 +38,18 @@ case 2:
 case 3:
     System.out.print("La Multiplicacion es igual a "+(Numero1*Numero2));   
 	break;	
-
-
-
-
+case 4:
+    System.out.print("La Division es igual a "+(Numero1/Numero2));   
+	break;	
+case 5:
+    System.out.print("el Resto de la division es igual a "+(Numero1%Numero2));   
+	break;	
+case 6:
+    System.out.print(Numero1+" Elevado a "+Numero2+" Es Igual a "+Math.pow(Numero1,Numero2));   
+	break;	
+case 7:
+    System.out.print("La Raiz cuadrada de "+Numero1 +" es "+Math.sqrt(Numero1)+" La Raiz cuadrada de "+Numero2 +" es "+Math.sqrt(Numero2));   
+	break;	
 
 
 }
