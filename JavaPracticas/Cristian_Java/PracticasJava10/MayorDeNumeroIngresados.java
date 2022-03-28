@@ -13,7 +13,7 @@ for(int i = 0; i <= 4; i++){
 
 int Numero = myObj.nextInt();
 int Valor = Numero;
-if(Valor > Valor){
+if( Valor > NumeroMayor){
 
 NumeroMayor = Valor;
 }
