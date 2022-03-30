@@ -38,8 +38,9 @@ public class MenuMultiOpciones {
                 System.out.println("6. Salir \n");
                 Opcion = Obj.nextInt();
                 System.out.println("1.Definir \n");               
-                System.out.println("2.Acceder \n");
+                System.out.println("2.Acceder \n");                
                 Opcion = Obj.nextInt();
+                           
                 if(Opcion == 1){
                 
                 System.out.println("Concepto matemático que expresa una cantidad con relación a la unidad de cómputo; resulta de contar los elementos que forman un conjunto.");
