@@ -2,13 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package com.mycompany.primerproyectojavaide;
-
-import java.util.Scanner;
-
+package javaapplication1;
+import  java.util.Scanner;
 /**
  *
- * @author Infotep2019
+ * @author Cristhian
  */
 public class Menu {
 
@@ -16,8 +14,8 @@ public class Menu {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
-     boolean encendido = true;
+       
+        boolean encendido = true;
         Scanner Objeto = new Scanner(System.in);
         
         while(encendido){
@@ -225,6 +223,3 @@ public class Menu {
     }   
 }
     }
-
-    
-
