@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package Pruebas;
+package javaapplication1;
 import java.util.Scanner;
 /**
  *
@@ -28,7 +28,9 @@ public class Ejercicio4 {
             }
     }
       
-       
+    
+    
+    
     else if(Integer.parseInt(Numero) < 0 ){
    
     System.out.println(" Negativo "+Numero);
@@ -39,16 +41,30 @@ public class Ejercicio4 {
    System.out.println("Positivo "+Numero);
     }
     
+    
     if(!Numero.contains(".")){
     
     System.out.println("Numero entero "+Numero);
     
     }   
+    char[] Num = Numero.toCharArray();
+    int contador = 0;
+    
+    
+    for(int i = 0; i<Num.length; i++){
+    
+    if(Character.isDigit(Num[i])){
+        
+        contador ++;          
+    }
+    
+    }
+    System.out.println("Numero De Digitos "+contador);
     
     }
     
-   
     }
+    
     
     
     
