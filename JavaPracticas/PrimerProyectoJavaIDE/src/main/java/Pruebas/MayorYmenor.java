@@ -11,8 +11,10 @@ import java.util.*;
  */
 public class MayorYmenor {
 
-public void Menor_Mayor(){        
-Scanner myObj = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        
+        Scanner myObj = new Scanner(System.in);
 
 
 int[] Arreglo = new int[4];
@@ -29,10 +31,8 @@ Arrays.sort(Arreglo);
 System.out.print(Arreglo[0]+"\n");
 System.out.print(Arreglo[3]+"\n");
 }
-    public static void main(String[] args) {
-        
     }
-}
+
 
     
     

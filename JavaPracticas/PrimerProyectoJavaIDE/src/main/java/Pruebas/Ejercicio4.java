@@ -28,7 +28,9 @@ public class Ejercicio4 {
             }
     }
       
-       
+    
+    
+    
     else if(Integer.parseInt(Numero) < 0 ){
    
     System.out.println(" Negativo "+Numero);
@@ -39,16 +41,30 @@ public class Ejercicio4 {
    System.out.println("Positivo "+Numero);
     }
     
+    
     if(!Numero.contains(".")){
     
     System.out.println("Numero entero "+Numero);
     
     }   
+    char[] Num = Numero.toCharArray();
+    int contador = 0;
+    
+    
+    for(int i = 0; i<Num.length; i++){
+    
+    if(Character.isDigit(Num[i])){
+        
+        contador ++;          
+    }
+    
+    }
+    System.out.println("Numero De Digitos "+contador);
     
     }
     
-   
     }
+    
     
     
     
