@@ -8,11 +8,12 @@ package EjercicioVehiculo;
  *
  * @author Infotep2019
  */
-public class Coche extends Vehiculo{
-    
+public class Motocicleta extends Bicicleta {
+     
     private String velocidad;
     private double cilindrada;
-
+    
+    
     public String getVelocidad() {
         return velocidad;
     }
@@ -28,29 +29,30 @@ public class Coche extends Vehiculo{
     public void setCilindrada(double cilindrada) {
         this.cilindrada = cilindrada;
     }
-    public void MostrarCoche(){
+   
     
-    System.out.println("Coche \n");   
+    public void DatosCamioneta(){
+    
+    System.out.println("Motocicleta \n");   
     System.out.println("{");
-    System.out.println("El color del Coche es: "+getColor());
-    System.out.println("Numero de ruedas del coche son: "+getRueda());
-    System.out.println("Velocidad del coche (KM o MPH): "+ getVelocidad());
-    System.out.println("Cilindrada del coche: "+getCilindrada()+"cc");
+    System.out.println("El color de la Motocicleta es: "+getColor());
+    System.out.println("Numero de ruedas del Motocicleta son: "+getRueda());
+    System.out.println("la Velocidad de la Motocicleta es: "+getVelocidad());
+    System.out.println("La cilindrada de la Motocicleta es: "+getCilindrada());
     System.out.println("}");
     System.out.println("__________________________________________________");
     System.out.println(" ");
+         
     }
     
-    public Coche(){}
-   
-    public Coche(String color, int Ruedas, String velocidad, double cilindrada ){
-        
-      setColor(color);
-      setRueda(Ruedas);
-      this.velocidad = velocidad;
-      this.cilindrada = cilindrada;
-      
-     MostrarCoche();
-        
-    }  
+    public Motocicleta(String Color, int Ruedas, String Velocidad, double cilindrada){
+    
+    setColor(Color);
+    setRueda(Ruedas);
+    this.velocidad = Velocidad;
+    this.cilindrada = cilindrada;
+    
+    DatosCamioneta();
+    }
+    
 }

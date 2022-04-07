@@ -31,7 +31,7 @@ public class Vehiculo {
 
     public void DatosVehiculo(){
     
-       System.out.println("VEHICULO:  ");
+       System.out.print("VEHICULO: ");
        
     }
     

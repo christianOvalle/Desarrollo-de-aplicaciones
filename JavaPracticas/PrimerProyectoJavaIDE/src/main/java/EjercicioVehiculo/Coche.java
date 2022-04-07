@@ -36,8 +36,12 @@ public class Coche extends Vehiculo{
     System.out.println("Numero de ruedas del coche son: "+getRueda());
     System.out.println("Velocidad del coche (KM o MPH): "+ getVelocidad());
     System.out.println("Cilindrada del coche: "+getCilindrada()+"cc");
-    
+    System.out.println("}");
+    System.out.println("__________________________________________________");
+    System.out.println(" ");
     }
+    
+    public Coche(){}
    
     public Coche(String color, int Ruedas, String velocidad, double cilindrada ){
         
