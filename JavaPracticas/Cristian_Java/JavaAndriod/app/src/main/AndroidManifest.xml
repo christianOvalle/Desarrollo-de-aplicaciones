@@ -10,31 +10,33 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PrimeraApp">
         <activity
-            android:name=".Conversion"
+            android:name=".MainActivity2"
+            android:exported="false">
+        </activity>
+
+
+        <activity
+            android:name=".Calculadora"
+
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".Conversion">
+
         </activity>
         <activity
             android:name=".Mensaje"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:name=".MainActivity">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Calculadora">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="288dp"
+        android:text="Calculadora"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <EditText
+        android:id="@+id/editTextNumber5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Valor1"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/editTextNumber6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Valor2"
+        android:inputType="number" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="97dp"
+            android:layout_height="41dp"
+            android:text="Dividir" />
+
+        <RadioButton
+            android:id="@+id/radioButton5"
+            android:layout_width="86dp"
+            android:layout_height="48dp"
+            android:text="Pow" />
+
+        <RadioButton
+            android:id="@+id/radioButton6"
+            android:layout_width="wrap_content"
+            android:layout_height="47dp"
+            android:text="Mudulo" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="88dp"
+            android:layout_height="40dp"
+            android:text="Resta" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="87dp"
+            android:layout_height="43dp"
+            android:text="Multi" />
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="88dp"
+            android:layout_height="47dp"
+            android:text="Suma" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="152dp"
+            android:layout_height="41dp"
+            android:text="Calcular" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="214dp"
+            android:layout_height="33dp"
+            android:text="TextView" />
+    </RadioGroup>
+
+</LinearLayout>
