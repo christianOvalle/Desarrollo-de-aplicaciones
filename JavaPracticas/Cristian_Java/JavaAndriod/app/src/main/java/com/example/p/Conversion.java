@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class Conversion extends AppCompatActivity {
+public class Conversion extends AppCompatActivity  {
 
     private EditText Valor1;
     private EditText Valor2;

@@ -10,14 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PrimeraApp">
         <activity
-            android:name=".MainActivity2"
-            android:exported="false">
-        </activity>
-
-
-        <activity
-            android:name=".Calculadora"
-
+            android:name=".TazaDeCambio"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,18 +19,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Conversion">
+            android:name=".MainActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".Calculadora"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+        <activity android:name=".Conversion" />
         <activity
             android:name=".Mensaje"
-            android:exported="true">
-
-        </activity>
-        <activity
-            android:name=".MainActivity">
-
-        </activity>
+            android:exported="true" />
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
