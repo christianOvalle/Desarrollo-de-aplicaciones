@@ -45,7 +45,7 @@ public class NumeroMayor extends AppCompatActivity implements View.OnClickListen
         }
          else {
             Toast.makeText(this, "Ambos numeros son iguales", Toast.LENGTH_SHORT).show();
-        }aaaaaaaaaaaaaaaaaaaaaaa
+        }
 
 
 
