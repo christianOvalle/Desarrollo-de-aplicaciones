@@ -69,7 +69,7 @@ public class Calculadora extends AppCompatActivity implements View.OnClickListen
         } else if (this.RadioDividir.isChecked()) {
             if (num2 == 0 || num1 == 0) {
 
-                Toast.makeText(this, "No se puede dividir en tre cero", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "No se puede dividir entre cero", Toast.LENGTH_SHORT).show();
 
             } else {
 

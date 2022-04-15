@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MostrarLenguajes">
+
+    <CheckBox
+        android:id="@+id/checkBox24"
+        android:layout_width="142dp"
+        android:layout_height="wrap_content"
+        android:text="Java" />
+
+    <CheckBox
+        android:id="@+id/checkBox23"
+        android:layout_width="142dp"
+        android:layout_height="wrap_content"
+        android:text="JavaScript" />
+
+    <CheckBox
+        android:id="@+id/checkBox22"
+        android:layout_width="142dp"
+        android:layout_height="wrap_content"
+        android:text="Go" />
+
+    <CheckBox
+        android:id="@+id/checkBox21"
+        android:layout_width="142dp"
+        android:layout_height="wrap_content"
+        android:text="Kotlin" />
+
+    <CheckBox
+        android:id="@+id/checkBox20"
+        android:layout_width="142dp"
+        android:layout_height="wrap_content"
+        android:text="Python" />
+
+    <CheckBox
+        android:id="@+id/checkBox19"
+        android:layout_width="142dp"
+        android:layout_height="wrap_content"
+        android:text="Lneguaje C / C++" />
+
+    <CheckBox
+        android:id="@+id/checkBox18"
+        android:layout_width="142dp"
+        android:layout_height="wrap_content"
+        android:text="Scala" />
+
+    <CheckBox
+        android:id="@+id/checkBox17"
+        android:layout_width="142dp"
+        android:layout_height="wrap_content"
+        android:text="Ruby" />
+
+    <CheckBox
+        android:id="@+id/checkBox16"
+        android:layout_width="142dp"
+        android:layout_height="wrap_content"
+        android:text="Swift" />
+
+    <CheckBox
+        android:id="@+id/checkBox7"
+        android:layout_width="142dp"
+        android:layout_height="wrap_content"
+        android:text="Dart" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="245dp"
+        android:layout_height="wrap_content"
+        android:text="Ver Lenguajes" />
+
+</LinearLayout>
