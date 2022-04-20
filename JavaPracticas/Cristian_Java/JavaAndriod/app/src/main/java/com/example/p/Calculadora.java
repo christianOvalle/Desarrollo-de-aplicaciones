@@ -42,6 +42,7 @@ public class Calculadora extends AppCompatActivity implements View.OnClickListen
 
         this.Resultado = this.findViewById(R.id.textView4);
 
+
     }
 
 
@@ -57,6 +58,7 @@ public class Calculadora extends AppCompatActivity implements View.OnClickListen
         if (this.RadioSuma.isChecked()) {
             Valor = num1 + num2;
             Resultado.setText((Valor.toString()));
+            this.RadioSuma.setChecked(false);
         } else if (this.RadioResta.isChecked()) {
             Valor = num1 - num2;
             Resultado.setText((Valor.toString() + ","));

@@ -11,8 +11,8 @@ import android.widget.Toast;
 
 public class Years extends AppCompatActivity implements View.OnClickListener {
 
-     Spinner Lista;
-     Button Ver;
+     private Spinner Lista;
+    private  Button Ver;
 
 
     @Override
@@ -25,7 +25,14 @@ public class Years extends AppCompatActivity implements View.OnClickListener {
         this.Ver.setOnClickListener(this);
         this.Lista = this.findViewById(R.id.spinner);
 
-        String[] Numeros = {"1980", "1981","1982","1983","1984","1985","1986","1987","1988","1989","1990","1991","1992","1993","1994","1995","1996","1997","1998","1999","2000","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018","2019","2020","2021","2022"};
+        String[] Numeros = new String[41];
+        int M = 0;
+        for(Integer i = 1980; i < 2021; i++ ){
+
+            Numeros[M] = i.toString();
+            M++;
+
+        }
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, Numeros);
         Lista.setAdapter(adapter);
@@ -33,9 +40,11 @@ public class Years extends AppCompatActivity implements View.OnClickListener {
 
     }
 
+
     @Override
     public void onClick(View view) {
-       String Valor = this.Lista.getSelectedItem().toString();
-        Toast.makeText(this, Valor+"", Toast.LENGTH_SHORT).show();
+
+
+        Toast.makeText(this,    Lista.getSelectedItem().toString(), Toast.LENGTH_SHORT).show();
     }
 }
