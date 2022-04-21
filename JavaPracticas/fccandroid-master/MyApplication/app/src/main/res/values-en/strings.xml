@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Primera apliacion de android estudio</string>
+    <string name="fruta_manzana">Apple</string>
+    <string name="fruta_fresa">Strawberry</string>
+    <string name="fruta_naranja">Orange</string>
+    <string name="fruta_pera">Pear</string>
+    <string name="fruta_platano">Banana</string>
+    <string name="fruta_cereza">Cherry</string>
+    <string name="btn_mensaje">Show Message</string>
+    <string name="key_prueba">"show "</string>
+</resources>

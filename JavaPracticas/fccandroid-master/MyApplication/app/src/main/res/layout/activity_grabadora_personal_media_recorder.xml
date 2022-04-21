@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".GrabadoraPersonalMediaRecorder">
+
+    <Button
+        android:id="@+id/btnGrabadoraPersonalMediaRecorderGrabar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Grabar" />
+
+    <Button
+        android:id="@+id/btnGrabadoraPersonalMediaRecorderDetenerReproduccion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Detener reproduccion" />
+
+    <Button
+        android:id="@+id/btnGrabadoraPersonalMediaRecorderReproducirGrabacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="reproducir grabacion" />
+
+    <TextView
+        android:id="@+id/textViewGrabadoraPersonalMediaRecorderLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Acciones"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+</LinearLayout>

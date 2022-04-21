@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myapplication">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!--
+ If your app targets Android 9 or lower, you can declare
+         ACCESS_COARSE_LOCATION instead.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication">
+        <activity android:name=".DetectarDispositivoBlueTooth"></activity>
+        <activity android:name=".EnviarMensajeWhatsappSinGuardarNumero" />
+        <activity android:name=".Prueba" />
+        <activity android:name=".MenuContextualExample" />
+        <activity android:name=".StringFrutasVariosIdiomas" />
+        <activity android:name=".TouchEventExample" />
+        <activity android:name=".ToastExample" />
+        <activity android:name=".AlertDialogBotones" />
+        <activity android:name=".AlertDialogSimple" />
+        <activity android:name=".Notificaciones" />
+        <activity android:name=".MenuOpcionesIcono" />
+        <activity android:name=".MenuOpcionesSubMenu" />
+        <activity android:name=".MenuOpciones" />
+        <activity android:name=".GrabadoraPersonalMediaRecorder" />
+        <activity android:name=".GrabarAudioConLaGrabadoraAndroid">
+            <intent-filter>
+                <action android:name="android.provider.MediaStore.RECORD_SOUND" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ReproducirAudioMemoriaExterna" />
+        <activity android:name=".ArchivoTxtMemoriaExterna" />
+        <activity android:name=".ArchivoTxtMemoriaInterna" />
+        <activity android:name=".ReproductorAndroid" />
+        <activity android:name=".ReproductorAudioMP3" />
+        <activity android:name=".ControlReproductor" />
+        <activity android:name=".MediaPlayerReproducirAudioExample" />
+        <activity android:name=".FrameLayoutExample" />
+        <activity android:name=".RelativeLayoutExample" />
+        <activity android:name=".TableLayoutExample" />
+        <activity android:name=".ScrollViewLinearLayoutExample" />
+        <activity android:name=".LinearLayoutExample" />
+        <activity android:name=".CRUDSqlite" />
+        <activity android:name=".XMLSheredPreferencesExample" />
+        <activity android:name=".CheckBoxExample" />
+        <activity android:name=".PrincipalActivityMenuListView">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ListViewExample" />
+        <activity android:name=".ResultadoBuscadorWeb" />
+        <activity android:name=".BuscadorWeb" />
+        <activity android:name=".ImageButtonExample" />
+        <activity android:name=".EjemploActivity" />
+        <activity android:name=".CalculadoraSpinner" />
+        <activity android:name=".CalculadoraRadioButon" />
+        <activity android:name=".MainActivity" />
+    </application>
+
+</manifest>

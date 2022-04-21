@@ -11,23 +11,30 @@ import android.widget.EditText;
 
 public class Ejercicio2_P4 extends AppCompatActivity {
 
-    EditText Email,Years;
+    EditText Email,nombre,apellido,whastapp,direccion;
+
     Button Ejecutar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ejercicio1_p4);
+        setContentView(R.layout.activity_ejercicio2_p4);
 
-        this.Email = this.findViewById(R.id.editTextTextEmailAddress3);
-        this.Years =this.findViewById(R.id.editTextNumber8);
+        this.Email = this.findViewById(R.id.editTextTextEmailAddress9);
+        this.apellido =this.findViewById(R.id.editTextTextEmailAddress8);
+        this.nombre =this.findViewById(R.id.editTextTextEmailAddress3);
+        this.whastapp =this.findViewById(R.id.editTextTextEmailAddress7);
+        this.direccion=this.findViewById(R.id.editTextTextEmailAddress6);
         this.Ejecutar = this.findViewById(R.id.button13);
 
 
         SharedPreferences prefe =getSharedPreferences("datos", Context.MODE_PRIVATE);
 
         Email.setText(prefe.getString("email",""));
-        //Years.setText(prefe.getString("Edad",""));
+        apellido.setText(prefe.getString("apellido",""));
+        nombre.setText(prefe.getString("nombre",""));
+        whastapp.setText(prefe.getString("wsp",""));
+        direccion.setText(prefe.getString("direccion",""));
 
         this.Ejecutar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,7 +44,10 @@ public class Ejercicio2_P4 extends AppCompatActivity {
 
                 SharedPreferences.Editor editor = preferences.edit();
                 editor.putString("email",Email.getText().toString());
-                //editor.putString("Edad",Years.getText().toString());
+                editor.putString("Edad",apellido.getText().toString());
+                editor.putString("Edad",nombre.getText().toString());
+                editor.putString("Edad",whastapp.getText().toString());
+                editor.putString("Edad",direccion.getText().toString());
                 editor.commit();
                 finish();
 

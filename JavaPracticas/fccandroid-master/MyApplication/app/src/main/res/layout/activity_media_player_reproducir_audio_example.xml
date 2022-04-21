@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MediaPlayerReproducirAudioExample">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="false">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageViewBurro"
+                android:layout_width="110dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:contentDescription="burro"
+                app:srcCompat="@drawable/burro" />
+
+            <ImageView
+                android:id="@+id/imageViewCaballo"
+                android:layout_width="110dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:contentDescription="caballo"
+                app:srcCompat="@drawable/caballo" />
+
+            <ImageView
+                android:id="@+id/imageViewElefante"
+                android:layout_width="110dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:contentDescription="elefante"
+                app:srcCompat="@drawable/elefante" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageViewGallo"
+                android:layout_width="110dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:contentDescription="gallo"
+                app:srcCompat="@drawable/gallo" />
+
+            <ImageView
+                android:id="@+id/imageViewGato"
+                android:layout_width="110dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:contentDescription="gato"
+                app:srcCompat="@drawable/gato" />
+
+            <ImageView
+                android:id="@+id/imageViewLeon"
+                android:layout_width="110dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:contentDescription="leon"
+                app:srcCompat="@drawable/leon" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageViewLobo"
+                android:layout_width="110dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:contentDescription="lobo"
+                app:srcCompat="@drawable/lobo" />
+
+            <ImageView
+                android:id="@+id/imageViewMono"
+                android:layout_width="110dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:contentDescription="mono"
+                app:srcCompat="@drawable/mono" />
+
+            <ImageView
+                android:id="@+id/imageViewPajaro"
+                android:layout_width="110dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:contentDescription="pajaro"
+                app:srcCompat="@drawable/pajaro" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageViewPerro"
+                android:layout_width="110dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:contentDescription="perro"
+                app:srcCompat="@drawable/perro" />
+
+            <ImageView
+                android:id="@+id/imageViewVaca"
+                android:layout_width="110dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:contentDescription="vaca"
+                app:srcCompat="@drawable/vaca" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

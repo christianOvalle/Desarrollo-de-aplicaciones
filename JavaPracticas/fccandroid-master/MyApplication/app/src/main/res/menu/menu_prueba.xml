@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menuItemNosotros"
+        android:title="Sobre nosotros" />
+    <item android:title="Colores" >
+        <menu >
+            <item android:title="Rojo" />
+            <item android:title="Marron" />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/menuItemCompartir"
+        android:icon="@drawable/ic_baseline_share_24"
+        android:title="Compartir" ></item>
+</menu>

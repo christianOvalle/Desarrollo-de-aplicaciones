@@ -12,16 +12,40 @@
         android:layout_width="409dp"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Ingrese Email"
+        android:hint="Nombre"
         android:inputType="textEmailAddress" />
 
     <EditText
-        android:id="@+id/editTextNumber8"
+        android:id="@+id/editTextTextEmailAddress8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Edad"
-        android:inputType="number" />
+        android:hint="Apellido"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Whatsapp"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Direccion"
+        android:inputType="textEmailAddress" />
 
     <Button
         android:id="@+id/button13"

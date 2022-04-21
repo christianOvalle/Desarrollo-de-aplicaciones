@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/MenuItemMenuOpcionesIconoCompartir"
+        android:icon="@drawable/ic_baseline_person_add_24"
+        android:title="Compartir"
+        app:showAsAction="always" />
+    <item
+        android:icon="@drawable/ic_baseline_phonelink_setup_24"
+        android:title="Informacion"
+        app:showAsAction="always" />
+    <item
+        android:icon="@drawable/ic_baseline_share_24"
+        android:title="Sub menu">
+        <menu >
+            <item
+                android:id="@+id/idOpcion1MenuOpciones"
+                android:title="Opcion 1" />
+        </menu>
+    </item>
+    <item
+        android:icon="@drawable/ic_baseline_phone_24"
+        android:title="Llamada"
+        app:showAsAction="always" />
+</menu>
