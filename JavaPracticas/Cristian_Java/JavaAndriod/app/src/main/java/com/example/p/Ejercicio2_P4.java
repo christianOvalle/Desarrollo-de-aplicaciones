@@ -43,11 +43,12 @@ public class Ejercicio2_P4 extends AppCompatActivity {
                 SharedPreferences preferences = getSharedPreferences("datos",Context.MODE_PRIVATE);
 
                 SharedPreferences.Editor editor = preferences.edit();
+
                 editor.putString("email",Email.getText().toString());
-                editor.putString("Edad",apellido.getText().toString());
-                editor.putString("Edad",nombre.getText().toString());
-                editor.putString("Edad",whastapp.getText().toString());
-                editor.putString("Edad",direccion.getText().toString());
+                editor.putString("apellido",apellido.getText().toString());
+                editor.putString("nombre",nombre.getText().toString());
+                editor.putString("wsp",whastapp.getText().toString());
+                editor.putString("direccion",direccion.getText().toString());
                 editor.commit();
                 finish();
 
