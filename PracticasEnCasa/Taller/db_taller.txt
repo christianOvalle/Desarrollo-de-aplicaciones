@@ -14,6 +14,7 @@ correo VARCHAR(100),
 rol VARCHAR(100)
 
 
+
 );
 
 create table Clientes(
@@ -22,7 +23,8 @@ nombre VARCHAR(50),
 apellido VARCHAR(50),
 cedula VARCHAR(50),
 direccion VARCHAR(150),
-telefono VARCHAR(50)
+telefono VARCHAR(50),
+fecha_registro de registro
  
 
 );
@@ -60,9 +62,9 @@ FOREIGN KEY(id_taller_mecanico) REFERENCES Taller(id_Taller)
 create TABLE Inventario_Respuesto(
 id int not null IDENTITY(1,1) PRIMARY KEY,
 nombre_pieza VARCHAR(50),
-cantidad_pieza VARCHAR(50),
-precio_pieza VARCHAR(50),
-cantidad_disponible VARCHAR(50),
+cantidad_pieza int,
+precio_pieza int),
+cantidad_disponible int,
 estado_piezas VARCHAR(50)
 
 );
@@ -71,7 +73,7 @@ create TABLE Servicios(
 id int not null IDENTITY(1,1) PRIMARY KEY,
 nombre VARCHAR(150),
 tipo_servicio VARCHAR(150),
-costo VARCHAR(50)
+costo int
 
 );
 
@@ -85,7 +87,7 @@ nombre_servicio varchar(100),
 nombre_taller VARCHAR(100),
 direccion_taller VARCHAR(100),
 telefono_taller VARCHAR(100),
-costo_trabajo VARCHAR(100)
+costo_trabajo int
 );
 
 create TABLE Detalle_Reparacion(
@@ -93,7 +95,7 @@ id int not null IDENTITY(1,1) PRIMARY KEY,
 nombre_servicio varchar(100),
 tipo_servicio varchar(100),
 nombre_mecanico VARCHAR(100),
-costo_trabajo VARCHAR(100)
+costo_trabajo int
 
 
 );
