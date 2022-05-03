@@ -74,31 +74,45 @@ namespace ProyectoTaller.Vistas
             this.TelefonotextBox.Text = clienteE.telefono;
             this.DirecciontextBox.Text = clienteE.direccion;
         }
-        
+
 
         private void Modificarbutton_Click(object sender, EventArgs e)
         {
-            String Nombre = this.NombretextBox.Text;
-            string Apellido = this.ApellidotextBox.Text;
-            string Cedula = this.CedulatextBox.Text;
-            string Telefono = this.TelefonotextBox.Text;
-            string Direccion = this.DirecciontextBox.Text;
-            int ID = int.Parse(this.textBox1.Text);
 
-            Conexion.Clientes clientesE = dbtaller.Clientes.Find(ID);
+            if (textBox1.Text == "")
+            {
+                MessageBox.Show("Ddebe ingresar un id en el campo id");
 
-            clientesE.nombre = Nombre;
-            clientesE.apellido = Apellido;
-            clientesE.cedula = Cedula;
-            clientesE.telefono = Telefono;
-            clientesE.direccion = Direccion;
-            clientesE.fecha_registro = DateTime.Now;
+            }
 
-            dbtaller.Entry(clientesE).State = System.Data.Entity.EntityState.Modified;
-            dbtaller.SaveChanges();
+            else {
+                String Nombre = this.NombretextBox.Text;
+                string Apellido = this.ApellidotextBox.Text;
+                string Cedula = this.CedulatextBox.Text;
+                string Telefono = this.TelefonotextBox.Text;
+                string Direccion = this.DirecciontextBox.Text;
+                int ID = int.Parse(this.textBox1.Text);
 
-            MessageBox.Show("Se a modificado");
-            SetDataGrid();
+
+                Conexion.Clientes clientesE = dbtaller.Clientes.Find(ID);
+
+                clientesE.nombre = Nombre;
+                clientesE.apellido = Apellido;
+                clientesE.cedula = Cedula;
+                clientesE.telefono = Telefono;
+                clientesE.direccion = Direccion;
+                clientesE.fecha_registro = DateTime.Now;
+
+
+
+                dbtaller.Entry(clientesE).State = System.Data.Entity.EntityState.Modified;
+                dbtaller.SaveChanges();
+
+                MessageBox.Show("Se a modificado");
+
+                SetDataGrid();
+
+            }
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
