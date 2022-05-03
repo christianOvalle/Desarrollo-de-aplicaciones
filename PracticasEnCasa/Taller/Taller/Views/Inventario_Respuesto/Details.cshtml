@@ -1,0 +1,58 @@
+﻿@model Taller.Models.Inventario_Respuesto
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Inventario_Respuesto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre_pieza)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre_pieza)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cantidad_pieza)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cantidad_pieza)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.precio_pieza)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.precio_pieza)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cantidad_disponible)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cantidad_disponible)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.estado_piezas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estado_piezas)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

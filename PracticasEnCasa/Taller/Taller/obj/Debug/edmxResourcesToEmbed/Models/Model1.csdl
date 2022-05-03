@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="db_TallerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Clientes">
+    <Key>
+      <PropertyRef Name="id_cliente" />
+    </Key>
+    <Property Name="id_cliente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cedula" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="direccion" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Vehiculos" Relationship="Self.FK__Vehiculos__id_ve__267ABA7A" FromRole="Clientes" ToRole="Vehiculos" />
+  </EntityType>
+  <EntityType Name="Facturacion">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rnc_taller" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="modelo_vehiculo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="marca_vehiculo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="color_vehiculo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="nombre_servicio" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="nombre_taller" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="direccion_taller" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="telefono_taller" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="costo_trabajo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Inventario_Respuesto">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre_pieza" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cantidad_pieza" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="precio_pieza" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cantidad_disponible" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="estado_piezas" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Mecanicos">
+    <Key>
+      <PropertyRef Name="id_mecanico" />
+    </Key>
+    <Property Name="id_mecanico" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_taller_mecanico" Type="Int32" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cedula" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fecha_nacimiento" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="estatus" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Taller" Relationship="Self.FK__Mecanicos__id_ta__2B3F6F97" FromRole="Mecanicos" ToRole="Taller" />
+  </EntityType>
+  <EntityType Name="Servicios">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="tipo_servicio" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="costo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Taller">
+    <Key>
+      <PropertyRef Name="id_taller" />
+    </Key>
+    <Property Name="id_taller" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rnc" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="direccion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="correo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Mecanicos" Relationship="Self.FK__Mecanicos__id_ta__2B3F6F97" FromRole="Taller" ToRole="Mecanicos" />
+  </EntityType>
+  <EntityType Name="Vehiculos">
+    <Key>
+      <PropertyRef Name="id_vehiculo" />
+    </Key>
+    <Property Name="id_vehiculo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_vehiculo_cliente" Type="Int32" />
+    <Property Name="matricula" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="modelo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="color" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="marca" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Clientes" Relationship="Self.FK__Vehiculos__id_ve__267ABA7A" FromRole="Vehiculos" ToRole="Clientes" />
+  </EntityType>
+  <Association Name="FK__Vehiculos__id_ve__267ABA7A">
+    <End Role="Clientes" Type="Self.Clientes" Multiplicity="0..1" />
+    <End Role="Vehiculos" Type="Self.Vehiculos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clientes">
+        <PropertyRef Name="id_cliente" />
+      </Principal>
+      <Dependent Role="Vehiculos">
+        <PropertyRef Name="id_vehiculo_cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Mecanicos__id_ta__2B3F6F97">
+    <End Role="Taller" Type="Self.Taller" Multiplicity="0..1" />
+    <End Role="Mecanicos" Type="Self.Mecanicos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Taller">
+        <PropertyRef Name="id_taller" />
+      </Principal>
+      <Dependent Role="Mecanicos">
+        <PropertyRef Name="id_taller_mecanico" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="db_TallerEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Clientes" EntityType="Self.Clientes" />
+    <EntitySet Name="Facturacion" EntityType="Self.Facturacion" />
+    <EntitySet Name="Inventario_Respuesto" EntityType="Self.Inventario_Respuesto" />
+    <EntitySet Name="Mecanicos" EntityType="Self.Mecanicos" />
+    <EntitySet Name="Servicios" EntityType="Self.Servicios" />
+    <EntitySet Name="Taller" EntityType="Self.Taller" />
+    <EntitySet Name="Vehiculos" EntityType="Self.Vehiculos" />
+    <AssociationSet Name="FK__Vehiculos__id_ve__267ABA7A" Association="Self.FK__Vehiculos__id_ve__267ABA7A">
+      <End Role="Clientes" EntitySet="Clientes" />
+      <End Role="Vehiculos" EntitySet="Vehiculos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Mecanicos__id_ta__2B3F6F97" Association="Self.FK__Mecanicos__id_ta__2B3F6F97">
+      <End Role="Taller" EntitySet="Taller" />
+      <End Role="Mecanicos" EntitySet="Mecanicos" />
+    </AssociationSet>
+    <EntitySet Name="Detalle_reparacion" EntityType="db_TallerModel.Detalle_reparacion" />
+    <EntitySet Name="Usuario" EntityType="db_TallerModel.Usuario" />
+  </EntityContainer>
+  <EntityType Name="Detalle_reparacion">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre_servicio" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="tipo_servicio" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="nombre_mecanico" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="costo_trabajo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="contrasena" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cedula" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="direccion" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="correo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="rol" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

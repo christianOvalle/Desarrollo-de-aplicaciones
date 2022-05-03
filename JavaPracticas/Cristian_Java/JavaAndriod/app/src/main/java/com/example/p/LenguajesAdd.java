@@ -13,26 +13,28 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class LenguajesAdd extends AppCompatActivity implements AdapterView.OnItemLongClickListener, View.OnClickListener{
+public class LenguajesAdd extends AppCompatActivity implements AdapterView.OnItemLongClickListener, AdapterView.OnClickListener{
 
     ArrayList<String> Creador = new ArrayList<>();
     ArrayList<String> Menu = new ArrayList<>();
     ListView Lengu;
-    Button add;
+    Button agregar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lenguajes_list_view);
+        setContentView(R.layout.activity_lenguajes_add);
 
         this.Lengu = this.findViewById(R.id.Lenguajes3);
-        this.add = this.findViewById(R.id.button19);
-        this.add.setOnClickListener(this);
+        this.agregar = this.findViewById(R.id.button19);
+        this.agregar.setOnClickListener(this);
         this.Lengu.setOnItemLongClickListener(this);
 
         LlenarListaLenguajes();
 
     }
+
+
 
     public void LlenarListaLenguajes(){
 
@@ -54,9 +56,9 @@ public class LenguajesAdd extends AppCompatActivity implements AdapterView.OnIte
         Creador.add("Creado por Brendan Eich en 1995");
         Creador.add("Creado por Anders Hejlsberg Microsoft en 2000");
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,this.Menu);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,Menu);
         Lengu.setAdapter(adapter);
-
+        adapter.notifyDataSetChanged();
 
 
     }
@@ -67,7 +69,7 @@ public class LenguajesAdd extends AppCompatActivity implements AdapterView.OnIte
 
         int PosicionLenguaje = i;
         String LenguajeSeleccionado = this.Lengu.getItemAtPosition(PosicionLenguaje).toString();
-        String CreadorLenguaje = this.Creador.get(PosicionLenguaje);
+        String CreadorLenguaje = Creador.get(PosicionLenguaje);
 
         switch(PosicionLenguaje){
 

@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Periodico",
+    "\\Periodico\\Controllers",
+    "\\Periodico\\Views",
+    "\\Periodico\\Views\\categorias",
+    "\\Periodico\\Views\\EnviarArchivos",
+    "\\Periodico\\Views\\Login",
+    "\\Periodico\\Views\\noticias"
+  ],
+  "SelectedNode": "\\Periodico\\Controllers\\noticiasController.cs",
+  "PreviewInSolutionExplorer": false
+}

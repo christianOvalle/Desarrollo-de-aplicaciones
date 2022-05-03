@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5d878465b1934d3ab3b520fa40792a85" Name="Diagram1">
+        <EntityTypeShape EntityType="db_TallerModel.Clientes" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_TallerModel.Facturacion" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_TallerModel.Inventario_Respuesto" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_TallerModel.Mecanicos" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_TallerModel.Servicios" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_TallerModel.Taller" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_TallerModel.Vehiculos" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="db_TallerModel.FK__Vehiculos__id_ve__267ABA7A" ManuallyRouted="false" />
+        <AssociationConnector Association="db_TallerModel.FK__Mecanicos__id_ta__2B3F6F97" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="db_TallerModel.Detalle_reparacion" Width="1.5" PointX="7.875" PointY="4.75" />
+        <EntityTypeShape EntityType="db_TallerModel.Usuario" Width="1.5" PointX="10.375" PointY="2.625" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

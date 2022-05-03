@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@{
+    Layout = null;
+}
+
+<h2>Logeo</h2>
+
+<form action="@Url.Action("ProcesarLogin","Login")" method="post">
+
+    Ingrese Su Nombre<br />
+    <input type="text" name="nombre" /><br />
+    Ingrese Contraseña<br />
+    <input type="password" name="Clave" /><br /><br />
+
+    <input type="submit" value="Entrar" />
+
+
+
+
+
+</form>
+

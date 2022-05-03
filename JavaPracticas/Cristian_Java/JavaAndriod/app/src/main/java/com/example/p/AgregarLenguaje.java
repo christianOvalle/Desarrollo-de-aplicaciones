@@ -2,6 +2,7 @@ package com.example.p;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -31,8 +32,11 @@ public class AgregarLenguaje extends AppCompatActivity implements View.OnClickLi
     public void onClick(View view) {
 
         lenguajesAdd.Menu.add(this.UsuarioLenguaje.getText().toString());
+       
         lenguajesAdd.Creador.add(this.UsuarioFecha.getText().toString());
-        this.finish();
+
+        Intent intent = new Intent(this,LenguajesAdd.class);
+        startActivity(intent);
 
 
     }

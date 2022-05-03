@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "DatosFactura";
+}
+
+<h2>DatosFactura</h2>
+<table>
+    <div class="row">
+
+        @foreach (Taller.Models.Facturacion item in Model)
+        {
+
+           
+                <tr>
+                    <td>@item.nombre_taller</td>
+                    <td>@item.rnc_taller</td>
+                    <td>@item.direccion_taller</td>
+                    <td>@item.telefono_taller</td>
+                    <td>@item.marca_vehiculo</td>
+                    <td>@item.modelo_vehiculo</td>
+                    <td>@item.color_vehiculo</td>
+                    <td>@item.nombre_servicio</td>
+                    <td>@item.costo_trabajo</td>
+
+                </tr>
+
+
+
+
+                }
+
+
+
+        </div>
+    </table>
