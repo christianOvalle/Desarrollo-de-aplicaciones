@@ -85,7 +85,7 @@ namespace ProyectoTaller.Vistas
             if (id > 0)
             {
 
-                
+                Guardar();
                 Cvehiculo.borrar(id);
                 limpiar();
             }
