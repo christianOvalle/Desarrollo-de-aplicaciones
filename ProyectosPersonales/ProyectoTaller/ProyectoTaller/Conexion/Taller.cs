@@ -17,17 +17,17 @@ namespace ProyectoTaller.Conexion
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Taller()
         {
-            this.Mecanicos = new HashSet<Mecanicos>();
+            this.Facturacion = new HashSet<Facturacion>();
         }
     
         public int id_taller { get; set; }
-        public string rnc { get; set; }
+        public Nullable<int> rnc { get; set; }
         public string direccion { get; set; }
         public string nombre { get; set; }
         public string telefono { get; set; }
         public string correo { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Mecanicos> Mecanicos { get; set; }
+        public virtual ICollection<Facturacion> Facturacion { get; set; }
     }
 }

@@ -57,50 +57,58 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion\Clientes.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ConexionTaller.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Conexion\ConexionTaller.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConexionTaller.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Conexion\ConexionTaller.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConexionTaller.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Conexion\ConexionTaller.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConexionTaller.edmx</DependentUpon>
     </Compile>
     <Compile Include="Conexion\Detalle_Reparacion.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ConexionTaller.tt</DependentUpon>
     </Compile>
     <Compile Include="Conexion\Facturacion.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ConexionTaller.tt</DependentUpon>
     </Compile>
     <Compile Include="Conexion\Inventario_Respuesto.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ConexionTaller.tt</DependentUpon>
     </Compile>
     <Compile Include="Conexion\Mecanicos.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Conexion\Model1.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Conexion\Model1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Conexion\Model1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
+      <DependentUpon>ConexionTaller.tt</DependentUpon>
     </Compile>
     <Compile Include="Conexion\Servicios.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ConexionTaller.tt</DependentUpon>
     </Compile>
     <Compile Include="Conexion\Taller.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Conexion\Usuario.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ConexionTaller.tt</DependentUpon>
     </Compile>
     <Compile Include="Conexion\Vehiculos.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>ConexionTaller.tt</DependentUpon>
     </Compile>
-    <Compile Include="ClasesCrud\Cvehiculo.cs" />
+    <Compile Include="detalleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="detalleForm.Designer.cs">
+      <DependentUpon>detalleForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vistas\AsignacionMec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\AsignacionMec.Designer.cs">
+      <DependentUpon>AsignacionMec.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +120,18 @@
     </Compile>
     <Compile Include="Vistas\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Mecanico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Mecanico.Designer.cs">
+      <DependentUpon>Mecanico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Piezas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Piezas.Designer.cs">
+      <DependentUpon>Piezas.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Vehiculo.cs">
       <SubType>Form</SubType>
@@ -125,6 +145,9 @@
     <Compile Include="Vistas\VistaPrincipal.Designer.cs">
       <DependentUpon>VistaPrincipal.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="detalleForm.resx">
+      <DependentUpon>detalleForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -135,11 +158,20 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Vistas\AsignacionMec.resx">
+      <DependentUpon>AsignacionMec.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Mecanico.resx">
+      <DependentUpon>Mecanico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Piezas.resx">
+      <DependentUpon>Piezas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Vehiculo.resx">
       <DependentUpon>Vehiculo.cs</DependentUpon>
@@ -147,12 +179,12 @@
     <EmbeddedResource Include="Vistas\VistaPrincipal.resx">
       <DependentUpon>VistaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="Conexion\Model1.edmx">
+    <EntityDeploy Include="Conexion\ConexionTaller.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+      <LastGenOutput>ConexionTaller.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Conexion\Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
+    <None Include="Conexion\ConexionTaller.edmx.diagram">
+      <DependentUpon>ConexionTaller.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -173,15 +205,15 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="Conexion\Model1.Context.tt">
+    <Content Include="Conexion\ConexionTaller.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>ConexionTaller.edmx</DependentUpon>
+      <LastGenOutput>ConexionTaller.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Conexion\Model1.tt">
+    <Content Include="Conexion\ConexionTaller.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
+      <DependentUpon>ConexionTaller.edmx</DependentUpon>
+      <LastGenOutput>ConexionTaller.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

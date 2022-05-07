@@ -13,10 +13,10 @@ namespace ProyectoTaller.Conexion
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class db_TallerEntities : DbContext
+    public partial class db_taller_infotepEntities : DbContext
     {
-        public db_TallerEntities()
-            : base("name=db_TallerEntities")
+        public db_taller_infotepEntities()
+            : base("name=db_taller_infotepEntities")
         {
         }
     
@@ -32,7 +32,6 @@ namespace ProyectoTaller.Conexion
         public virtual DbSet<Mecanicos> Mecanicos { get; set; }
         public virtual DbSet<Servicios> Servicios { get; set; }
         public virtual DbSet<Taller> Taller { get; set; }
-        public virtual DbSet<Usuario> Usuario { get; set; }
         public virtual DbSet<Vehiculos> Vehiculos { get; set; }
     }
 }

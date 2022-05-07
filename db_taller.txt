@@ -1,0 +1,149 @@
+create database GETA_taller
+go
+
+use  GETA_taller
+
+
+
+CREATE TABLE  GETA_taller(
+id_taller int not null identity(1,1) primary key,
+RNC VARCHAR(100),
+NOMBRE VARCHAR(60),
+TELEFONO INT,
+CORREO VARCHAR(100),
+);
+
+
+
+
+
+
+CREATE TABLE  GETA_cliente(
+
+id_cliente int not null identity(1,1) primary key,
+NOMBRE VARCHAR(60),
+APELLIDO VARCHAR(60),
+DIRECCION VARCHAR(100),
+TELEFONO INT,
+FECHA_REGISTRO DATETIME
+);
+
+
+
+
+
+CREATE TABLE  GETA_vehiculo(
+id_vehiculo int not null identity(1,1) primary key,
+MATRICULA VARCHAR(20),
+MODELO VARCHAR(30),
+COLOR VARCHAR(30),
+id_cliente int
+FOREIGN KEY (id_cliente) REFERENCES GETA_cliente(id_cliente)
+
+);
+
+
+
+
+
+
+CREATE TABLE  GETA_servicio(
+
+id_servicio int not null identity(1,1) primary key,
+EVALUCION text,
+PRECIO INT,
+id_vehiculo INT
+FOREIGN KEY (id_vehiculo) REFERENCES GETA_vehiculo(id_vehiculo)
+);
+
+
+
+
+
+
+CREATE TABLE  GETA_inventario_repuesto(
+
+id_inventario int not null identity(1,1) primary key,
+CATEGORIA VARCHAR(60),
+NOMBRE_PIEZAS VARCHAR(100),
+CANTIDAD_DISPONIBLE INT,
+PRECIO FLOAT,
+ESTADO INT,
+
+);
+
+
+
+
+
+
+CREATE TABLE GETA_detalle_reparacion(
+
+id_detalle int not null identity(1,1) primary key,
+CANTIDAD VARCHAR(100),
+PRECIO FLOAT,
+MANO_OBRA FLOAT,
+COMETARIO TEXT,
+id_servicio INT,
+id_inventario INT,
+
+FOREIGN KEY (id_servicio) REFERENCES GETA_servicio(id_servicio),
+FOREIGN KEY (id_inventario) REFERENCES GETA_inventario_repuesto(id_inventario)
+
+
+
+);
+
+
+
+
+
+
+CREATE TABLE  GETA_mecanico(
+
+id_mecanico int not null identity(1,1) primary key,
+NOMBRE VARCHAR(60),
+APELLID0 VARCHAR(60),
+CEDULA INT,
+ESTADO INT ,
+id_detalle INT
+
+FOREIGN KEY (id_detalle) REFERENCES GETA_detalle_reparacion(id_detalle)
+
+);
+
+
+
+
+
+CREATE TABLE  GETA_usuario(
+
+id_usuario int not null identity(1,1) primary key,
+ROL INT,
+NOMBRE VARCHAR (60),
+USUARIO VARCHAR(30),
+CONTRASENA VARCHAR(30),
+id_mecanico INT
+
+FOREIGN KEY (id_mecanico) REFERENCES GETA_mecanico(id_mecanico)
+);
+
+
+
+CREATE TABLE  GETA_factura(
+id_factura int not null identity(1,1) primary key,
+SUBTOTAL FLOAT,
+ITB FLOAT,
+TOTAL FLOAT,
+fecha_salida datetime,
+id_mecanico int,
+id_cliente int,
+id_taller int,
+id_vehiculo int
+
+FOREIGN KEY (id_vehiculo) REFERENCES GETA_vehiculo(id_vehiculo),
+FOREIGN KEY (id_taller) REFERENCES GETA_taller(id_taller),
+FOREIGN KEY (id_cliente) REFERENCES GETA_cliente(id_cliente),
+FOREIGN KEY (id_mecanico) REFERENCES GETA_mecanico(id_mecanico)
+
+); 

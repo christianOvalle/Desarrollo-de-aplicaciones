@@ -17,6 +17,7 @@ namespace ProyectoTaller.Conexion
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Clientes()
         {
+            this.Facturacion = new HashSet<Facturacion>();
             this.Vehiculos = new HashSet<Vehiculos>();
         }
     
@@ -28,6 +29,8 @@ namespace ProyectoTaller.Conexion
         public string telefono { get; set; }
         public Nullable<System.DateTime> fecha_registro { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Facturacion> Facturacion { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Vehiculos> Vehiculos { get; set; }
     }

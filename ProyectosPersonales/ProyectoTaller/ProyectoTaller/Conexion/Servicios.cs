@@ -14,9 +14,17 @@ namespace ProyectoTaller.Conexion
     
     public partial class Servicios
     {
-        public int id { get; set; }
-        public string nombre { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Servicios()
+        {
+            this.Detalle_Reparacion = new HashSet<Detalle_Reparacion>();
+        }
+    
+        public int id_servicio { get; set; }
         public string tipo_servicio { get; set; }
         public Nullable<int> costo { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Detalle_Reparacion> Detalle_Reparacion { get; set; }
     }
 }

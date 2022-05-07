@@ -12,94 +12,98 @@ namespace ProyectoTaller.Vistas
 {
     public partial class Vehiculo : Form
     {
+        Conexion.db_taller_infotepEntities db_Taller = new Conexion.db_taller_infotepEntities();
+
         public Vehiculo()
         {
             InitializeComponent();
-            LlenarGrid();
+            SetDataGrid();
+
         }
 
-        Cvehiculo Cvehiculo = new Cvehiculo();
-        Conexion.Vehiculos Vehi = new Conexion.Vehiculos();
-        int id;
-
-        private void LlenarGrid() {
-
-            var leer = Cvehiculo.Leer();
-            VehiculodataGridView.DataSource = leer.ToList();
-        }
-
-
-        private void Vehiculo_Load(object sender, EventArgs e)
+        public void SetDataGrid()
         {
-            LlenarGrid();
+
+            VehiculodataGridView.DataSource = db_Taller.Vehiculos.ToList();
         }
 
-        public void limpiar() {
 
-            id = 0;
-            this.textBoxColor.Text = "";
-            this.textBoxMarca.Text = "";
-            this.textBoxMatricula.Text = "";
-            this.textBoxModelo.Text = "";
-            LlenarGrid();
-        }
+        public void TomarDatos()
+        {
 
-        public void Guardar() {
+            var vehiculoA = new Conexion.Vehiculos();
 
-            Conexion.Clientes clientes = new Conexion.Clientes();
-
-            Vehi.id_vehiculo = id;
-            Vehi.marca = this.textBoxMarca.Text;
-            Vehi.matricula = this.textBoxMatricula.Text;
-            Vehi.modelo = this.textBoxModelo.Text;
-            Vehi.color = this.textBoxColor.Text;
+            vehiculoA.matricula = this.textBoxMatricula.Text;
+            vehiculoA.modelo = this.textBoxModelo.Text;
+            vehiculoA.color = this.textBoxColor.Text;
             
+
+
+
+            db_Taller.Vehiculos.Add(vehiculoA);
+            db_Taller.SaveChanges();
+
+        }
+
+        private void Agregarbuttonv_Click_1(object sender, EventArgs e)
+        {
+            TomarDatos();
+            SetDataGrid();
+        }
+
+        private void Borrabuttonv_Click_1(object sender, EventArgs e)
+        {
+            int ID = Convert.ToInt32(VehiculodataGridView.CurrentRow.Cells["id_vehiculo"].Value.ToString());
+            var vehiculoB = db_Taller.Vehiculos.Find(ID);
+            db_Taller.Vehiculos.Remove(vehiculoB);
+            db_Taller.SaveChanges();
+
+            MessageBox.Show("Se elimino correctamente");
+            SetDataGrid();
         
-        }
-
-        private void Agregarbuttonv_Click(object sender, EventArgs e)
+    
+}
+     
+        private void Modificarbuttonv_Click_1(object sender, EventArgs e)
         {
-            Guardar();
-            Cvehiculo.agregar(Vehi);
-            limpiar();
+
+            String matricula= this.textBoxMatricula.Text;
+            string modelo = this.textBoxModelo.Text;
+            string color = this.textBoxColor.Text;
+                      
+            int ID = Convert.ToInt32(VehiculodataGridView.CurrentRow.Cells["id_vehiculo"].Value.ToString());
+
+
+            var vehiculoE = db_Taller.Vehiculos.Find(ID);
+
+            vehiculoE.matricula = matricula;
+            vehiculoE.modelo = modelo;
+            vehiculoE.color = color;
+           
+                       
+            db_Taller.Entry(vehiculoE).State = System.Data.Entity.EntityState.Modified;
+            db_Taller.SaveChanges();
+
+            MessageBox.Show("Se a modificado");
+
+            SetDataGrid();
 
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            if (id > 0)
-            {
-
-                Guardar();
-                Cvehiculo.actualizar(Vehi);
-                limpiar();
-            }
-        }
-
-        private void VehiculodataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (id > 0)
-            {
-
-                Guardar();
-                Cvehiculo.borrar(id);
-                limpiar();
-            }
-
-        }
-
+        
         private void VehiculodataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            id = Convert.ToInt32(VehiculodataGridView.CurrentRow.Cells["id_vehiculo"].Value.ToString());
-            textBoxMatricula.Text = VehiculodataGridView.CurrentRow.Cells["matricula"].Value.ToString();
-            textBoxModelo.Text = VehiculodataGridView.CurrentRow.Cells["modelo"].Value.ToString();
-            textBoxColor.Text = VehiculodataGridView.CurrentRow.Cells["color"].Value.ToString();
-            textBoxMarca.Text = VehiculodataGridView.CurrentRow.Cells["marca"].Value.ToString();
+            int id = Convert.ToInt32(this.VehiculodataGridView.CurrentRow.Cells["id_vehiculo"].Value);
+            var valor = db_Taller.Vehiculos.Find(id);
+
+            this.textBoxMatricula.Text = valor.matricula;
+            this.textBoxMatricula.Text = valor.modelo;
+            this.textBoxColor.Text = valor.color;
+                     
         }
+        
+       
+
     }
 }
+

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="903de8069b2043a4a15a4fd973dc7ed9" Name="Diagram1">
+        <EntityTypeShape EntityType="db_taller_infotepModel.Clientes" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_taller_infotepModel.Detalle_Reparacion" Width="1.5" PointX="5.25" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_taller_infotepModel.Facturacion" Width="1.5" PointX="7.5" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_taller_infotepModel.Inventario_Respuesto" Width="1.5" PointX="3" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_taller_infotepModel.Mecanicos" Width="1.5" PointX="5.25" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_taller_infotepModel.Servicios" Width="1.5" PointX="3" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_taller_infotepModel.Taller" Width="1.5" PointX="5.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_taller_infotepModel.Vehiculos" Width="1.5" PointX="3" PointY="9.25" IsExpanded="true" />
+        <AssociationConnector Association="db_taller_infotepModel.FK__Facturaci__id_cl__33D4B598" ManuallyRouted="false" />
+        <AssociationConnector Association="db_taller_infotepModel.FK__Vehiculos__id_cl__267ABA7A" ManuallyRouted="false" />
+        <AssociationConnector Association="db_taller_infotepModel.FK__Detalle_R__id_in__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="db_taller_infotepModel.FK__Detalle_R__id_se__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="db_taller_infotepModel.FK__Detalle_R__id_ve__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="db_taller_infotepModel.FK__Facturaci__id_me__32E0915F" ManuallyRouted="false" />
+        <AssociationConnector Association="db_taller_infotepModel.FK__Facturaci__id_ta__34C8D9D1" ManuallyRouted="false" />
+        <AssociationConnector Association="db_taller_infotepModel.FK__Facturaci__id_ve__35BCFE0A" ManuallyRouted="false" />
+        <AssociationConnector Association="db_taller_infotepModel.FK__Mecanicos__id_ve__2B3F6F97" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

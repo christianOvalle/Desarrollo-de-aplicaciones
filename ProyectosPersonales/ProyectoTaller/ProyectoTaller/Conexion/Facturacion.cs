@@ -14,15 +14,18 @@ namespace ProyectoTaller.Conexion
     
     public partial class Facturacion
     {
-        public int id { get; set; }
-        public string rnc_taller { get; set; }
-        public string modelo_vehiculo { get; set; }
-        public string marca_vehiculo { get; set; }
-        public string color_vehiculo { get; set; }
-        public string nombre_servicio { get; set; }
-        public string nombre_taller { get; set; }
-        public string direccion_taller { get; set; }
-        public string telefono_taller { get; set; }
-        public Nullable<int> costo_trabajo { get; set; }
+        public int id_factura { get; set; }
+        public Nullable<System.DateTime> fecha_salida { get; set; }
+        public Nullable<int> id_mecanico { get; set; }
+        public Nullable<int> id_cliente { get; set; }
+        public Nullable<int> id_taller { get; set; }
+        public Nullable<int> id_vehiculo { get; set; }
+        public Nullable<int> subtotal { get; set; }
+        public Nullable<int> total { get; set; }
+    
+        public virtual Clientes Clientes { get; set; }
+        public virtual Mecanicos Mecanicos { get; set; }
+        public virtual Taller Taller { get; set; }
+        public virtual Vehiculos Vehiculos { get; set; }
     }
 }

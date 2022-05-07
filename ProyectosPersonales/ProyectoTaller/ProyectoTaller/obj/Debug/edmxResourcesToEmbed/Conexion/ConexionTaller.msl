@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="db_taller_infotepModelStoreContainer" CdmEntityContainer="db_taller_infotepEntities">
+    <EntitySetMapping Name="Clientes">
+      <EntityTypeMapping TypeName="db_taller_infotepModel.Clientes">
+        <MappingFragment StoreEntitySet="Clientes">
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apellido" ColumnName="apellido" />
+          <ScalarProperty Name="cedula" ColumnName="cedula" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="fecha_registro" ColumnName="fecha_registro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Detalle_Reparacion">
+      <EntityTypeMapping TypeName="db_taller_infotepModel.Detalle_Reparacion">
+        <MappingFragment StoreEntitySet="Detalle_Reparacion">
+          <ScalarProperty Name="id_detalle" ColumnName="id_detalle" />
+          <ScalarProperty Name="id_vehiculo" ColumnName="id_vehiculo" />
+          <ScalarProperty Name="id_inventario" ColumnName="id_inventario" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="mano_obra" ColumnName="mano_obra" />
+          <ScalarProperty Name="id_servicio" ColumnName="id_servicio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Facturacion">
+      <EntityTypeMapping TypeName="db_taller_infotepModel.Facturacion">
+        <MappingFragment StoreEntitySet="Facturacion">
+          <ScalarProperty Name="id_factura" ColumnName="id_factura" />
+          <ScalarProperty Name="fecha_salida" ColumnName="fecha_salida" />
+          <ScalarProperty Name="id_mecanico" ColumnName="id_mecanico" />
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+          <ScalarProperty Name="id_taller" ColumnName="id_taller" />
+          <ScalarProperty Name="id_vehiculo" ColumnName="id_vehiculo" />
+          <ScalarProperty Name="subtotal" ColumnName="subtotal" />
+          <ScalarProperty Name="total" ColumnName="total" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inventario_Respuesto">
+      <EntityTypeMapping TypeName="db_taller_infotepModel.Inventario_Respuesto">
+        <MappingFragment StoreEntitySet="Inventario_Respuesto">
+          <ScalarProperty Name="id_inventario" ColumnName="id_inventario" />
+          <ScalarProperty Name="nombre_pieza" ColumnName="nombre_pieza" />
+          <ScalarProperty Name="precio_pieza" ColumnName="precio_pieza" />
+          <ScalarProperty Name="cantidad_disponible" ColumnName="cantidad_disponible" />
+          <ScalarProperty Name="estado_piezas" ColumnName="estado_piezas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mecanicos">
+      <EntityTypeMapping TypeName="db_taller_infotepModel.Mecanicos">
+        <MappingFragment StoreEntitySet="Mecanicos">
+          <ScalarProperty Name="id_mecanico" ColumnName="id_mecanico" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apellido" ColumnName="apellido" />
+          <ScalarProperty Name="cedula" ColumnName="cedula" />
+          <ScalarProperty Name="fecha_nacimiento" ColumnName="fecha_nacimiento" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="id_vehiculo" ColumnName="id_vehiculo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Servicios">
+      <EntityTypeMapping TypeName="db_taller_infotepModel.Servicios">
+        <MappingFragment StoreEntitySet="Servicios">
+          <ScalarProperty Name="id_servicio" ColumnName="id_servicio" />
+          <ScalarProperty Name="tipo_servicio" ColumnName="tipo_servicio" />
+          <ScalarProperty Name="costo" ColumnName="costo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Taller">
+      <EntityTypeMapping TypeName="db_taller_infotepModel.Taller">
+        <MappingFragment StoreEntitySet="Taller">
+          <ScalarProperty Name="id_taller" ColumnName="id_taller" />
+          <ScalarProperty Name="rnc" ColumnName="rnc" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vehiculos">
+      <EntityTypeMapping TypeName="db_taller_infotepModel.Vehiculos">
+        <MappingFragment StoreEntitySet="Vehiculos">
+          <ScalarProperty Name="id_vehiculo" ColumnName="id_vehiculo" />
+          <ScalarProperty Name="matricula" ColumnName="matricula" />
+          <ScalarProperty Name="modelo" ColumnName="modelo" />
+          <ScalarProperty Name="color" ColumnName="color" />
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
