@@ -146,7 +146,7 @@ namespace ProyectoTaller
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(13, 274);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(653, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(835, 150);
             this.dataGridView1.TabIndex = 55;
             // 
             // Borrarbutton
@@ -192,7 +192,7 @@ namespace ProyectoTaller
             // 
             // precioManoObra
             // 
-            this.precioManoObra.Location = new System.Drawing.Point(518, 56);
+            this.precioManoObra.Location = new System.Drawing.Point(518, 58);
             this.precioManoObra.Maximum = new decimal(new int[] {
             1215752192,
             23,
@@ -207,7 +207,7 @@ namespace ProyectoTaller
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(725, 536);
+            this.ClientSize = new System.Drawing.Size(874, 536);
             this.Controls.Add(this.precioManoObra);
             this.Controls.Add(this.precioPieza);
             this.Controls.Add(this.Borrarbutton);

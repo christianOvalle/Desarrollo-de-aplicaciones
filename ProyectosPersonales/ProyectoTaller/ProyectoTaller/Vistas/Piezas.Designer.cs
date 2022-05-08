@@ -146,7 +146,8 @@ namespace ProyectoTaller.Vistas
             this.dataGridViewHerramientas.Location = new System.Drawing.Point(326, 42);
             this.dataGridViewHerramientas.Name = "dataGridViewHerramientas";
             this.dataGridViewHerramientas.Size = new System.Drawing.Size(634, 263);
-            this.dataGridViewHerramientas.TabIndex = 10;            
+            this.dataGridViewHerramientas.TabIndex = 10;
+            this.dataGridViewHerramientas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewHerramientas_CellDoubleClick);
             // 
             // label6
             // 

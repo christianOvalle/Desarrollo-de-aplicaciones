@@ -50,13 +50,13 @@ namespace ProyectoTaller
             var tablaServicio = (from servicio in conexion.Servicios
                                  select new
                                  {
-                                     servicio.tipo_servicio,
-                                     servicio.costo
+                                     servicio.id_servicio,
+                                     servicio.tipo_servicio
                                  }).ToList();
 
             manoObra.DataSource = tablaServicio;
             manoObra.DisplayMember = "tipo_servicio";
-            manoObra.ValueMember = "costo";
+            manoObra.ValueMember = "id_servicio";
         }
 
         private void detalleForm_Load(object sender, EventArgs e)
@@ -80,15 +80,16 @@ namespace ProyectoTaller
             detalle.id_servicio = int.Parse(manoObra.SelectedValue.ToString());
             decimal subtotal = (precioPieza.Value * cantidad.Value) + precioManoObra.Value;
             detalle.mano_obra = int.Parse(subtotal.ToString());
+            
+            
 
             conexion.Detalle_Reparacion.Add(detalle);
             conexion.SaveChanges();
             llenarDgv();
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
+        
 
-        }
+       
     }
 }

@@ -40,8 +40,8 @@ namespace ProyectoTaller.Vistas
             this.textBoxCedula = new System.Windows.Forms.TextBox();
             this.textBoxFecha = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.radioButtonD = new System.Windows.Forms.RadioButton();
             this.radioButtonN = new System.Windows.Forms.RadioButton();
+            this.radioButtonD = new System.Windows.Forms.RadioButton();
             this.buttonadd = new System.Windows.Forms.Button();
             this.buttondel = new System.Windows.Forms.Button();
             this.buttonedit = new System.Windows.Forms.Button();
@@ -56,6 +56,7 @@ namespace ProyectoTaller.Vistas
             this.MecanicodataGridView.Name = "MecanicodataGridView";
             this.MecanicodataGridView.Size = new System.Drawing.Size(696, 181);
             this.MecanicodataGridView.TabIndex = 0;
+            this.MecanicodataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MecanicodataGridView_CellDoubleClick);
             // 
             // label1
             // 
@@ -144,17 +145,6 @@ namespace ProyectoTaller.Vistas
             this.panel1.Size = new System.Drawing.Size(178, 31);
             this.panel1.TabIndex = 10;
             // 
-            // radioButtonD
-            // 
-            this.radioButtonD.AutoSize = true;
-            this.radioButtonD.Location = new System.Drawing.Point(3, 7);
-            this.radioButtonD.Name = "radioButtonD";
-            this.radioButtonD.Size = new System.Drawing.Size(74, 17);
-            this.radioButtonD.TabIndex = 0;
-            this.radioButtonD.TabStop = true;
-            this.radioButtonD.Text = "Disponible";
-            this.radioButtonD.UseVisualStyleBackColor = true;
-            // 
             // radioButtonN
             // 
             this.radioButtonN.AutoSize = true;
@@ -165,6 +155,17 @@ namespace ProyectoTaller.Vistas
             this.radioButtonN.TabStop = true;
             this.radioButtonN.Text = "No Disponible";
             this.radioButtonN.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonD
+            // 
+            this.radioButtonD.AutoSize = true;
+            this.radioButtonD.Location = new System.Drawing.Point(3, 7);
+            this.radioButtonD.Name = "radioButtonD";
+            this.radioButtonD.Size = new System.Drawing.Size(74, 17);
+            this.radioButtonD.TabIndex = 0;
+            this.radioButtonD.TabStop = true;
+            this.radioButtonD.Text = "Disponible";
+            this.radioButtonD.UseVisualStyleBackColor = true;
             // 
             // buttonadd
             // 
@@ -182,7 +183,7 @@ namespace ProyectoTaller.Vistas
             this.buttondel.Name = "buttondel";
             this.buttondel.Size = new System.Drawing.Size(120, 38);
             this.buttondel.TabIndex = 12;
-            this.buttondel.Text = "Editar";
+            this.buttondel.Text = "Borrar";
             this.buttondel.UseVisualStyleBackColor = true;
             this.buttondel.Click += new System.EventHandler(this.buttondel_Click);
             // 
@@ -192,9 +193,9 @@ namespace ProyectoTaller.Vistas
             this.buttonedit.Name = "buttonedit";
             this.buttonedit.Size = new System.Drawing.Size(120, 38);
             this.buttonedit.TabIndex = 13;
-            this.buttonedit.Text = "Añadir";
+            this.buttonedit.Text = "Editar";
             this.buttonedit.UseVisualStyleBackColor = true;
-            
+            this.buttonedit.Click += new System.EventHandler(this.buttonedit_Click);
             // 
             // Mecanico
             // 

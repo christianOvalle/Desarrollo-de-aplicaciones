@@ -67,19 +67,14 @@ namespace ProyectoTaller.Vistas
         public void Editar()
         {
 
-            String nombre = this.textBoxNombre.Text;
-            string apellido = this.textBoxApellido.Text;
-            string cedula = this.textBoxCedula.Text;
-            string fecha = this.textBoxFecha.Text;
+           
             int ID = Convert.ToInt32(MecanicodataGridView.CurrentRow.Cells["id_mecanico"].Value.ToString());
-
-
             var mecanicoE = db_TallerEntities.Mecanicos.Find(ID);
 
-            mecanicoE.nombre = nombre;
-            mecanicoE.apellido = apellido;
-            mecanicoE.cedula = cedula;
-            mecanicoE.fecha_nacimiento = fecha;
+            mecanicoE.nombre = this.textBoxNombre.Text;
+            mecanicoE.apellido = this.textBoxApellido.Text;
+            mecanicoE.cedula = this.textBoxCedula.Text;
+            mecanicoE.fecha_nacimiento = this.textBoxFecha.Text;
             if (radioButtonD.Checked)
             {
                 mecanicoE.estatus = false;
@@ -106,23 +101,22 @@ namespace ProyectoTaller.Vistas
             SetDataGrid();
         }
 
-      
-        private void Borrabuttonv_Click_1(object sender, EventArgs e)
+        private void buttonedit_Click(object sender, EventArgs e)
         {
-            Borrar();
-
+            Editar();
         }
-   
+
+
         private void buttondel_Click(object sender, EventArgs e)
         {
 
-            Editar();
+            Borrar();
 
         }
 
-        private void VehiculodataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
 
+        private void MecanicodataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
             int id = Convert.ToInt32(this.MecanicodataGridView.CurrentRow.Cells["id_mecanico"].Value);
             var valor = db_TallerEntities.Mecanicos.Find(id);
 
@@ -131,7 +125,7 @@ namespace ProyectoTaller.Vistas
             this.textBoxCedula.Text = valor.cedula;
             this.textBoxFecha.Text = valor.fecha_nacimiento;
         }
-      
+
     }
 }
 

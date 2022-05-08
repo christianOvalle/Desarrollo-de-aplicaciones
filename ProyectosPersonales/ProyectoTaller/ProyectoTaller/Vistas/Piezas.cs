@@ -60,7 +60,7 @@ namespace ProyectoTaller.Vistas
         public void borrar()
         {
 
-            int ID = Convert.ToInt32(dataGridViewHerramientas.CurrentRow.Cells["id"].Value.ToString());
+            int ID = Convert.ToInt32(dataGridViewHerramientas.CurrentRow.Cells["id_inventario"].Value.ToString());
             var herramientasB = db_.Inventario_Respuesto.Find(ID);
             db_.Inventario_Respuesto.Remove(herramientasB);
             db_.SaveChanges();
@@ -76,7 +76,7 @@ namespace ProyectoTaller.Vistas
             String nombreP = this.textBoxnombrepieza.Text;           
             int precioP = Convert.ToInt32(this.textBoxpreciodepieza.Text);
             int cantidad_dP = Convert.ToInt32(this.textBoxcantidaddisponible.Text);
-            int ID = Convert.ToInt32(dataGridViewHerramientas.CurrentRow.Cells["id"].Value.ToString());
+            int ID = Convert.ToInt32(dataGridViewHerramientas.CurrentRow.Cells["id_inventario"].Value.ToString());
 
 
             var herramientasE = db_.Inventario_Respuesto.Find(ID);
@@ -125,17 +125,18 @@ namespace ProyectoTaller.Vistas
             editar();
         }
 
-        private void Piezas_MouseDoubleClick(object sender, DataGridViewCellEventArgs e)
+      
+
+        private void dataGridViewHerramientas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            int id = Convert.ToInt32(this.dataGridViewHerramientas.CurrentRow.Cells["id"].Value);
+            int id = Convert.ToInt32(this.dataGridViewHerramientas.CurrentRow.Cells["id_inventario"].Value);
             var valor = db_.Inventario_Respuesto.Find(id);
 
-            this.textBoxnombrepieza.Text = valor.nombre_pieza;           
+            this.textBoxnombrepieza.Text = valor.nombre_pieza;
             this.textBoxpreciodepieza.Text = valor.precio_pieza.ToString();
             this.textBoxcantidaddisponible.Text = valor.cantidad_disponible.ToString();
         }
-
     }
     }
 
