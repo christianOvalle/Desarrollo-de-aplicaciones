@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="db_taller_infotepModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Clientes">
+    <Key>
+      <PropertyRef Name="id_cliente" />
+    </Key>
+    <Property Name="id_cliente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cedula" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="direccion" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fecha_registro" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Facturacion" Relationship="Self.FK__Facturaci__id_cl__33D4B598" FromRole="Clientes" ToRole="Facturacion" />
+    <NavigationProperty Name="Vehiculos" Relationship="Self.FK__Vehiculos__id_cl__267ABA7A" FromRole="Clientes" ToRole="Vehiculos" />
+  </EntityType>
+  <EntityType Name="Detalle_Reparacion">
+    <Key>
+      <PropertyRef Name="id_detalle" />
+    </Key>
+    <Property Name="id_detalle" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_vehiculo" Type="Int32" />
+    <Property Name="id_inventario" Type="Int32" />
+    <Property Name="precio" Type="Int32" />
+    <Property Name="cantidad" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="mano_obra" Type="Int32" />
+    <Property Name="id_servicio" Type="Int32" />
+    <NavigationProperty Name="Inventario_Respuesto" Relationship="Self.FK__Detalle_R__id_in__398D8EEE" FromRole="Detalle_Reparacion" ToRole="Inventario_Respuesto" />
+    <NavigationProperty Name="Servicios" Relationship="Self.FK__Detalle_R__id_se__3A81B327" FromRole="Detalle_Reparacion" ToRole="Servicios" />
+    <NavigationProperty Name="Vehiculos" Relationship="Self.FK__Detalle_R__id_ve__38996AB5" FromRole="Detalle_Reparacion" ToRole="Vehiculos" />
+  </EntityType>
+  <EntityType Name="Facturacion">
+    <Key>
+      <PropertyRef Name="id_factura" />
+    </Key>
+    <Property Name="id_factura" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fecha_salida" Type="DateTime" Precision="3" />
+    <Property Name="id_mecanico" Type="Int32" />
+    <Property Name="id_cliente" Type="Int32" />
+    <Property Name="id_taller" Type="Int32" />
+    <Property Name="id_vehiculo" Type="Int32" />
+    <Property Name="subtotal" Type="Int32" />
+    <Property Name="total" Type="Int32" />
+    <NavigationProperty Name="Clientes" Relationship="Self.FK__Facturaci__id_cl__33D4B598" FromRole="Facturacion" ToRole="Clientes" />
+    <NavigationProperty Name="Mecanicos" Relationship="Self.FK__Facturaci__id_me__32E0915F" FromRole="Facturacion" ToRole="Mecanicos" />
+    <NavigationProperty Name="Taller" Relationship="Self.FK__Facturaci__id_ta__34C8D9D1" FromRole="Facturacion" ToRole="Taller" />
+    <NavigationProperty Name="Vehiculos" Relationship="Self.FK__Facturaci__id_ve__35BCFE0A" FromRole="Facturacion" ToRole="Vehiculos" />
+  </EntityType>
+  <EntityType Name="Inventario_Respuesto">
+    <Key>
+      <PropertyRef Name="id_inventario" />
+    </Key>
+    <Property Name="id_inventario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre_pieza" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="precio_pieza" Type="Int32" />
+    <Property Name="cantidad_disponible" Type="Int32" />
+    <Property Name="estado_piezas" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Detalle_Reparacion" Relationship="Self.FK__Detalle_R__id_in__398D8EEE" FromRole="Inventario_Respuesto" ToRole="Detalle_Reparacion" />
+  </EntityType>
+  <EntityType Name="Mecanicos">
+    <Key>
+      <PropertyRef Name="id_mecanico" />
+    </Key>
+    <Property Name="id_mecanico" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cedula" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fecha_nacimiento" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="estatus" Type="Boolean" />
+    <Property Name="id_vehiculo" Type="Int32" />
+    <NavigationProperty Name="Facturacion" Relationship="Self.FK__Facturaci__id_me__32E0915F" FromRole="Mecanicos" ToRole="Facturacion" />
+    <NavigationProperty Name="Vehiculos" Relationship="Self.FK__Mecanicos__id_ve__2B3F6F97" FromRole="Mecanicos" ToRole="Vehiculos" />
+  </EntityType>
+  <EntityType Name="Servicios">
+    <Key>
+      <PropertyRef Name="id_servicio" />
+    </Key>
+    <Property Name="id_servicio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tipo_servicio" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="costo" Type="Int32" />
+    <NavigationProperty Name="Detalle_Reparacion" Relationship="Self.FK__Detalle_R__id_se__3A81B327" FromRole="Servicios" ToRole="Detalle_Reparacion" />
+  </EntityType>
+  <EntityType Name="Taller">
+    <Key>
+      <PropertyRef Name="id_taller" />
+    </Key>
+    <Property Name="id_taller" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="rnc" Type="Int32" />
+    <Property Name="direccion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="correo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Facturacion" Relationship="Self.FK__Facturaci__id_ta__34C8D9D1" FromRole="Taller" ToRole="Facturacion" />
+  </EntityType>
+  <EntityType Name="Vehiculos">
+    <Key>
+      <PropertyRef Name="id_vehiculo" />
+    </Key>
+    <Property Name="id_vehiculo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="matricula" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="modelo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="color" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="id_cliente" Type="Int32" />
+    <NavigationProperty Name="Clientes" Relationship="Self.FK__Vehiculos__id_cl__267ABA7A" FromRole="Vehiculos" ToRole="Clientes" />
+    <NavigationProperty Name="Detalle_Reparacion" Relationship="Self.FK__Detalle_R__id_ve__38996AB5" FromRole="Vehiculos" ToRole="Detalle_Reparacion" />
+    <NavigationProperty Name="Facturacion" Relationship="Self.FK__Facturaci__id_ve__35BCFE0A" FromRole="Vehiculos" ToRole="Facturacion" />
+    <NavigationProperty Name="Mecanicos" Relationship="Self.FK__Mecanicos__id_ve__2B3F6F97" FromRole="Vehiculos" ToRole="Mecanicos" />
+  </EntityType>
+  <Association Name="FK__Facturaci__id_cl__33D4B598">
+    <End Role="Clientes" Type="Self.Clientes" Multiplicity="0..1" />
+    <End Role="Facturacion" Type="Self.Facturacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clientes">
+        <PropertyRef Name="id_cliente" />
+      </Principal>
+      <Dependent Role="Facturacion">
+        <PropertyRef Name="id_cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Vehiculos__id_cl__267ABA7A">
+    <End Role="Clientes" Type="Self.Clientes" Multiplicity="0..1" />
+    <End Role="Vehiculos" Type="Self.Vehiculos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clientes">
+        <PropertyRef Name="id_cliente" />
+      </Principal>
+      <Dependent Role="Vehiculos">
+        <PropertyRef Name="id_cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Detalle_R__id_in__398D8EEE">
+    <End Role="Inventario_Respuesto" Type="Self.Inventario_Respuesto" Multiplicity="0..1" />
+    <End Role="Detalle_Reparacion" Type="Self.Detalle_Reparacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Inventario_Respuesto">
+        <PropertyRef Name="id_inventario" />
+      </Principal>
+      <Dependent Role="Detalle_Reparacion">
+        <PropertyRef Name="id_inventario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Detalle_R__id_se__3A81B327">
+    <End Role="Servicios" Type="Self.Servicios" Multiplicity="0..1" />
+    <End Role="Detalle_Reparacion" Type="Self.Detalle_Reparacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Servicios">
+        <PropertyRef Name="id_servicio" />
+      </Principal>
+      <Dependent Role="Detalle_Reparacion">
+        <PropertyRef Name="id_servicio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Detalle_R__id_ve__38996AB5">
+    <End Role="Vehiculos" Type="Self.Vehiculos" Multiplicity="0..1" />
+    <End Role="Detalle_Reparacion" Type="Self.Detalle_Reparacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vehiculos">
+        <PropertyRef Name="id_vehiculo" />
+      </Principal>
+      <Dependent Role="Detalle_Reparacion">
+        <PropertyRef Name="id_vehiculo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Facturaci__id_me__32E0915F">
+    <End Role="Mecanicos" Type="Self.Mecanicos" Multiplicity="0..1" />
+    <End Role="Facturacion" Type="Self.Facturacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mecanicos">
+        <PropertyRef Name="id_mecanico" />
+      </Principal>
+      <Dependent Role="Facturacion">
+        <PropertyRef Name="id_mecanico" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Facturaci__id_ta__34C8D9D1">
+    <End Role="Taller" Type="Self.Taller" Multiplicity="0..1" />
+    <End Role="Facturacion" Type="Self.Facturacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Taller">
+        <PropertyRef Name="id_taller" />
+      </Principal>
+      <Dependent Role="Facturacion">
+        <PropertyRef Name="id_taller" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Facturaci__id_ve__35BCFE0A">
+    <End Role="Vehiculos" Type="Self.Vehiculos" Multiplicity="0..1" />
+    <End Role="Facturacion" Type="Self.Facturacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vehiculos">
+        <PropertyRef Name="id_vehiculo" />
+      </Principal>
+      <Dependent Role="Facturacion">
+        <PropertyRef Name="id_vehiculo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Mecanicos__id_ve__2B3F6F97">
+    <End Role="Vehiculos" Type="Self.Vehiculos" Multiplicity="0..1" />
+    <End Role="Mecanicos" Type="Self.Mecanicos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vehiculos">
+        <PropertyRef Name="id_vehiculo" />
+      </Principal>
+      <Dependent Role="Mecanicos">
+        <PropertyRef Name="id_vehiculo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="db_taller_infotepEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Clientes" EntityType="Self.Clientes" />
+    <EntitySet Name="Detalle_Reparacion" EntityType="Self.Detalle_Reparacion" />
+    <EntitySet Name="Facturacion" EntityType="Self.Facturacion" />
+    <EntitySet Name="Inventario_Respuesto" EntityType="Self.Inventario_Respuesto" />
+    <EntitySet Name="Mecanicos" EntityType="Self.Mecanicos" />
+    <EntitySet Name="Servicios" EntityType="Self.Servicios" />
+    <EntitySet Name="Taller" EntityType="Self.Taller" />
+    <EntitySet Name="Vehiculos" EntityType="Self.Vehiculos" />
+    <AssociationSet Name="FK__Facturaci__id_cl__33D4B598" Association="Self.FK__Facturaci__id_cl__33D4B598">
+      <End Role="Clientes" EntitySet="Clientes" />
+      <End Role="Facturacion" EntitySet="Facturacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Vehiculos__id_cl__267ABA7A" Association="Self.FK__Vehiculos__id_cl__267ABA7A">
+      <End Role="Clientes" EntitySet="Clientes" />
+      <End Role="Vehiculos" EntitySet="Vehiculos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Detalle_R__id_in__398D8EEE" Association="Self.FK__Detalle_R__id_in__398D8EEE">
+      <End Role="Inventario_Respuesto" EntitySet="Inventario_Respuesto" />
+      <End Role="Detalle_Reparacion" EntitySet="Detalle_Reparacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Detalle_R__id_se__3A81B327" Association="Self.FK__Detalle_R__id_se__3A81B327">
+      <End Role="Servicios" EntitySet="Servicios" />
+      <End Role="Detalle_Reparacion" EntitySet="Detalle_Reparacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Detalle_R__id_ve__38996AB5" Association="Self.FK__Detalle_R__id_ve__38996AB5">
+      <End Role="Vehiculos" EntitySet="Vehiculos" />
+      <End Role="Detalle_Reparacion" EntitySet="Detalle_Reparacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Facturaci__id_me__32E0915F" Association="Self.FK__Facturaci__id_me__32E0915F">
+      <End Role="Mecanicos" EntitySet="Mecanicos" />
+      <End Role="Facturacion" EntitySet="Facturacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Facturaci__id_ta__34C8D9D1" Association="Self.FK__Facturaci__id_ta__34C8D9D1">
+      <End Role="Taller" EntitySet="Taller" />
+      <End Role="Facturacion" EntitySet="Facturacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Facturaci__id_ve__35BCFE0A" Association="Self.FK__Facturaci__id_ve__35BCFE0A">
+      <End Role="Vehiculos" EntitySet="Vehiculos" />
+      <End Role="Facturacion" EntitySet="Facturacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Mecanicos__id_ve__2B3F6F97" Association="Self.FK__Mecanicos__id_ve__2B3F6F97">
+      <End Role="Vehiculos" EntitySet="Vehiculos" />
+      <End Role="Mecanicos" EntitySet="Mecanicos" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
