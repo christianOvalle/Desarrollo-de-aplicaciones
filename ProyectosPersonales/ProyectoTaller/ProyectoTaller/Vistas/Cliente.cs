@@ -12,7 +12,7 @@ namespace ProyectoTaller.Vistas
 {
     public partial class Cliente : Form
     {
-        Conexion.db_TallerEntities dbtaller = new Conexion.db_TallerEntities();
+        Conexion.db_TallerEntities1 dbtaller = new Conexion.db_TallerEntities1();
 
 
         public Cliente()
@@ -120,6 +120,7 @@ namespace ProyectoTaller.Vistas
             Conexion.Clientes Cli = new Conexion.Clientes();
             var valor = dbtaller.Clientes.Where(x => x.id_cliente == id).FirstOrDefault();
 
+            this.textBox1.Text = valor.id_cliente.ToString();
             this.NombretextBox.Text = valor.nombre;
             this.ApellidotextBox.Text = valor.apellido;
             this.CedulatextBox.Text = valor.cedula;

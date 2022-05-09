@@ -4,32 +4,28 @@
 }
 
 <h2>DatosFactura</h2>
+<h3>@ViewBag.nombreT</h3>
+
 <table>
-    <div class="row">
+      
+        <tr>
+            <td>@ViewBag.rncT</td>
+            <td>@ViewBag.nombreT</td>
+            <td>@ViewBag.direccionT</td>
+            <td>@ViewBag.telefonoT</td>
+            <td>@ViewBag.MarcaV</td>
+            <td>@ViewBag.ModeloV</td>
+            <td>@ViewBag.Colorv</td>
+            <td>@ViewBag.nombreS</td>
+            <td>@ViewBag.costoS</td>
 
-        @foreach (Taller.Models.Facturacion item in Model)
-        {
-
-           
-                <tr>
-                    <td>@item.nombre_taller</td>
-                    <td>@item.rnc_taller</td>
-                    <td>@item.direccion_taller</td>
-                    <td>@item.telefono_taller</td>
-                    <td>@item.marca_vehiculo</td>
-                    <td>@item.modelo_vehiculo</td>
-                    <td>@item.color_vehiculo</td>
-                    <td>@item.nombre_servicio</td>
-                    <td>@item.costo_trabajo</td>
-
-                </tr>
+        </tr>
 
 
 
 
-                }
+        <h2>@ViewBag.hola</h2>
 
-
-
-        </div>
+     
     </table>
+    

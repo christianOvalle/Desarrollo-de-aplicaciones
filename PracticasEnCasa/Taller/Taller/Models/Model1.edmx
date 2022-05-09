@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="db_TallerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="db_TallerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Clientes">
           <Key>
             <PropertyRef Name="id_cliente" />
@@ -15,6 +15,7 @@
           <Property Name="cedula" Type="varchar" MaxLength="50" />
           <Property Name="direccion" Type="varchar" MaxLength="150" />
           <Property Name="telefono" Type="varchar" MaxLength="50" />
+          <Property Name="SituacionVehiculo" Type="varchar" MaxLength="500" />
           <Property Name="fecha_registro" Type="datetime" />
         </EntityType>
         <EntityType Name="Detalle_Reparacion">
@@ -153,7 +154,8 @@
             <End Role="Vehiculos" EntitySet="Vehiculos" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="db_TallerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -167,6 +169,7 @@
           <Property Name="cedula" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="direccion" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Name="telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SituacionVehiculo" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
           <Property Name="fecha_registro" Type="DateTime" Precision="3" />
           <NavigationProperty Name="Vehiculos" Relationship="Self.FK__Vehiculos__id_ve__286302EC" FromRole="Clientes" ToRole="Vehiculos" />
         </EntityType>
@@ -290,7 +293,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="db_TallerEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="db_TallerEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Clientes" EntityType="Self.Clientes" />
           <EntitySet Name="Detalle_Reparacion" EntityType="Self.Detalle_Reparacion" />
           <EntitySet Name="Facturacion" EntityType="Self.Facturacion" />
@@ -314,7 +317,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="db_TallerModelStoreContainer" CdmEntityContainer="db_TallerEntities">
+        <EntityContainerMapping StorageEntityContainer="db_TallerModelStoreContainer" CdmEntityContainer="db_TallerEntities1">
           <EntitySetMapping Name="Clientes">
             <EntityTypeMapping TypeName="db_TallerModel.Clientes">
               <MappingFragment StoreEntitySet="Clientes">
@@ -324,6 +327,7 @@
                 <ScalarProperty Name="cedula" ColumnName="cedula" />
                 <ScalarProperty Name="direccion" ColumnName="direccion" />
                 <ScalarProperty Name="telefono" ColumnName="telefono" />
+                <ScalarProperty Name="SituacionVehiculo" ColumnName="SituacionVehiculo" />
                 <ScalarProperty Name="fecha_registro" ColumnName="fecha_registro" />
               </MappingFragment>
             </EntityTypeMapping>

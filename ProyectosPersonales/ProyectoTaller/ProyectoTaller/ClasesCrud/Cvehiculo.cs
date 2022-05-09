@@ -11,7 +11,7 @@ namespace ProyectoTaller
      class Cvehiculo
     {
 
-        Conexion.db_TallerEntities dbTaller = new Conexion.db_TallerEntities();
+        Conexion.db_TallerEntities1 dbTaller = new Conexion.db_TallerEntities1();
 
         public void agregar(Conexion.Vehiculos vehiculoAdd) {
             try

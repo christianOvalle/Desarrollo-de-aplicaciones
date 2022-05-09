@@ -24,7 +24,7 @@ apellido VARCHAR(50),
 cedula VARCHAR(50),
 direccion VARCHAR(150),
 telefono VARCHAR(50),
-fecha_registro de registro
+fecha_registro de registro datetime
  
 
 );

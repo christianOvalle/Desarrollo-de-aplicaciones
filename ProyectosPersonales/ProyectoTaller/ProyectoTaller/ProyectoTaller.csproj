@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>ProyectoTaller</RootNamespace>
     <AssemblyName>ProyectoTaller</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -56,49 +56,49 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClasesCrud\Cvehiculo.cs" />
     <Compile Include="Conexion\Clientes.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Conexion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Conexion\Conexion.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Conexion.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Conexion\Conexion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Conexion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Conexion\Conexion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Conexion.edmx</DependentUpon>
     </Compile>
     <Compile Include="Conexion\Detalle_Reparacion.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Conexion.tt</DependentUpon>
     </Compile>
     <Compile Include="Conexion\Facturacion.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Conexion.tt</DependentUpon>
     </Compile>
     <Compile Include="Conexion\Inventario_Respuesto.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Conexion.tt</DependentUpon>
     </Compile>
     <Compile Include="Conexion\Mecanicos.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Conexion\Model1.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Conexion\Model1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Conexion\Model1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
+      <DependentUpon>Conexion.tt</DependentUpon>
     </Compile>
     <Compile Include="Conexion\Servicios.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Conexion.tt</DependentUpon>
     </Compile>
     <Compile Include="Conexion\Taller.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Conexion.tt</DependentUpon>
     </Compile>
     <Compile Include="Conexion\Usuario.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Conexion.tt</DependentUpon>
     </Compile>
     <Compile Include="Conexion\Vehiculos.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Conexion.tt</DependentUpon>
     </Compile>
-    <Compile Include="ClasesCrud\Cvehiculo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vistas\Cliente.cs">
@@ -147,12 +147,12 @@
     <EmbeddedResource Include="Vistas\VistaPrincipal.resx">
       <DependentUpon>VistaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="Conexion\Model1.edmx">
+    <EntityDeploy Include="Conexion\Conexion.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+      <LastGenOutput>Conexion.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Conexion\Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
+    <None Include="Conexion\Conexion.edmx.diagram">
+      <DependentUpon>Conexion.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -171,17 +171,16 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="Conexion\Model1.Context.tt">
+    <Content Include="Conexion\Conexion.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Conexion.edmx</DependentUpon>
+      <LastGenOutput>Conexion.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Conexion\Model1.tt">
+    <Content Include="Conexion\Conexion.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
+      <DependentUpon>Conexion.edmx</DependentUpon>
+      <LastGenOutput>Conexion.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

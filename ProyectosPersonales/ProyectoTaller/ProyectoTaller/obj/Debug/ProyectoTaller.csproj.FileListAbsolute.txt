@@ -34,3 +34,4 @@ C:\Users\Cristhian\Documents\practicaspoo2021\ProyectosPersonales\ProyectoTaller
 C:\Users\Cristhian\Documents\practicaspoo2021\ProyectosPersonales\ProyectoTaller\ProyectoTaller\obj\Debug\ProyectoTaller.exe
 C:\Users\Cristhian\Documents\practicaspoo2021\ProyectosPersonales\ProyectoTaller\ProyectoTaller\obj\Debug\ProyectoTaller.pdb
 C:\Users\Cristhian\Documents\practicaspoo2021\ProyectosPersonales\ProyectoTaller\ProyectoTaller\obj\Debug\ProyectoTaller.Vistas.Vehiculo.resources
+C:\Users\Infotep2019\Documents\GitHub\practicaspoo2021\ProyectosPersonales\ProyectoTaller\ProyectoTaller\obj\Debug\ProyectoTaller.Vistas.Vehiculo.resources
