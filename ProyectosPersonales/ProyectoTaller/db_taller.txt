@@ -50,7 +50,6 @@ nombre_pieza VARCHAR(50),
 precio_pieza int,
 cantidad_disponible int,
 estado_piezas VARCHAR(50)
-
 );
 
 create TABLE Servicios(
@@ -67,7 +66,7 @@ id_mecanico int REFERENCES Mecanicos(id_mecanico),
 id_cliente int REFERENCES Clientes(id_cliente),
 id_taller int REFERENCES Taller(id_taller),
 id_vehiculo int REFERENCES Vehiculos(id_vehiculo),
-SubTotal int,
+subtotal int,
 total int
 );
 

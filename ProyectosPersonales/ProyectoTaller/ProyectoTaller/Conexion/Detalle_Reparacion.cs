@@ -14,10 +14,16 @@ namespace ProyectoTaller.Conexion
     
     public partial class Detalle_Reparacion
     {
-        public int id { get; set; }
-        public string nombre_servicio { get; set; }
-        public string tipo_servicio { get; set; }
-        public string nombre_mecanico { get; set; }
-        public Nullable<int> costo_trabajo { get; set; }
+        public int id_detalle { get; set; }
+        public Nullable<int> id_vehiculo { get; set; }
+        public Nullable<int> id_inventario { get; set; }
+        public Nullable<int> precio { get; set; }
+        public string cantidad { get; set; }
+        public Nullable<int> mano_obra { get; set; }
+        public Nullable<int> id_servicio { get; set; }
+    
+        public virtual Inventario_Respuesto Inventario_Respuesto { get; set; }
+        public virtual Servicios Servicios { get; set; }
+        public virtual Vehiculos Vehiculos { get; set; }
     }
 }

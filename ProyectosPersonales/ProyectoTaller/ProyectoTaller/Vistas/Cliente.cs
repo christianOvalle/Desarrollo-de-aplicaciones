@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProyectoTaller.Conexion;
 
 namespace ProyectoTaller.Vistas
 {
     public partial class Cliente : Form
     {
-        Conexion.db_TallerEntities1 dbtaller = new Conexion.db_TallerEntities1();
+        db_taller_infotepEntities  dbtaller = new db_taller_infotepEntities();
 
 
         public Cliente()
@@ -28,18 +29,24 @@ namespace ProyectoTaller.Vistas
 
             ClientesdataGridView.DataSource = dbtaller.Clientes.ToList();
         }
-
+        public void limpiarCampos()
+        {
+            idCliente.Value = 0;
+            NombretextBox.Clear();
+            ApellidotextBox.Clear();
+            CedulatextBox.Clear();
+            DirecciontextBox.Clear();
+            TelefonotextBox.Clear();
+        }
 
         public void TomarDatos()
         {
 
-            Conexion.Clientes clienteA = new Conexion.Clientes();
-
-
+            var clienteA = new Conexion.Clientes();
 
             clienteA.nombre = this.NombretextBox.Text;
             clienteA.apellido = this.ApellidotextBox.Text;
-            clienteA.cedula = this.ApellidotextBox.Text;
+            clienteA.cedula = this.CedulatextBox.Text;
             clienteA.direccion = this.DirecciontextBox.Text;
             clienteA.telefono = this.TelefonotextBox.Text;
 
@@ -55,78 +62,42 @@ namespace ProyectoTaller.Vistas
         {
             TomarDatos();
             SetDataGrid();
+            limpiarCampos();
         }
 
         private void Borrarbutton_Click(object sender, EventArgs e)
         {
-            int ID = int.Parse(this.textBox1.Text);
-            Conexion.Clientes ClienteB = dbtaller.Clientes.Find(ID);
-            dbtaller.Clientes.Remove(ClienteB);
+            Clientes clientesE = dbtaller.Clientes.Find(idCliente.Value);
+            dbtaller.Clientes.Remove(clientesE);
             dbtaller.SaveChanges();
 
             MessageBox.Show("Se elimino correctamente");
             SetDataGrid();
+            limpiarCampos();
         }
 
-        public void Editar()
-        {
-            Conexion.Clientes clienteE = new Conexion.Clientes();
-
-            this.NombretextBox.Text = clienteE.nombre;
-            this.ApellidotextBox.Text = clienteE.apellido;
-            this.CedulatextBox.Text = clienteE.cedula;
-            this.TelefonotextBox.Text = clienteE.telefono;
-            this.DirecciontextBox.Text = clienteE.direccion;
-        }
 
 
         private void Modificarbutton_Click(object sender, EventArgs e)
         {
+            
+            Clientes clientesE = dbtaller.Clientes.Find(idCliente.Value);       
+            clientesE.nombre = this.NombretextBox.Text;
+            clientesE.apellido = this.ApellidotextBox.Text;
+            clientesE.cedula = this.CedulatextBox.Text;
+            clientesE.telefono = this.TelefonotextBox.Text;
+            clientesE.direccion = this.DirecciontextBox.Text;            
 
-
-
-            String Nombre = this.NombretextBox.Text;
-            string Apellido = this.ApellidotextBox.Text;
-            string Cedula = this.CedulatextBox.Text;
-            string Telefono = this.TelefonotextBox.Text;
-            string Direccion = this.DirecciontextBox.Text;
-            int ID = int.Parse(this.textBox1.Text);
-
-
-            Conexion.Clientes clientesE = dbtaller.Clientes.Find(ID);
-
-            clientesE.nombre = Nombre;
-            clientesE.apellido = Apellido;
-            clientesE.cedula = Cedula;
-            clientesE.telefono = Telefono;
-            clientesE.direccion = Direccion;
-            clientesE.fecha_registro = DateTime.Now;
-
-
-
-            dbtaller.Entry(clientesE).State = System.Data.Entity.EntityState.Modified;
+            //dbtaller.Entry(clientesE).State = System.Data.Entity.EntityState.Modified;
             dbtaller.SaveChanges();
 
             MessageBox.Show("Se a modificado");
 
+            limpiarCampos();
             SetDataGrid();
 
         } 
 
-        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-            int id = Convert.ToInt32(this.ClientesdataGridView.CurrentRow.Cells["id_cliente"].Value);
-            Conexion.Clientes Cli = new Conexion.Clientes();
-            var valor = dbtaller.Clientes.Where(x => x.id_cliente == id).FirstOrDefault();
-
-            this.textBox1.Text = valor.id_cliente.ToString();
-            this.NombretextBox.Text = valor.nombre;
-            this.ApellidotextBox.Text = valor.apellido;
-            this.CedulatextBox.Text = valor.cedula;
-            this.TelefonotextBox.Text = valor.telefono;
-            this.DirecciontextBox.Text = valor.direccion;
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -135,6 +106,21 @@ namespace ProyectoTaller.Vistas
             vehiculo.ShowDialog();
             
 
+        }
+
+        private void RellenarCampos(object sender, DataGridViewCellEventArgs e)
+        {
+            idCliente.Value = decimal.Parse(ClientesdataGridView.CurrentRow.Cells[0].Value.ToString());
+            NombretextBox.Text = ClientesdataGridView.CurrentRow.Cells[1].Value.ToString();
+            ApellidotextBox.Text = ClientesdataGridView.CurrentRow.Cells[2].Value.ToString();
+            CedulatextBox.Text = ClientesdataGridView.CurrentRow.Cells[3].Value.ToString();
+            DirecciontextBox.Text = ClientesdataGridView.CurrentRow.Cells[4].Value.ToString();
+            TelefonotextBox.Text = ClientesdataGridView.CurrentRow.Cells[5].Value.ToString();
+        }
+
+        private void ClientesdataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
         }
     }
     }
