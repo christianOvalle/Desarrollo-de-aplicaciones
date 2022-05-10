@@ -8,7 +8,7 @@ namespace Taller.Controllers
 {
     public class LoginController : Controller
     {
-        Models.db_TallerEntities db = new Models.db_TallerEntities();
+        Models.db_TallerEntities1 db = new Models.db_TallerEntities1();
         
 
         // GET: Login

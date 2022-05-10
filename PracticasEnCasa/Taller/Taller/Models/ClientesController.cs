@@ -11,7 +11,7 @@ namespace Taller.Models
 {
     public class ClientesController : Controller
     {
-        private db_TallerEntities db = new db_TallerEntities();
+        private db_TallerEntities1 db = new db_TallerEntities1();
 
         // GET: Clientes
         public ActionResult Index()

@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="db_TallerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Clientes">
+    <Key>
+      <PropertyRef Name="id_cliente" />
+    </Key>
+    <Property Name="id_cliente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" />
+    <Property Name="apellido" Type="varchar" MaxLength="50" />
+    <Property Name="cedula" Type="varchar" MaxLength="50" />
+    <Property Name="direccion" Type="varchar" MaxLength="150" />
+    <Property Name="telefono" Type="varchar" MaxLength="50" />
+    <Property Name="fecha_registro" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Detalle_Reparacion">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre_servicio" Type="varchar" MaxLength="100" />
+    <Property Name="tipo_servicio" Type="varchar" MaxLength="100" />
+    <Property Name="nombre_mecanico" Type="varchar" MaxLength="100" />
+    <Property Name="costo_trabajo" Type="int" />
+  </EntityType>
+  <EntityType Name="Facturacion">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rnc_taller" Type="varchar" MaxLength="100" />
+    <Property Name="modelo_vehiculo" Type="varchar" MaxLength="100" />
+    <Property Name="marca_vehiculo" Type="varchar" MaxLength="100" />
+    <Property Name="color_vehiculo" Type="varchar" MaxLength="100" />
+    <Property Name="nombre_servicio" Type="varchar" MaxLength="100" />
+    <Property Name="nombre_taller" Type="varchar" MaxLength="100" />
+    <Property Name="direccion_taller" Type="varchar" MaxLength="100" />
+    <Property Name="telefono_taller" Type="varchar" MaxLength="100" />
+    <Property Name="costo_trabajo" Type="int" />
+  </EntityType>
+  <EntityType Name="Inventario_Respuesto">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre_pieza" Type="varchar" MaxLength="50" />
+    <Property Name="cantidad_pieza" Type="int" />
+    <Property Name="precio_pieza" Type="int" />
+    <Property Name="cantidad_disponible" Type="int" />
+    <Property Name="estado_piezas" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Mecanicos">
+    <Key>
+      <PropertyRef Name="id_mecanico" />
+    </Key>
+    <Property Name="id_mecanico" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_taller_mecanico" Type="int" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" />
+    <Property Name="apellido" Type="varchar" MaxLength="50" />
+    <Property Name="cedula" Type="varchar" MaxLength="50" />
+    <Property Name="fecha_nacimiento" Type="varchar" MaxLength="100" />
+    <Property Name="estatus" Type="bit" />
+  </EntityType>
+  <EntityType Name="Servicios">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="150" />
+    <Property Name="tipo_servicio" Type="varchar" MaxLength="150" />
+    <Property Name="costo" Type="int" />
+  </EntityType>
+  <EntityType Name="Taller">
+    <Key>
+      <PropertyRef Name="id_taller" />
+    </Key>
+    <Property Name="id_taller" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rnc" Type="varchar" MaxLength="100" />
+    <Property Name="direccion" Type="varchar" MaxLength="100" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" />
+    <Property Name="telefono" Type="varchar" MaxLength="50" />
+    <Property Name="correo" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" />
+    <Property Name="apellido" Type="varchar" MaxLength="50" />
+    <Property Name="contrasena" Type="varchar" MaxLength="50" />
+    <Property Name="cedula" Type="varchar" MaxLength="50" />
+    <Property Name="direccion" Type="varchar" MaxLength="150" />
+    <Property Name="telefono" Type="varchar" MaxLength="50" />
+    <Property Name="correo" Type="varchar" MaxLength="100" />
+    <Property Name="rol" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Vehiculos">
+    <Key>
+      <PropertyRef Name="id_vehiculo" />
+    </Key>
+    <Property Name="id_vehiculo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_vehiculo_cliente" Type="int" />
+    <Property Name="matricula" Type="varchar" MaxLength="50" />
+    <Property Name="modelo" Type="varchar" MaxLength="50" />
+    <Property Name="color" Type="varchar" MaxLength="50" />
+    <Property Name="marca" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK__Mecanicos__id_ta__2D27B809">
+    <End Role="Taller" Type="Self.Taller" Multiplicity="0..1" />
+    <End Role="Mecanicos" Type="Self.Mecanicos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Taller">
+        <PropertyRef Name="id_taller" />
+      </Principal>
+      <Dependent Role="Mecanicos">
+        <PropertyRef Name="id_taller_mecanico" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Vehiculos__id_ve__286302EC">
+    <End Role="Clientes" Type="Self.Clientes" Multiplicity="0..1" />
+    <End Role="Vehiculos" Type="Self.Vehiculos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clientes">
+        <PropertyRef Name="id_cliente" />
+      </Principal>
+      <Dependent Role="Vehiculos">
+        <PropertyRef Name="id_vehiculo_cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="db_TallerModelStoreContainer">
+    <EntitySet Name="Clientes" EntityType="Self.Clientes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Detalle_Reparacion" EntityType="Self.Detalle_Reparacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Facturacion" EntityType="Self.Facturacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Inventario_Respuesto" EntityType="Self.Inventario_Respuesto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mecanicos" EntityType="Self.Mecanicos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Servicios" EntityType="Self.Servicios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Taller" EntityType="Self.Taller" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Vehiculos" EntityType="Self.Vehiculos" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Mecanicos__id_ta__2D27B809" Association="Self.FK__Mecanicos__id_ta__2D27B809">
+      <End Role="Taller" EntitySet="Taller" />
+      <End Role="Mecanicos" EntitySet="Mecanicos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Vehiculos__id_ve__286302EC" Association="Self.FK__Vehiculos__id_ve__286302EC">
+      <End Role="Clientes" EntitySet="Clientes" />
+      <End Role="Vehiculos" EntitySet="Vehiculos" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
