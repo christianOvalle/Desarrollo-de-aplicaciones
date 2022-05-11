@@ -22,11 +22,16 @@ namespace ProyectoTaller
         private void llenarDgv()
         {
             var DetalleF = (from Df in conexion.Detalle_Reparacion
+                            join invn in conexion.Inventario_Respuesto
+                            on Df.id_inventario equals invn.id_inventario
+                            join servn in conexion.Servicios
+                            on Df.id_servicio equals servn.id_servicio
+                           
                           select new
                           {
                               Df.id_detalle,
-                              Df.id_inventario,
-                              Df.id_servicio,
+                              invn.nombre_pieza,
+                              servn.tipo_servicio,                           
                               Df.precio,
                               Df.cantidad,
                               Df.mano_obra
@@ -95,14 +100,8 @@ namespace ProyectoTaller
             decimal subtotal = (precioPieza.Value * cantidad.Value) + precioManoObra.Value;
             detalle.mano_obra = int.Parse(subtotal.ToString());
             detalle.precio = inv.precio_pieza;
-            
-
-           
-            
-            
-            
-            
-
+                                  
+                                              
             conexion.Detalle_Reparacion.Add(detalle);
             conexion.SaveChanges();
             llenarDgv();

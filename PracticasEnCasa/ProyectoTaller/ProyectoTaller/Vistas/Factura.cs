@@ -28,7 +28,7 @@ namespace ProyectoTaller.Vistas
         public void addClientes() {
 
             var datosc = (from cli in db_Taller.Clientes
-                          select new
+                         select new
                           {
                               cli.id_cliente,
                               cli.nombre,

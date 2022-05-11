@@ -26,6 +26,8 @@ namespace ProyectoTaller.Vistas
         {
 
             var datosM = (from mec in db_TallerEntities.Mecanicos
+                          join veh in db_TallerEntities.Vehiculos
+                          on mec.id_vehiculo equals veh.id_vehiculo
                           select new
                           {
                               mec.id_mecanico,
@@ -33,10 +35,12 @@ namespace ProyectoTaller.Vistas
                               mec.apellido,
                               mec.cedula,
                               mec.fecha_nacimiento,
-                              mec.estatus, 
+                              mec.estatus,                             
+                              veh.matricula,
                               mec.id_vehiculo
                          }).ToList();
             MecanicodataGridView.DataSource = datosM;
+           
         }
 
         public void LimpiarCampos() { 
@@ -52,11 +56,13 @@ namespace ProyectoTaller.Vistas
         {
 
             var mecanicoA = new Conexion.Mecanicos();
+            var veh = new Conexion.Vehiculos();
 
             mecanicoA.nombre = this.textBoxNombre.Text;
             mecanicoA.apellido = this.textBoxApellido.Text;
             mecanicoA.cedula = this.textBoxCedula.Text;
             mecanicoA.fecha_nacimiento = this.textBoxFecha.Text;
+            veh.matricula = "";
             if (radioButtonD.Checked) {
                 mecanicoA.estatus = false;
             }
@@ -64,9 +70,10 @@ namespace ProyectoTaller.Vistas
 
                 mecanicoA.estatus = true;
             }
-
+            db_TallerEntities.Vehiculos.Add(veh);
             db_TallerEntities.Mecanicos.Add(mecanicoA);
             db_TallerEntities.SaveChanges();
+            SetDataGrid();
 
         }
 
