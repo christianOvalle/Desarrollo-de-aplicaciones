@@ -1,0 +1,16 @@
+C:\Users\Infotep2019\Documents\GitHub\practicaspoo2021\ProyectosPersonales\crud\crud\bin\Debug\crud.exe.config
+C:\Users\Infotep2019\Documents\GitHub\practicaspoo2021\ProyectosPersonales\crud\crud\bin\Debug\crud.exe
+C:\Users\Infotep2019\Documents\GitHub\practicaspoo2021\ProyectosPersonales\crud\crud\bin\Debug\crud.pdb
+C:\Users\Infotep2019\Documents\GitHub\practicaspoo2021\ProyectosPersonales\crud\crud\bin\Debug\EntityFramework.dll
+C:\Users\Infotep2019\Documents\GitHub\practicaspoo2021\ProyectosPersonales\crud\crud\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Infotep2019\Documents\GitHub\practicaspoo2021\ProyectosPersonales\crud\crud\bin\Debug\EntityFramework.xml
+C:\Users\Infotep2019\Documents\GitHub\practicaspoo2021\ProyectosPersonales\crud\crud\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Infotep2019\Documents\GitHub\practicaspoo2021\ProyectosPersonales\crud\crud\obj\Debug\crud.csproj.AssemblyReference.cache
+C:\Users\Infotep2019\Documents\GitHub\practicaspoo2021\ProyectosPersonales\crud\crud\obj\Debug\crud.csproj.SuggestedBindingRedirects.cache
+C:\Users\Infotep2019\Documents\GitHub\practicaspoo2021\ProyectosPersonales\crud\crud\obj\Debug\crud.Form1.resources
+C:\Users\Infotep2019\Documents\GitHub\practicaspoo2021\ProyectosPersonales\crud\crud\obj\Debug\crud.Properties.Resources.resources
+C:\Users\Infotep2019\Documents\GitHub\practicaspoo2021\ProyectosPersonales\crud\crud\obj\Debug\crud.csproj.GenerateResource.cache
+C:\Users\Infotep2019\Documents\GitHub\practicaspoo2021\ProyectosPersonales\crud\crud\obj\Debug\crud.csproj.CoreCompileInputs.cache
+C:\Users\Infotep2019\Documents\GitHub\practicaspoo2021\ProyectosPersonales\crud\crud\obj\Debug\crud.csproj.CopyComplete
+C:\Users\Infotep2019\Documents\GitHub\practicaspoo2021\ProyectosPersonales\crud\crud\obj\Debug\crud.exe
+C:\Users\Infotep2019\Documents\GitHub\practicaspoo2021\ProyectosPersonales\crud\crud\obj\Debug\crud.pdb

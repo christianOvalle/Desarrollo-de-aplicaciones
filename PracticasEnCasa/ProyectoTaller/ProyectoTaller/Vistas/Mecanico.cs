@@ -94,7 +94,7 @@ namespace ProyectoTaller.Vistas
         {
 
            
-            int ID = Convert.ToInt32(MecanicodataGridView.CurrentRow.Cells["id_mecanico"].Value.ToString());
+            int ID = int.Parse(MecanicodataGridView.CurrentRow.Cells["id_mecanico"].Value.ToString());
             var mecanicoE = db_TallerEntities.Mecanicos.Find(ID);
 
             mecanicoE.nombre = this.textBoxNombre.Text;
