@@ -1,0 +1,17 @@
+C:\Users\Cristhian\Documents\practicaspoo2021\ProyectosPersonales\ProyectoTranslogic\ProyectoTranslogic\bin\Debug\ProyectoTranslogic.exe.config
+C:\Users\Cristhian\Documents\practicaspoo2021\ProyectosPersonales\ProyectoTranslogic\ProyectoTranslogic\bin\Debug\ProyectoTranslogic.exe
+C:\Users\Cristhian\Documents\practicaspoo2021\ProyectosPersonales\ProyectoTranslogic\ProyectoTranslogic\bin\Debug\ProyectoTranslogic.pdb
+C:\Users\Cristhian\Documents\practicaspoo2021\ProyectosPersonales\ProyectoTranslogic\ProyectoTranslogic\bin\Debug\EntityFramework.dll
+C:\Users\Cristhian\Documents\practicaspoo2021\ProyectosPersonales\ProyectoTranslogic\ProyectoTranslogic\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Cristhian\Documents\practicaspoo2021\ProyectosPersonales\ProyectoTranslogic\ProyectoTranslogic\bin\Debug\EntityFramework.xml
+C:\Users\Cristhian\Documents\practicaspoo2021\ProyectosPersonales\ProyectoTranslogic\ProyectoTranslogic\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Cristhian\Documents\practicaspoo2021\ProyectosPersonales\ProyectoTranslogic\ProyectoTranslogic\obj\Debug\ProyectoTranslogic.csproj.AssemblyReference.cache
+C:\Users\Cristhian\Documents\practicaspoo2021\ProyectosPersonales\ProyectoTranslogic\ProyectoTranslogic\obj\Debug\ProyectoTranslogic.Formularios.Cliente.resources
+C:\Users\Cristhian\Documents\practicaspoo2021\ProyectosPersonales\ProyectoTranslogic\ProyectoTranslogic\obj\Debug\ProyectoTranslogic.Formularios.Principal.resources
+C:\Users\Cristhian\Documents\practicaspoo2021\ProyectosPersonales\ProyectoTranslogic\ProyectoTranslogic\obj\Debug\ProyectoTranslogic.Properties.Resources.resources
+C:\Users\Cristhian\Documents\practicaspoo2021\ProyectosPersonales\ProyectoTranslogic\ProyectoTranslogic\obj\Debug\ProyectoTranslogic.csproj.GenerateResource.cache
+C:\Users\Cristhian\Documents\practicaspoo2021\ProyectosPersonales\ProyectoTranslogic\ProyectoTranslogic\obj\Debug\ProyectoTranslogic.csproj.CoreCompileInputs.cache
+C:\Users\Cristhian\Documents\practicaspoo2021\ProyectosPersonales\ProyectoTranslogic\ProyectoTranslogic\obj\Debug\ProyectoTranslogic.csproj.CopyComplete
+C:\Users\Cristhian\Documents\practicaspoo2021\ProyectosPersonales\ProyectoTranslogic\ProyectoTranslogic\obj\Debug\ProyectoTranslogic.exe
+C:\Users\Cristhian\Documents\practicaspoo2021\ProyectosPersonales\ProyectoTranslogic\ProyectoTranslogic\obj\Debug\ProyectoTranslogic.pdb
+C:\Users\Cristhian\Documents\practicaspoo2021\ProyectosPersonales\ProyectoTranslogic\ProyectoTranslogic\obj\Debug\ProyectoTranslogic.Formularios.Evento.resources
