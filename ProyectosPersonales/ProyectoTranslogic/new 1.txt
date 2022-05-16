@@ -1,0 +1,90 @@
+
+CREATE TABLE cliente (
+    id_cliente int not null IDENTITY(1,1) primary key,
+    nombre_cliente varchar(100),
+    apellido_cliente varchar(100),
+    cedula_cliente varchar(50),
+    direccion_cliente varchar(100),
+    numero_de_tarjeta varchar(100),
+    cantidad_de_personas int,
+    banco varchar(100),
+    fecha_registro datetime 
+);
+
+CREATE TABLE eventos (
+    id_evento int not null IDENTITY(1,1) PRIMARY KEY,
+    nombre_evento varchar(200),
+    ciudad_evento varchar(150),
+    tipo_de_evento varchar(100),
+    fecha_de_evento varchar(100),
+    fecha_registro_de_event datetime,
+    id_cliente REFERENCES cliente(id_cliente)
+);
+
+CREATE TABLE companiaproveedoras (
+    id_compania int not null IDENTITY(1,1) primary key,
+    nombre varchar(100),
+    rnc varchar(100),
+    direccion varchar(250),
+    cantidad_Buses varchar(100),
+    id_safe int REFERENCES safe_journey(id_safe)
+);
+
+
+
+CREATE TABLE coordinacion_viaje (
+    id int not null IDENTITY(1,1) primary key,
+    fecha_hacia_evento varchar(50),
+    fecha_hacia_casa varchar(80),
+    tipo_transporte varchar(100),
+	id_cliente REFERENCES cliente(id_cliente),
+	id_evento int REFERENCES eventos(id_evento)
+);
+
+
+
+CREATE TABLE detalle_de_viaje (
+    id_detalle int not null IDENTITY(1,1) primary key,
+    kilometros_recorridos float  NULL,
+    subtotal float,
+    costo_total float,
+    id_cliente REFERENCES cliente(id_cliente),
+    id_evento int REFERENCES eventos(id_evento),
+    id_vehiculo int REFERENCES vehiculos(id_vehiculo)
+);
+
+
+
+CREATE TABLE eventos (
+    id_evento int not null IDENTITY(1,1) PRIMARY KEY,
+    nombre_evento varchar(200),
+    ciudad_evento varchar(150),
+    tipo_de_evento varchar(100),
+    fecha_de_evento varchar(100),
+    fecha_registro_de_event datetime,
+    id_cliente REFERENCES cliente(id_cliente)
+);
+
+
+
+CREATE TABLE safe_journey (
+    id_safe int not null IDENTITY(1,1) PRIMARY KEY,
+    nombre_empresa varchar(100),
+    RNC_empresa varchar(100),
+    direccion_empresa varchar(250)
+);
+
+
+
+CREATE TABLE vehiculos (
+    id_vehiculo int not null IDENTITY(1,1) PRIMARY KEY ,
+    tipo_de_vehiculo varchar(100),
+    chofer varchar(100),
+    chofer_extra varchar(100),
+    placa varchar(20),
+    cantidad_asientas int,
+    tipo varchar(100),
+    precio_por_asiento float,
+    precio float,
+    id_compania int REFERENCES companiaproveedoras(id_compania)
+);
