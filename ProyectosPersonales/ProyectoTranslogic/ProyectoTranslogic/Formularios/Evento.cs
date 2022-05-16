@@ -12,7 +12,7 @@ namespace ProyectoTranslogic.Formularios
 {
     public partial class Evento : Form
     {
-        Modelo.db_TranslogicEntities1 db = new Modelo.db_TranslogicEntities1();
+        Modelo.db_TranslogicEntities7 db = new Modelo.db_TranslogicEntities7();
 
         public Evento()
         {
@@ -33,15 +33,30 @@ namespace ProyectoTranslogic.Formularios
                                       even.ciudad_evento,
                                       even.tipo_de_evento,
                                       even.fecha_de_evento,
-                                      even.fecha_registro_de_evento,
-                                      even.id_cliente,
-                                      cli.nombre_cliente,
+                                      even.fecha_registro_de_event,
+                                      cli.id_cliente,
+                                      cli.nombre_cliente
+                                      
 
                                   }
                     ).ToList();
 
-            dataGridViewEventos.DataSource = consultaevento;
+            dataGridViewP.DataSource = consultaevento;
+            this.labelEventos.Text = dataGridViewP.Rows.Count.ToString() + " Registros encontrados";
+
+
+            if (dataGridViewP.Rows.Count == 0)
+            {
+
+                this.buttoncoordinar.Visible = false;
+
+            }
+
+            else {
                 
+                this.buttoncoordinar.Visible = true;
+            }
+
         }
 
 
@@ -54,8 +69,8 @@ namespace ProyectoTranslogic.Formularios
 
             var clienteConsulta = (from cli in db.cliente
                                    select new
-                                   {   cli.id_cliente,
-                                       ListaClientes = cli.nombre_cliente + " " + cli.nombre_cliente
+                                   { cli.id_cliente,
+                                       ListaClientes = cli.nombre_cliente + " " + cli.apellido_cliente
                                    }
                 ).ToList();
 
@@ -75,34 +90,71 @@ namespace ProyectoTranslogic.Formularios
             eve.nombre_evento = textBoxEventoNombre.Text;
             eve.ciudad_evento = textBoxEventociudad.Text;
             eve.tipo_de_evento = comboBoxEventos.Text;
+            eve.fecha_de_evento = dateTimePicker1.Text;
+            eve.fecha_registro_de_event = DateTime.Now;
+            eve.id_cliente = int.Parse(this.comboBoxClientes.SelectedValue.ToString());
 
             db.eventos.Add(eve);
+            MessageBox.Show("Registro Agregado");
             db.SaveChanges();
+            setData();
         
         
         }
 
         public void editar() {
 
-            int id = Convert.ToInt32(dataGridViewEventos.CurrentRow.Cells[0].Value);
+            int id = Convert.ToInt32(dataGridViewP.CurrentRow.Cells[0].Value);
             Modelo.eventos evento = db.eventos.Find(id);
             evento.nombre_evento = textBoxEventoNombre.Text;
             evento.ciudad_evento = textBoxEventociudad.Text;
             evento.tipo_de_evento = comboBoxEventos.Text;
 
             db.Entry(evento).State = System.Data.Entity.EntityState.Modified;
+            MessageBox.Show("Registro Editado");
             db.SaveChanges();
+            setData();
         
         }
         public void borrar() {
 
-            int id = Convert.ToInt32(dataGridViewEventos.CurrentRow.Cells[0].Value);
+            int id = Convert.ToInt32(dataGridViewP.CurrentRow.Cells[0].Value);
             Modelo.eventos eve = db.eventos.Find(id);
             db.eventos.Remove(eve);
+            MessageBox.Show("Registro Borrado");
             db.SaveChanges();
+            setData();
 
 
         }
 
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            agregar();
+        }
+
+        private void buttonEdit_Click(object sender, EventArgs e)
+        {
+            editar();
+        }
+
+        private void buttonBorrar_Click(object sender, EventArgs e)
+        {
+            borrar();
+        }
+
+        private void buttoncoordinar_Click(object sender, EventArgs e)
+        {
+            Coordinacion coordinacion = new Coordinacion();
+            Cliente cliente = new Cliente();
+
+            int id = Convert.ToInt32(dataGridViewP.CurrentRow.Cells[0].Value);
+            Modelo.eventos evento = db.eventos.Find(id);
+            coordinacion.textBoxNombreE.Text = evento.nombre_evento;
+            coordinacion.texboxNombreC.Text = dataGridViewP.CurrentRow.Cells[7].Value.ToString();
+
+            coordinacion.ShowDialog();
+
+        }
     }
 }

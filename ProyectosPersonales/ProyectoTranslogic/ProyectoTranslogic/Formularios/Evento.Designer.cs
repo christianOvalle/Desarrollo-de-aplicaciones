@@ -32,21 +32,22 @@ namespace ProyectoTranslogic.Formularios
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxEventoNombre = new System.Windows.Forms.TextBox();
             this.buttonAdd = new System.Windows.Forms.Button();
-            this.dataGridViewEventos = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dataGridViewP = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxEventociudad = new System.Windows.Forms.TextBox();
             this.comboBoxEventos = new System.Windows.Forms.ComboBox();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonBorrar = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelEventos = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.comboBoxClientes = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEventos)).BeginInit();
+            this.buttoncoordinar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewP)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -75,19 +76,11 @@ namespace ProyectoTranslogic.Formularios
             this.buttonAdd.TabIndex = 2;
             this.buttonAdd.Text = "Agregar";
             this.buttonAdd.UseVisualStyleBackColor = false;
-            // 
-            // dataGridViewEventos
-            // 
-            this.dataGridViewEventos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewEventos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewEventos.Location = new System.Drawing.Point(6, 27);
-            this.dataGridViewEventos.Name = "dataGridViewEventos";
-            this.dataGridViewEventos.Size = new System.Drawing.Size(1205, 150);
-            this.dataGridViewEventos.TabIndex = 3;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dataGridViewEventos);
+            this.groupBox1.Controls.Add(this.dataGridViewP);
             this.groupBox1.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -95,6 +88,15 @@ namespace ProyectoTranslogic.Formularios
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Eventos Registrados";
+            // 
+            // dataGridViewP
+            // 
+            this.dataGridViewP.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewP.Location = new System.Drawing.Point(6, 24);
+            this.dataGridViewP.Name = "dataGridViewP";
+            this.dataGridViewP.Size = new System.Drawing.Size(1205, 150);
+            this.dataGridViewP.TabIndex = 0;
             // 
             // label2
             // 
@@ -140,6 +142,7 @@ namespace ProyectoTranslogic.Formularios
             this.buttonEdit.TabIndex = 11;
             this.buttonEdit.Text = "Editar";
             this.buttonEdit.UseVisualStyleBackColor = false;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // buttonBorrar
             // 
@@ -151,15 +154,15 @@ namespace ProyectoTranslogic.Formularios
             this.buttonBorrar.TabIndex = 12;
             this.buttonBorrar.Text = "Borrar";
             this.buttonBorrar.UseVisualStyleBackColor = false;
+            this.buttonBorrar.Click += new System.EventHandler(this.buttonBorrar_Click);
             // 
-            // label4
+            // labelEventos
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(1248, 184);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "label4";
+            this.labelEventos.AutoSize = true;
+            this.labelEventos.Location = new System.Drawing.Point(1248, 184);
+            this.labelEventos.Name = "labelEventos";
+            this.labelEventos.Size = new System.Drawing.Size(0, 13);
+            this.labelEventos.TabIndex = 13;
             // 
             // label5
             // 
@@ -196,17 +199,31 @@ namespace ProyectoTranslogic.Formularios
             this.label6.TabIndex = 18;
             this.label6.Text = "Cliente";
             // 
+            // buttoncoordinar
+            // 
+            this.buttoncoordinar.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.buttoncoordinar.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttoncoordinar.Location = new System.Drawing.Point(1096, 248);
+            this.buttoncoordinar.Name = "buttoncoordinar";
+            this.buttoncoordinar.Size = new System.Drawing.Size(133, 51);
+            this.buttoncoordinar.TabIndex = 19;
+            this.buttoncoordinar.Text = "Coordinar viaje";
+            this.buttoncoordinar.UseVisualStyleBackColor = false;
+            this.buttoncoordinar.Click += new System.EventHandler(this.buttoncoordinar_Click);
+            // 
             // Evento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1361, 450);
+            this.Controls.Add(this.buttoncoordinar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.comboBoxClientes);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.labelEventos);
             this.Controls.Add(this.buttonBorrar);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.comboBoxEventos);
@@ -219,8 +236,8 @@ namespace ProyectoTranslogic.Formularios
             this.Controls.Add(this.label1);
             this.Name = "Evento";
             this.Text = "Evento";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEventos)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewP)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,7 +248,6 @@ namespace ProyectoTranslogic.Formularios
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxEventoNombre;
         private System.Windows.Forms.Button buttonAdd;
-        private System.Windows.Forms.DataGridView dataGridViewEventos;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -239,10 +255,12 @@ namespace ProyectoTranslogic.Formularios
         private System.Windows.Forms.ComboBox comboBoxEventos;
         private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.Button buttonBorrar;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelEventos;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ComboBox comboBoxClientes;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button buttoncoordinar;
+        private System.Windows.Forms.DataGridView dataGridViewP;
     }
 }

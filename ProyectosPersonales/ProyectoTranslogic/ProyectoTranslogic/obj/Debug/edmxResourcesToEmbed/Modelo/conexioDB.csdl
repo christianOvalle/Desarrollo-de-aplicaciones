@@ -196,7 +196,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="db_TranslogicEntities7" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="db_TranslogicEntities3" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="cliente" EntityType="Self.cliente" />
     <EntitySet Name="companiaproveedoras" EntityType="Self.companiaproveedoras" />
     <EntitySet Name="coordinacion_viaje" EntityType="Self.coordinacion_viaje" />

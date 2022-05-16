@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="db_TranslogicModelStoreContainer" CdmEntityContainer="db_TranslogicEntities7">
+  <EntityContainerMapping StorageEntityContainer="db_TranslogicModelStoreContainer" CdmEntityContainer="db_TranslogicEntities3">
     <EntitySetMapping Name="cliente">
       <EntityTypeMapping TypeName="db_TranslogicModel.cliente">
         <MappingFragment StoreEntitySet="cliente">

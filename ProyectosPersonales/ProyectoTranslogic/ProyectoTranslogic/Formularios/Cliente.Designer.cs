@@ -149,7 +149,7 @@ namespace ProyectoTranslogic.Formularios
             // buttonadd
             // 
             this.buttonadd.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.buttonadd.Font = new System.Drawing.Font("Lucida Calligraphy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonadd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonadd.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.buttonadd.Location = new System.Drawing.Point(12, 197);
             this.buttonadd.Name = "buttonadd";
@@ -162,7 +162,7 @@ namespace ProyectoTranslogic.Formularios
             // buttondelete
             // 
             this.buttondelete.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.buttondelete.Font = new System.Drawing.Font("Lucida Calligraphy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttondelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttondelete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.buttondelete.Location = new System.Drawing.Point(165, 197);
             this.buttondelete.Name = "buttondelete";
@@ -175,7 +175,7 @@ namespace ProyectoTranslogic.Formularios
             // buttoneditar
             // 
             this.buttoneditar.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.buttoneditar.Font = new System.Drawing.Font("Lucida Calligraphy", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttoneditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttoneditar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.buttoneditar.Location = new System.Drawing.Point(330, 197);
             this.buttoneditar.Name = "buttoneditar";
@@ -187,6 +187,7 @@ namespace ProyectoTranslogic.Formularios
             // 
             // dataGridViewCliente
             // 
+            this.dataGridViewCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCliente.GridColor = System.Drawing.SystemColors.InactiveCaption;
             this.dataGridViewCliente.Location = new System.Drawing.Point(6, 28);
@@ -198,7 +199,7 @@ namespace ProyectoTranslogic.Formularios
             // labelRegistros
             // 
             this.labelRegistros.AutoSize = true;
-            this.labelRegistros.Location = new System.Drawing.Point(967, 419);
+            this.labelRegistros.Location = new System.Drawing.Point(977, 419);
             this.labelRegistros.Name = "labelRegistros";
             this.labelRegistros.Size = new System.Drawing.Size(104, 13);
             this.labelRegistros.TabIndex = 16;
@@ -216,7 +217,7 @@ namespace ProyectoTranslogic.Formularios
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dataGridViewCliente);
-            this.groupBox1.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 254);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(949, 184);
@@ -228,6 +229,7 @@ namespace ProyectoTranslogic.Formularios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1108, 450);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.comboBoxBanco);

@@ -38,6 +38,8 @@
           <Property Name="fecha_hacia_evento" Type="varchar" MaxLength="50" />
           <Property Name="fecha_hacia_casa" Type="varchar" MaxLength="80" />
           <Property Name="tipo_transporte" Type="varchar" MaxLength="100" />
+          <Property Name="id_cliente" Type="int" />
+          <Property Name="id_evento" Type="int" />
         </EntityType>
         <EntityType Name="detalle_de_viaje">
           <Key>
@@ -60,7 +62,7 @@
           <Property Name="ciudad_evento" Type="varchar" MaxLength="150" />
           <Property Name="tipo_de_evento" Type="varchar" MaxLength="100" />
           <Property Name="fecha_de_evento" Type="varchar" MaxLength="100" />
-          <Property Name="fecha_registro_de_evento" Type="datetime" />
+          <Property Name="fecha_registro_de_event" Type="datetime" />
           <Property Name="id_cliente" Type="int" />
         </EntityType>
         <EntityType Name="safe_journey">
@@ -87,7 +89,7 @@
           <Property Name="precio" Type="float" />
           <Property Name="id_compania" Type="int" />
         </EntityType>
-        <Association Name="FK__companiap__id_sa__2F10007B">
+        <Association Name="FK__companiap__id_sa__2B3F6F97">
           <End Role="safe_journey" Type="Self.safe_journey" Multiplicity="0..1" />
           <End Role="companiaproveedoras" Type="Self.companiaproveedoras" Multiplicity="*" />
           <ReferentialConstraint>
@@ -96,6 +98,30 @@
             </Principal>
             <Dependent Role="companiaproveedoras">
               <PropertyRef Name="id_safe" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__coordinac__id_cl__2E1BDC42">
+          <End Role="cliente" Type="Self.cliente" Multiplicity="0..1" />
+          <End Role="coordinacion_viaje" Type="Self.coordinacion_viaje" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cliente">
+              <PropertyRef Name="id_cliente" />
+            </Principal>
+            <Dependent Role="coordinacion_viaje">
+              <PropertyRef Name="id_cliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__coordinac__id_ev__2F10007B">
+          <End Role="eventos" Type="Self.eventos" Multiplicity="0..1" />
+          <End Role="coordinacion_viaje" Type="Self.coordinacion_viaje" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="eventos">
+              <PropertyRef Name="id_evento" />
+            </Principal>
+            <Dependent Role="coordinacion_viaje">
+              <PropertyRef Name="id_evento" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -167,9 +193,17 @@
           <EntitySet Name="eventos" EntityType="Self.eventos" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="safe_journey" EntityType="Self.safe_journey" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="vehiculos" EntityType="Self.vehiculos" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__companiap__id_sa__2F10007B" Association="Self.FK__companiap__id_sa__2F10007B">
+          <AssociationSet Name="FK__companiap__id_sa__2B3F6F97" Association="Self.FK__companiap__id_sa__2B3F6F97">
             <End Role="safe_journey" EntitySet="safe_journey" />
             <End Role="companiaproveedoras" EntitySet="companiaproveedoras" />
+          </AssociationSet>
+          <AssociationSet Name="FK__coordinac__id_cl__2E1BDC42" Association="Self.FK__coordinac__id_cl__2E1BDC42">
+            <End Role="cliente" EntitySet="cliente" />
+            <End Role="coordinacion_viaje" EntitySet="coordinacion_viaje" />
+          </AssociationSet>
+          <AssociationSet Name="FK__coordinac__id_ev__2F10007B" Association="Self.FK__coordinac__id_ev__2F10007B">
+            <End Role="eventos" EntitySet="eventos" />
+            <End Role="coordinacion_viaje" EntitySet="coordinacion_viaje" />
           </AssociationSet>
           <AssociationSet Name="FK__detalle_d__id_cl__34C8D9D1" Association="Self.FK__detalle_d__id_cl__34C8D9D1">
             <End Role="cliente" EntitySet="cliente" />
@@ -210,6 +244,7 @@
           <Property Name="cantidad_de_personas" Type="Int32" />
           <Property Name="banco" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="fecha_registro" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="coordinacion_viaje" Relationship="Self.FK__coordinac__id_cl__2E1BDC42" FromRole="cliente" ToRole="coordinacion_viaje" />
           <NavigationProperty Name="detalle_de_viaje" Relationship="Self.FK__detalle_d__id_cl__34C8D9D1" FromRole="cliente" ToRole="detalle_de_viaje" />
           <NavigationProperty Name="eventos" Relationship="Self.FK__eventos__id_clie__286302EC" FromRole="cliente" ToRole="eventos" />
         </EntityType>
@@ -223,7 +258,7 @@
           <Property Name="direccion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
           <Property Name="cantidad_Buses" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="id_safe" Type="Int32" />
-          <NavigationProperty Name="safe_journey" Relationship="Self.FK__companiap__id_sa__2F10007B" FromRole="companiaproveedoras" ToRole="safe_journey" />
+          <NavigationProperty Name="safe_journey" Relationship="Self.FK__companiap__id_sa__2B3F6F97" FromRole="companiaproveedoras" ToRole="safe_journey" />
           <NavigationProperty Name="vehiculos" Relationship="Self.FK__vehiculos__id_co__31EC6D26" FromRole="companiaproveedoras" ToRole="vehiculos" />
         </EntityType>
         <EntityType Name="coordinacion_viaje">
@@ -234,6 +269,10 @@
           <Property Name="fecha_hacia_evento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="fecha_hacia_casa" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
           <Property Name="tipo_transporte" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="id_cliente" Type="Int32" />
+          <Property Name="id_evento" Type="Int32" />
+          <NavigationProperty Name="cliente" Relationship="Self.FK__coordinac__id_cl__2E1BDC42" FromRole="coordinacion_viaje" ToRole="cliente" />
+          <NavigationProperty Name="eventos" Relationship="Self.FK__coordinac__id_ev__2F10007B" FromRole="coordinacion_viaje" ToRole="eventos" />
         </EntityType>
         <EntityType Name="detalle_de_viaje">
           <Key>
@@ -259,9 +298,10 @@
           <Property Name="ciudad_evento" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Name="tipo_de_evento" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="fecha_de_evento" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="fecha_registro_de_evento" Type="DateTime" Precision="3" />
+          <Property Name="fecha_registro_de_event" Type="DateTime" Precision="3" />
           <Property Name="id_cliente" Type="Int32" />
           <NavigationProperty Name="cliente" Relationship="Self.FK__eventos__id_clie__286302EC" FromRole="eventos" ToRole="cliente" />
+          <NavigationProperty Name="coordinacion_viaje" Relationship="Self.FK__coordinac__id_ev__2F10007B" FromRole="eventos" ToRole="coordinacion_viaje" />
           <NavigationProperty Name="detalle_de_viaje" Relationship="Self.FK__detalle_d__id_ev__35BCFE0A" FromRole="eventos" ToRole="detalle_de_viaje" />
         </EntityType>
         <EntityType Name="safe_journey">
@@ -272,7 +312,7 @@
           <Property Name="nombre_empresa" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="RNC_empresa" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="direccion_empresa" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="companiaproveedoras" Relationship="Self.FK__companiap__id_sa__2F10007B" FromRole="safe_journey" ToRole="companiaproveedoras" />
+          <NavigationProperty Name="companiaproveedoras" Relationship="Self.FK__companiap__id_sa__2B3F6F97" FromRole="safe_journey" ToRole="companiaproveedoras" />
         </EntityType>
         <EntityType Name="vehiculos">
           <Key>
@@ -291,6 +331,18 @@
           <NavigationProperty Name="companiaproveedoras" Relationship="Self.FK__vehiculos__id_co__31EC6D26" FromRole="vehiculos" ToRole="companiaproveedoras" />
           <NavigationProperty Name="detalle_de_viaje" Relationship="Self.FK__detalle_d__id_ve__36B12243" FromRole="vehiculos" ToRole="detalle_de_viaje" />
         </EntityType>
+        <Association Name="FK__coordinac__id_cl__2E1BDC42">
+          <End Role="cliente" Type="Self.cliente" Multiplicity="0..1" />
+          <End Role="coordinacion_viaje" Type="Self.coordinacion_viaje" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cliente">
+              <PropertyRef Name="id_cliente" />
+            </Principal>
+            <Dependent Role="coordinacion_viaje">
+              <PropertyRef Name="id_cliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__detalle_d__id_cl__34C8D9D1">
           <End Role="cliente" Type="Self.cliente" Multiplicity="0..1" />
           <End Role="detalle_de_viaje" Type="Self.detalle_de_viaje" Multiplicity="*" />
@@ -315,7 +367,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__companiap__id_sa__2F10007B">
+        <Association Name="FK__companiap__id_sa__2B3F6F97">
           <End Role="safe_journey" Type="Self.safe_journey" Multiplicity="0..1" />
           <End Role="companiaproveedoras" Type="Self.companiaproveedoras" Multiplicity="*" />
           <ReferentialConstraint>
@@ -336,6 +388,18 @@
             </Principal>
             <Dependent Role="vehiculos">
               <PropertyRef Name="id_compania" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__coordinac__id_ev__2F10007B">
+          <End Role="eventos" Type="Self.eventos" Multiplicity="0..1" />
+          <End Role="coordinacion_viaje" Type="Self.coordinacion_viaje" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="eventos">
+              <PropertyRef Name="id_evento" />
+            </Principal>
+            <Dependent Role="coordinacion_viaje">
+              <PropertyRef Name="id_evento" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -363,7 +427,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="db_TranslogicEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="db_TranslogicEntities7" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="cliente" EntityType="Self.cliente" />
           <EntitySet Name="companiaproveedoras" EntityType="Self.companiaproveedoras" />
           <EntitySet Name="coordinacion_viaje" EntityType="Self.coordinacion_viaje" />
@@ -371,6 +435,10 @@
           <EntitySet Name="eventos" EntityType="Self.eventos" />
           <EntitySet Name="safe_journey" EntityType="Self.safe_journey" />
           <EntitySet Name="vehiculos" EntityType="Self.vehiculos" />
+          <AssociationSet Name="FK__coordinac__id_cl__2E1BDC42" Association="Self.FK__coordinac__id_cl__2E1BDC42">
+            <End Role="cliente" EntitySet="cliente" />
+            <End Role="coordinacion_viaje" EntitySet="coordinacion_viaje" />
+          </AssociationSet>
           <AssociationSet Name="FK__detalle_d__id_cl__34C8D9D1" Association="Self.FK__detalle_d__id_cl__34C8D9D1">
             <End Role="cliente" EntitySet="cliente" />
             <End Role="detalle_de_viaje" EntitySet="detalle_de_viaje" />
@@ -379,13 +447,17 @@
             <End Role="cliente" EntitySet="cliente" />
             <End Role="eventos" EntitySet="eventos" />
           </AssociationSet>
-          <AssociationSet Name="FK__companiap__id_sa__2F10007B" Association="Self.FK__companiap__id_sa__2F10007B">
+          <AssociationSet Name="FK__companiap__id_sa__2B3F6F97" Association="Self.FK__companiap__id_sa__2B3F6F97">
             <End Role="safe_journey" EntitySet="safe_journey" />
             <End Role="companiaproveedoras" EntitySet="companiaproveedoras" />
           </AssociationSet>
           <AssociationSet Name="FK__vehiculos__id_co__31EC6D26" Association="Self.FK__vehiculos__id_co__31EC6D26">
             <End Role="companiaproveedoras" EntitySet="companiaproveedoras" />
             <End Role="vehiculos" EntitySet="vehiculos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__coordinac__id_ev__2F10007B" Association="Self.FK__coordinac__id_ev__2F10007B">
+            <End Role="eventos" EntitySet="eventos" />
+            <End Role="coordinacion_viaje" EntitySet="coordinacion_viaje" />
           </AssociationSet>
           <AssociationSet Name="FK__detalle_d__id_ev__35BCFE0A" Association="Self.FK__detalle_d__id_ev__35BCFE0A">
             <End Role="eventos" EntitySet="eventos" />
@@ -401,7 +473,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="db_TranslogicModelStoreContainer" CdmEntityContainer="db_TranslogicEntities1">
+        <EntityContainerMapping StorageEntityContainer="db_TranslogicModelStoreContainer" CdmEntityContainer="db_TranslogicEntities7">
           <EntitySetMapping Name="cliente">
             <EntityTypeMapping TypeName="db_TranslogicModel.cliente">
               <MappingFragment StoreEntitySet="cliente">
@@ -436,6 +508,8 @@
                 <ScalarProperty Name="fecha_hacia_evento" ColumnName="fecha_hacia_evento" />
                 <ScalarProperty Name="fecha_hacia_casa" ColumnName="fecha_hacia_casa" />
                 <ScalarProperty Name="tipo_transporte" ColumnName="tipo_transporte" />
+                <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+                <ScalarProperty Name="id_evento" ColumnName="id_evento" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -460,7 +534,7 @@
                 <ScalarProperty Name="ciudad_evento" ColumnName="ciudad_evento" />
                 <ScalarProperty Name="tipo_de_evento" ColumnName="tipo_de_evento" />
                 <ScalarProperty Name="fecha_de_evento" ColumnName="fecha_de_evento" />
-                <ScalarProperty Name="fecha_registro_de_evento" ColumnName="fecha_registro_de_evento" />
+                <ScalarProperty Name="fecha_registro_de_event" ColumnName="fecha_registro_de_event" />
                 <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -508,7 +582,7 @@
         <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
-        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>
     </Options>
     <!-- Diagram content (shape and connector positions) -->

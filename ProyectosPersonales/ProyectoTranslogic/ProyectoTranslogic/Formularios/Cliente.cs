@@ -14,7 +14,7 @@ namespace ProyectoTranslogic.Formularios
 
       
     {
-        Modelo.db_TranslogicEntities1 db_Translogic = new Modelo.db_TranslogicEntities1();  
+        Modelo.db_TranslogicEntities7 db_Translogic = new Modelo.db_TranslogicEntities7();  
 
         public Cliente()
         {
@@ -37,10 +37,8 @@ namespace ProyectoTranslogic.Formularios
         }
         public void setData() {
 
-            var ConsultaCliente = (from clien in db_Translogic.cliente
-                                   join even in db_Translogic.eventos
-                                   on clien.id_cliente equals even.id_cliente
-                                   select new
+            var ConsultaCliente = (from clien in db_Translogic.cliente                                                                 
+                              select new
                                    {   
                                        clien.id_cliente,
                                        clien.nombre_cliente,
@@ -48,11 +46,10 @@ namespace ProyectoTranslogic.Formularios
                                        clien.cedula_cliente,
                                        clien.direccion_cliente,
                                        clien.numero_de_tarjeta,
-                                       clien.banco,
-                                       even.nombre_evento
-
-
+                                       clien.banco
+                                       
                                    }).ToList();
+
 
             this.dataGridViewCliente.DataSource = ConsultaCliente;
             this.labelRegistros.Text = dataGridViewCliente.Rows.Count.ToString() + " Registros encontrados";
