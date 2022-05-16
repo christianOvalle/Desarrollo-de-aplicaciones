@@ -54,13 +54,13 @@ namespace ProyectoTranslogic.Formularios
 
             var clienteConsulta = (from cli in db.cliente
                                    select new
-                                   {
-                                       /*ListaClientes = cli.nombre_cliente + " " +*/ cli.nombre_cliente
+                                   {   cli.id_cliente,
+                                       ListaClientes = cli.nombre_cliente + " " + cli.nombre_cliente
                                    }
                 ).ToList();
 
             comboBoxClientes.DataSource = clienteConsulta;
-            comboBoxClientes.DisplayMember = "nombre_cliente";
+            comboBoxClientes.DisplayMember = "ListaClientes";
             comboBoxClientes.ValueMember = "id_cliente";
             
 
