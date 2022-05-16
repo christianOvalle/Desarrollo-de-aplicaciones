@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="db_TranslogicModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="cliente">
+    <Key>
+      <PropertyRef Name="id_cliente" />
+    </Key>
+    <Property Name="id_cliente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre_cliente" Type="varchar" MaxLength="100" />
+    <Property Name="apellido_cliente" Type="varchar" MaxLength="100" />
+    <Property Name="cedula_cliente" Type="varchar" MaxLength="50" />
+    <Property Name="direccion_cliente" Type="varchar" MaxLength="100" />
+    <Property Name="numero_de_tarjeta" Type="varchar" MaxLength="100" />
+    <Property Name="cantidad_de_personas" Type="int" />
+    <Property Name="banco" Type="varchar" MaxLength="100" />
+    <Property Name="fecha_registro" Type="datetime" />
+  </EntityType>
+  <EntityType Name="companiaproveedoras">
+    <Key>
+      <PropertyRef Name="id_compania" />
+    </Key>
+    <Property Name="id_compania" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" />
+    <Property Name="rnc" Type="varchar" MaxLength="100" />
+    <Property Name="direccion" Type="varchar" MaxLength="250" />
+    <Property Name="cantidad_Buses" Type="varchar" MaxLength="100" />
+    <Property Name="id_safe" Type="int" />
+  </EntityType>
+  <EntityType Name="coordinacion_viaje">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fecha_hacia_evento" Type="varchar" MaxLength="50" />
+    <Property Name="fecha_hacia_casa" Type="varchar" MaxLength="80" />
+    <Property Name="tipo_transporte" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="detalle_de_viaje">
+    <Key>
+      <PropertyRef Name="id_detalle" />
+    </Key>
+    <Property Name="id_detalle" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="kilometros_recorridos" Type="float" />
+    <Property Name="subtotal" Type="float" />
+    <Property Name="costo_total" Type="float" />
+    <Property Name="id_cliente" Type="int" />
+    <Property Name="id_evento" Type="int" />
+    <Property Name="id_vehiculo" Type="int" />
+  </EntityType>
+  <EntityType Name="eventos">
+    <Key>
+      <PropertyRef Name="id_evento" />
+    </Key>
+    <Property Name="id_evento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre_evento" Type="varchar" MaxLength="200" />
+    <Property Name="ciudad_evento" Type="varchar" MaxLength="150" />
+    <Property Name="tipo_de_evento" Type="varchar" MaxLength="100" />
+    <Property Name="fecha_de_evento" Type="varchar" MaxLength="100" />
+    <Property Name="fecha_registro_de_evento" Type="datetime" />
+    <Property Name="id_cliente" Type="int" />
+  </EntityType>
+  <EntityType Name="safe_journey">
+    <Key>
+      <PropertyRef Name="id_safe" />
+    </Key>
+    <Property Name="id_safe" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre_empresa" Type="varchar" MaxLength="100" />
+    <Property Name="RNC_empresa" Type="varchar" MaxLength="100" />
+    <Property Name="direccion_empresa" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="vehiculos">
+    <Key>
+      <PropertyRef Name="id_vehiculo" />
+    </Key>
+    <Property Name="id_vehiculo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tipo_de_vehiculo" Type="varchar" MaxLength="100" />
+    <Property Name="chofer" Type="varchar" MaxLength="100" />
+    <Property Name="chofer_extra" Type="varchar" MaxLength="100" />
+    <Property Name="placa" Type="varchar" MaxLength="20" />
+    <Property Name="cantidad_asientas" Type="int" />
+    <Property Name="tipo" Type="varchar" MaxLength="100" />
+    <Property Name="precio_por_asiento" Type="float" />
+    <Property Name="precio" Type="float" />
+    <Property Name="id_compania" Type="int" />
+  </EntityType>
+  <Association Name="FK__companiap__id_sa__2F10007B">
+    <End Role="safe_journey" Type="Self.safe_journey" Multiplicity="0..1" />
+    <End Role="companiaproveedoras" Type="Self.companiaproveedoras" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="safe_journey">
+        <PropertyRef Name="id_safe" />
+      </Principal>
+      <Dependent Role="companiaproveedoras">
+        <PropertyRef Name="id_safe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__detalle_d__id_cl__34C8D9D1">
+    <End Role="cliente" Type="Self.cliente" Multiplicity="0..1" />
+    <End Role="detalle_de_viaje" Type="Self.detalle_de_viaje" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cliente">
+        <PropertyRef Name="id_cliente" />
+      </Principal>
+      <Dependent Role="detalle_de_viaje">
+        <PropertyRef Name="id_cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__detalle_d__id_ev__35BCFE0A">
+    <End Role="eventos" Type="Self.eventos" Multiplicity="0..1" />
+    <End Role="detalle_de_viaje" Type="Self.detalle_de_viaje" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="eventos">
+        <PropertyRef Name="id_evento" />
+      </Principal>
+      <Dependent Role="detalle_de_viaje">
+        <PropertyRef Name="id_evento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__detalle_d__id_ve__36B12243">
+    <End Role="vehiculos" Type="Self.vehiculos" Multiplicity="0..1" />
+    <End Role="detalle_de_viaje" Type="Self.detalle_de_viaje" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="vehiculos">
+        <PropertyRef Name="id_vehiculo" />
+      </Principal>
+      <Dependent Role="detalle_de_viaje">
+        <PropertyRef Name="id_vehiculo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__eventos__id_clie__286302EC">
+    <End Role="cliente" Type="Self.cliente" Multiplicity="0..1" />
+    <End Role="eventos" Type="Self.eventos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cliente">
+        <PropertyRef Name="id_cliente" />
+      </Principal>
+      <Dependent Role="eventos">
+        <PropertyRef Name="id_cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__vehiculos__id_co__31EC6D26">
+    <End Role="companiaproveedoras" Type="Self.companiaproveedoras" Multiplicity="0..1" />
+    <End Role="vehiculos" Type="Self.vehiculos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="companiaproveedoras">
+        <PropertyRef Name="id_compania" />
+      </Principal>
+      <Dependent Role="vehiculos">
+        <PropertyRef Name="id_compania" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="db_TranslogicModelStoreContainer">
+    <EntitySet Name="cliente" EntityType="Self.cliente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="companiaproveedoras" EntityType="Self.companiaproveedoras" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="coordinacion_viaje" EntityType="Self.coordinacion_viaje" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="detalle_de_viaje" EntityType="Self.detalle_de_viaje" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="eventos" EntityType="Self.eventos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="safe_journey" EntityType="Self.safe_journey" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="vehiculos" EntityType="Self.vehiculos" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__companiap__id_sa__2F10007B" Association="Self.FK__companiap__id_sa__2F10007B">
+      <End Role="safe_journey" EntitySet="safe_journey" />
+      <End Role="companiaproveedoras" EntitySet="companiaproveedoras" />
+    </AssociationSet>
+    <AssociationSet Name="FK__detalle_d__id_cl__34C8D9D1" Association="Self.FK__detalle_d__id_cl__34C8D9D1">
+      <End Role="cliente" EntitySet="cliente" />
+      <End Role="detalle_de_viaje" EntitySet="detalle_de_viaje" />
+    </AssociationSet>
+    <AssociationSet Name="FK__detalle_d__id_ev__35BCFE0A" Association="Self.FK__detalle_d__id_ev__35BCFE0A">
+      <End Role="eventos" EntitySet="eventos" />
+      <End Role="detalle_de_viaje" EntitySet="detalle_de_viaje" />
+    </AssociationSet>
+    <AssociationSet Name="FK__detalle_d__id_ve__36B12243" Association="Self.FK__detalle_d__id_ve__36B12243">
+      <End Role="vehiculos" EntitySet="vehiculos" />
+      <End Role="detalle_de_viaje" EntitySet="detalle_de_viaje" />
+    </AssociationSet>
+    <AssociationSet Name="FK__eventos__id_clie__286302EC" Association="Self.FK__eventos__id_clie__286302EC">
+      <End Role="cliente" EntitySet="cliente" />
+      <End Role="eventos" EntitySet="eventos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__vehiculos__id_co__31EC6D26" Association="Self.FK__vehiculos__id_co__31EC6D26">
+      <End Role="companiaproveedoras" EntitySet="companiaproveedoras" />
+      <End Role="vehiculos" EntitySet="vehiculos" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
