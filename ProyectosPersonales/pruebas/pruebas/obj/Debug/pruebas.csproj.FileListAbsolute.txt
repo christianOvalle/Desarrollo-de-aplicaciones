@@ -1,0 +1,8 @@
+C:\Users\Infotep2019\Documents\GitHub\practicaspoo2021\ProyectosPersonales\pruebas\pruebas\bin\Debug\pruebas.exe.config
+C:\Users\Infotep2019\Documents\GitHub\practicaspoo2021\ProyectosPersonales\pruebas\pruebas\bin\Debug\pruebas.exe
+C:\Users\Infotep2019\Documents\GitHub\practicaspoo2021\ProyectosPersonales\pruebas\pruebas\bin\Debug\pruebas.pdb
+C:\Users\Infotep2019\Documents\GitHub\practicaspoo2021\ProyectosPersonales\pruebas\pruebas\obj\Debug\pruebas.csproj.AssemblyReference.cache
+C:\Users\Infotep2019\Documents\GitHub\practicaspoo2021\ProyectosPersonales\pruebas\pruebas\obj\Debug\pruebas.csproj.SuggestedBindingRedirects.cache
+C:\Users\Infotep2019\Documents\GitHub\practicaspoo2021\ProyectosPersonales\pruebas\pruebas\obj\Debug\pruebas.csproj.CoreCompileInputs.cache
+C:\Users\Infotep2019\Documents\GitHub\practicaspoo2021\ProyectosPersonales\pruebas\pruebas\obj\Debug\pruebas.exe
+C:\Users\Infotep2019\Documents\GitHub\practicaspoo2021\ProyectosPersonales\pruebas\pruebas\obj\Debug\pruebas.pdb

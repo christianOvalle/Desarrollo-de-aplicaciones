@@ -3,7 +3,7 @@ CREATE DATABASE db_Translogic;
 use db_Translogic;
 
 create table safe_journey(
-id int not NULL identity(1,1) PRIMARY KEY,
+id_safe int not NULL identity(1,1) PRIMARY KEY,
 nombre varchar(100),
 RNC VARCHAR(100),
 direccion VARCHAR(250)
@@ -39,12 +39,13 @@ id_compania int not null identity(1,1) primary KEY,
 nombre varchar(100),
 rnc varchar(100),
 direccion varchar(250),
-cantidad_Buses VARCHAR(100)
+cantidad_Buses VARCHAR(100),
+id_safe int REFERENCES safe_journey(id_safe)
 
 );
 
 create table vehiculos(
-id int not null identity(1,1) primary KEY,
+id_vehiculo int not null identity(1,1) primary KEY,
 tipo_de_vehiculo varchar(100),
 chofer varchar(100),
 chofer_extra varchar(100),
@@ -58,13 +59,15 @@ id_compania int REFERENCES companiaproveedoras(id_compania)
 );
 
 
-create table detalleviaje(
+create table detalle_de_viaje(
 id_compania int not null identity(1,1) primary KEY,
 kilometros_recorridos float,
 subtotal float,
 costo_total float,
 id_cliente int REFERENCES cliente(id_cliente),
 id_evento int REFERENCES eventos(id_evento),
+id_vehiculo int REFERENCES vehiculos(id_vehiculo)
+
 
 
 )
