@@ -67,6 +67,12 @@
     <Compile Include="Formularios\Cliente.Designer.cs">
       <DependentUpon>Cliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\CompaniasRegistros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\CompaniasRegistros.Designer.cs">
+      <DependentUpon>CompaniasRegistros.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Coordinacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,9 +112,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>conexion.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Modelo\coordinacion_viaje.cs">
-      <DependentUpon>conexion.tt</DependentUpon>
-    </Compile>
     <Compile Include="Modelo\detalle_de_viaje.cs">
       <DependentUpon>conexion.tt</DependentUpon>
     </Compile>
@@ -125,6 +128,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formularios\Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\CompaniasRegistros.resx">
+      <DependentUpon>CompaniasRegistros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Coordinacion.resx">
       <DependentUpon>Coordinacion.cs</DependentUpon>

@@ -12,7 +12,7 @@ namespace ProyectoTranslogic.Formularios
 {
     public partial class Coordinacion : Form
     {
-        Modelo.db_TranslogicEntities7 db_TranslogicEntities7 = new Modelo.db_TranslogicEntities7();
+        Modelo.db_TranslogicEntities8 db_TranslogicEntities7 = new Modelo.db_TranslogicEntities8();
 
         public Coordinacion()
         {

@@ -14,7 +14,7 @@ namespace ProyectoTranslogic.Formularios
 
       
     {
-        Modelo.db_TranslogicEntities7 db_Translogic = new Modelo.db_TranslogicEntities7();  
+        Modelo.db_TranslogicEntities8 db_Translogic = new Modelo.db_TranslogicEntities8();  
 
         public Cliente()
         {

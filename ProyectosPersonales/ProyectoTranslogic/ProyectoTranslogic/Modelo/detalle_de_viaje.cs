@@ -18,6 +18,7 @@ namespace ProyectoTranslogic.Modelo
         public Nullable<double> kilometros_recorridos { get; set; }
         public Nullable<double> subtotal { get; set; }
         public Nullable<double> costo_total { get; set; }
+        public string tipo_transporte { get; set; }
         public Nullable<int> id_cliente { get; set; }
         public Nullable<int> id_evento { get; set; }
         public Nullable<int> id_vehiculo { get; set; }

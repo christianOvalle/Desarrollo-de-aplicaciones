@@ -13,10 +13,10 @@ namespace ProyectoTranslogic.Modelo
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class db_TranslogicEntities7 : DbContext
+    public partial class db_TranslogicEntities8 : DbContext
     {
-        public db_TranslogicEntities7()
-            : base("name=db_TranslogicEntities7")
+        public db_TranslogicEntities8()
+            : base("name=db_TranslogicEntities8")
         {
         }
     
@@ -27,7 +27,6 @@ namespace ProyectoTranslogic.Modelo
     
         public virtual DbSet<cliente> cliente { get; set; }
         public virtual DbSet<companiaproveedoras> companiaproveedoras { get; set; }
-        public virtual DbSet<coordinacion_viaje> coordinacion_viaje { get; set; }
         public virtual DbSet<detalle_de_viaje> detalle_de_viaje { get; set; }
         public virtual DbSet<eventos> eventos { get; set; }
         public virtual DbSet<safe_journey> safe_journey { get; set; }

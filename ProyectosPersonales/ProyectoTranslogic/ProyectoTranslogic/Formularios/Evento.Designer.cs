@@ -45,7 +45,10 @@ namespace ProyectoTranslogic.Formularios
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.comboBoxClientes = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.buttoncoordinar = new System.Windows.Forms.Button();
+            this.textBoxHS = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBoxHLL = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewP)).BeginInit();
             this.SuspendLayout();
@@ -199,17 +202,39 @@ namespace ProyectoTranslogic.Formularios
             this.label6.TabIndex = 18;
             this.label6.Text = "Cliente";
             // 
-            // buttoncoordinar
+            // textBoxHS
             // 
-            this.buttoncoordinar.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.buttoncoordinar.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttoncoordinar.Location = new System.Drawing.Point(1096, 248);
-            this.buttoncoordinar.Name = "buttoncoordinar";
-            this.buttoncoordinar.Size = new System.Drawing.Size(133, 51);
-            this.buttoncoordinar.TabIndex = 19;
-            this.buttoncoordinar.Text = "Coordinar viaje";
-            this.buttoncoordinar.UseVisualStyleBackColor = false;
-            this.buttoncoordinar.Click += new System.EventHandler(this.buttoncoordinar_Click);
+            this.textBoxHS.Location = new System.Drawing.Point(1156, 318);
+            this.textBoxHS.Name = "textBoxHS";
+            this.textBoxHS.Size = new System.Drawing.Size(111, 20);
+            this.textBoxHS.TabIndex = 19;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(964, 318);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(186, 15);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "Hora de salida hacia evento";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(964, 379);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(176, 15);
+            this.label7.TabIndex = 21;
+            this.label7.Text = "Hora de Salida hacia casa";
+            // 
+            // textBoxHLL
+            // 
+            this.textBoxHLL.Location = new System.Drawing.Point(1156, 378);
+            this.textBoxHLL.Name = "textBoxHLL";
+            this.textBoxHLL.Size = new System.Drawing.Size(111, 20);
+            this.textBoxHLL.TabIndex = 22;
             // 
             // Evento
             // 
@@ -218,7 +243,10 @@ namespace ProyectoTranslogic.Formularios
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1361, 450);
-            this.Controls.Add(this.buttoncoordinar);
+            this.Controls.Add(this.textBoxHLL);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.textBoxHS);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.comboBoxClientes);
             this.Controls.Add(this.dateTimePicker1);
@@ -260,7 +288,10 @@ namespace ProyectoTranslogic.Formularios
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ComboBox comboBoxClientes;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button buttoncoordinar;
         private System.Windows.Forms.DataGridView dataGridViewP;
+        private System.Windows.Forms.TextBox textBoxHS;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBoxHLL;
     }
 }

@@ -17,7 +17,6 @@ namespace ProyectoTranslogic.Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public eventos()
         {
-            this.coordinacion_viaje = new HashSet<coordinacion_viaje>();
             this.detalle_de_viaje = new HashSet<detalle_de_viaje>();
         }
     
@@ -27,11 +26,11 @@ namespace ProyectoTranslogic.Modelo
         public string tipo_de_evento { get; set; }
         public string fecha_de_evento { get; set; }
         public Nullable<System.DateTime> fecha_registro_de_event { get; set; }
+        public string fecha_hacia_evento { get; set; }
+        public string fecha_hacia_casa { get; set; }
         public Nullable<int> id_cliente { get; set; }
     
         public virtual cliente cliente { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<coordinacion_viaje> coordinacion_viaje { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<detalle_de_viaje> detalle_de_viaje { get; set; }
     }

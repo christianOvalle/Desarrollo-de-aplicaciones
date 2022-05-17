@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="db_TranslogicModelStoreContainer" CdmEntityContainer="db_TranslogicEntities7">
+  <EntityContainerMapping StorageEntityContainer="db_TranslogicModelStoreContainer" CdmEntityContainer="db_TranslogicEntities8">
     <EntitySetMapping Name="cliente">
       <EntityTypeMapping TypeName="db_TranslogicModel.cliente">
         <MappingFragment StoreEntitySet="cliente">
@@ -28,18 +28,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="coordinacion_viaje">
-      <EntityTypeMapping TypeName="db_TranslogicModel.coordinacion_viaje">
-        <MappingFragment StoreEntitySet="coordinacion_viaje">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="fecha_hacia_evento" ColumnName="fecha_hacia_evento" />
-          <ScalarProperty Name="fecha_hacia_casa" ColumnName="fecha_hacia_casa" />
-          <ScalarProperty Name="tipo_transporte" ColumnName="tipo_transporte" />
-          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
-          <ScalarProperty Name="id_evento" ColumnName="id_evento" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="detalle_de_viaje">
       <EntityTypeMapping TypeName="db_TranslogicModel.detalle_de_viaje">
         <MappingFragment StoreEntitySet="detalle_de_viaje">
@@ -47,6 +35,7 @@
           <ScalarProperty Name="kilometros_recorridos" ColumnName="kilometros_recorridos" />
           <ScalarProperty Name="subtotal" ColumnName="subtotal" />
           <ScalarProperty Name="costo_total" ColumnName="costo_total" />
+          <ScalarProperty Name="tipo_transporte" ColumnName="tipo_transporte" />
           <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
           <ScalarProperty Name="id_evento" ColumnName="id_evento" />
           <ScalarProperty Name="id_vehiculo" ColumnName="id_vehiculo" />
@@ -62,6 +51,8 @@
           <ScalarProperty Name="tipo_de_evento" ColumnName="tipo_de_evento" />
           <ScalarProperty Name="fecha_de_evento" ColumnName="fecha_de_evento" />
           <ScalarProperty Name="fecha_registro_de_event" ColumnName="fecha_registro_de_event" />
+          <ScalarProperty Name="fecha_hacia_evento" ColumnName="fecha_hacia_evento" />
+          <ScalarProperty Name="fecha_hacia_casa" ColumnName="fecha_hacia_casa" />
           <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
         </MappingFragment>
       </EntityTypeMapping>

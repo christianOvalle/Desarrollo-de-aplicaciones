@@ -12,7 +12,7 @@ namespace ProyectoTranslogic.Formularios
 {
     public partial class Evento : Form
     {
-        Modelo.db_TranslogicEntities7 db = new Modelo.db_TranslogicEntities7();
+        Modelo.db_TranslogicEntities8 db = new Modelo.db_TranslogicEntities8();
 
         public Evento()
         {
@@ -34,6 +34,8 @@ namespace ProyectoTranslogic.Formularios
                                       even.tipo_de_evento,
                                       even.fecha_de_evento,
                                       even.fecha_registro_de_event,
+                                      even.fecha_hacia_evento,
+                                      even.fecha_hacia_casa,
                                       cli.id_cliente,
                                       cli.nombre_cliente
                                       
@@ -43,19 +45,7 @@ namespace ProyectoTranslogic.Formularios
 
             dataGridViewP.DataSource = consultaevento;
             this.labelEventos.Text = dataGridViewP.Rows.Count.ToString() + " Registros encontrados";
-
-
-            if (dataGridViewP.Rows.Count == 0)
-            {
-
-                this.buttoncoordinar.Visible = false;
-
-            }
-
-            else {
-                
-                this.buttoncoordinar.Visible = true;
-            }
+          
 
         }
 
@@ -92,6 +82,8 @@ namespace ProyectoTranslogic.Formularios
             eve.tipo_de_evento = comboBoxEventos.Text;
             eve.fecha_de_evento = dateTimePicker1.Text;
             eve.fecha_registro_de_event = DateTime.Now;
+            eve.fecha_hacia_evento = textBoxHS.Text;
+            eve.fecha_hacia_casa = textBoxHLL.Text;
             eve.id_cliente = int.Parse(this.comboBoxClientes.SelectedValue.ToString());
 
             db.eventos.Add(eve);
@@ -109,6 +101,8 @@ namespace ProyectoTranslogic.Formularios
             evento.nombre_evento = textBoxEventoNombre.Text;
             evento.ciudad_evento = textBoxEventociudad.Text;
             evento.tipo_de_evento = comboBoxEventos.Text;
+            evento.fecha_hacia_evento = textBoxHS.Text;
+            evento.fecha_hacia_casa = textBoxHLL.Text;
 
             db.Entry(evento).State = System.Data.Entity.EntityState.Modified;
             MessageBox.Show("Registro Editado");
@@ -143,18 +137,6 @@ namespace ProyectoTranslogic.Formularios
             borrar();
         }
 
-        private void buttoncoordinar_Click(object sender, EventArgs e)
-        {
-            Coordinacion coordinacion = new Coordinacion();
-            Cliente cliente = new Cliente();
-
-            int id = Convert.ToInt32(dataGridViewP.CurrentRow.Cells[0].Value);
-            Modelo.eventos evento = db.eventos.Find(id);
-            coordinacion.textBoxNombreE.Text = evento.nombre_evento;
-            coordinacion.texboxNombreC.Text = dataGridViewP.CurrentRow.Cells[7].Value.ToString();
-
-            coordinacion.ShowDialog();
-
-        }
+       
     }
 }

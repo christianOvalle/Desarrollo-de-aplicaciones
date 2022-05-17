@@ -25,17 +25,6 @@
     <Property Name="cantidad_Buses" Type="varchar" MaxLength="100" />
     <Property Name="id_safe" Type="int" />
   </EntityType>
-  <EntityType Name="coordinacion_viaje">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="fecha_hacia_evento" Type="varchar" MaxLength="50" />
-    <Property Name="fecha_hacia_casa" Type="varchar" MaxLength="80" />
-    <Property Name="tipo_transporte" Type="varchar" MaxLength="100" />
-    <Property Name="id_cliente" Type="int" />
-    <Property Name="id_evento" Type="int" />
-  </EntityType>
   <EntityType Name="detalle_de_viaje">
     <Key>
       <PropertyRef Name="id_detalle" />
@@ -44,6 +33,7 @@
     <Property Name="kilometros_recorridos" Type="float" />
     <Property Name="subtotal" Type="float" />
     <Property Name="costo_total" Type="float" />
+    <Property Name="tipo_transporte" Type="varchar" MaxLength="100" />
     <Property Name="id_cliente" Type="int" />
     <Property Name="id_evento" Type="int" />
     <Property Name="id_vehiculo" Type="int" />
@@ -58,6 +48,8 @@
     <Property Name="tipo_de_evento" Type="varchar" MaxLength="100" />
     <Property Name="fecha_de_evento" Type="varchar" MaxLength="100" />
     <Property Name="fecha_registro_de_event" Type="datetime" />
+    <Property Name="fecha_hacia_evento" Type="varchar" MaxLength="50" />
+    <Property Name="fecha_hacia_casa" Type="varchar" MaxLength="80" />
     <Property Name="id_cliente" Type="int" />
   </EntityType>
   <EntityType Name="safe_journey">
@@ -96,31 +88,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__coordinac__id_cl__2E1BDC42">
-    <End Role="cliente" Type="Self.cliente" Multiplicity="0..1" />
-    <End Role="coordinacion_viaje" Type="Self.coordinacion_viaje" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="cliente">
-        <PropertyRef Name="id_cliente" />
-      </Principal>
-      <Dependent Role="coordinacion_viaje">
-        <PropertyRef Name="id_cliente" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__coordinac__id_ev__2F10007B">
-    <End Role="eventos" Type="Self.eventos" Multiplicity="0..1" />
-    <End Role="coordinacion_viaje" Type="Self.coordinacion_viaje" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="eventos">
-        <PropertyRef Name="id_evento" />
-      </Principal>
-      <Dependent Role="coordinacion_viaje">
-        <PropertyRef Name="id_evento" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__detalle_d__id_cl__34C8D9D1">
+  <Association Name="FK__detalle_d__id_cl__30F848ED">
     <End Role="cliente" Type="Self.cliente" Multiplicity="0..1" />
     <End Role="detalle_de_viaje" Type="Self.detalle_de_viaje" Multiplicity="*" />
     <ReferentialConstraint>
@@ -132,7 +100,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__detalle_d__id_ev__35BCFE0A">
+  <Association Name="FK__detalle_d__id_ev__31EC6D26">
     <End Role="eventos" Type="Self.eventos" Multiplicity="0..1" />
     <End Role="detalle_de_viaje" Type="Self.detalle_de_viaje" Multiplicity="*" />
     <ReferentialConstraint>
@@ -144,7 +112,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__detalle_d__id_ve__36B12243">
+  <Association Name="FK__detalle_d__id_ve__32E0915F">
     <End Role="vehiculos" Type="Self.vehiculos" Multiplicity="0..1" />
     <End Role="detalle_de_viaje" Type="Self.detalle_de_viaje" Multiplicity="*" />
     <ReferentialConstraint>
@@ -168,7 +136,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__vehiculos__id_co__31EC6D26">
+  <Association Name="FK__vehiculos__id_co__2E1BDC42">
     <End Role="companiaproveedoras" Type="Self.companiaproveedoras" Multiplicity="0..1" />
     <End Role="vehiculos" Type="Self.vehiculos" Multiplicity="*" />
     <ReferentialConstraint>
@@ -183,7 +151,6 @@
   <EntityContainer Name="db_TranslogicModelStoreContainer">
     <EntitySet Name="cliente" EntityType="Self.cliente" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="companiaproveedoras" EntityType="Self.companiaproveedoras" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="coordinacion_viaje" EntityType="Self.coordinacion_viaje" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="detalle_de_viaje" EntityType="Self.detalle_de_viaje" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="eventos" EntityType="Self.eventos" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="safe_journey" EntityType="Self.safe_journey" Schema="dbo" store:Type="Tables" />
@@ -192,23 +159,15 @@
       <End Role="safe_journey" EntitySet="safe_journey" />
       <End Role="companiaproveedoras" EntitySet="companiaproveedoras" />
     </AssociationSet>
-    <AssociationSet Name="FK__coordinac__id_cl__2E1BDC42" Association="Self.FK__coordinac__id_cl__2E1BDC42">
-      <End Role="cliente" EntitySet="cliente" />
-      <End Role="coordinacion_viaje" EntitySet="coordinacion_viaje" />
-    </AssociationSet>
-    <AssociationSet Name="FK__coordinac__id_ev__2F10007B" Association="Self.FK__coordinac__id_ev__2F10007B">
-      <End Role="eventos" EntitySet="eventos" />
-      <End Role="coordinacion_viaje" EntitySet="coordinacion_viaje" />
-    </AssociationSet>
-    <AssociationSet Name="FK__detalle_d__id_cl__34C8D9D1" Association="Self.FK__detalle_d__id_cl__34C8D9D1">
+    <AssociationSet Name="FK__detalle_d__id_cl__30F848ED" Association="Self.FK__detalle_d__id_cl__30F848ED">
       <End Role="cliente" EntitySet="cliente" />
       <End Role="detalle_de_viaje" EntitySet="detalle_de_viaje" />
     </AssociationSet>
-    <AssociationSet Name="FK__detalle_d__id_ev__35BCFE0A" Association="Self.FK__detalle_d__id_ev__35BCFE0A">
+    <AssociationSet Name="FK__detalle_d__id_ev__31EC6D26" Association="Self.FK__detalle_d__id_ev__31EC6D26">
       <End Role="eventos" EntitySet="eventos" />
       <End Role="detalle_de_viaje" EntitySet="detalle_de_viaje" />
     </AssociationSet>
-    <AssociationSet Name="FK__detalle_d__id_ve__36B12243" Association="Self.FK__detalle_d__id_ve__36B12243">
+    <AssociationSet Name="FK__detalle_d__id_ve__32E0915F" Association="Self.FK__detalle_d__id_ve__32E0915F">
       <End Role="vehiculos" EntitySet="vehiculos" />
       <End Role="detalle_de_viaje" EntitySet="detalle_de_viaje" />
     </AssociationSet>
@@ -216,7 +175,7 @@
       <End Role="cliente" EntitySet="cliente" />
       <End Role="eventos" EntitySet="eventos" />
     </AssociationSet>
-    <AssociationSet Name="FK__vehiculos__id_co__31EC6D26" Association="Self.FK__vehiculos__id_co__31EC6D26">
+    <AssociationSet Name="FK__vehiculos__id_co__2E1BDC42" Association="Self.FK__vehiculos__id_co__2E1BDC42">
       <End Role="companiaproveedoras" EntitySet="companiaproveedoras" />
       <End Role="vehiculos" EntitySet="vehiculos" />
     </AssociationSet>
