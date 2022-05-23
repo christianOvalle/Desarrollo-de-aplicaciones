@@ -35,8 +35,7 @@ namespace ProyectoTaller.Vistas
                               mec.apellido,
                               mec.cedula,
                               mec.fecha_nacimiento,
-                              mec.estatus,                             
-                              veh.matricula,
+                              mec.estatus,                                                       
                               mec.id_vehiculo
                          }).ToList();
             MecanicodataGridView.DataSource = datosM;
@@ -62,7 +61,8 @@ namespace ProyectoTaller.Vistas
             mecanicoA.apellido = this.textBoxApellido.Text;
             mecanicoA.cedula = this.textBoxCedula.Text;
             mecanicoA.fecha_nacimiento = this.textBoxFecha.Text;
-            veh.matricula = "";
+            
+           
             if (radioButtonD.Checked) {
                 mecanicoA.estatus = false;
             }

@@ -12,3 +12,16 @@ C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Siste
 C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Sistema de facturacion\Sistema_de_facturacion\Sistema_de_facturacion\obj\Debug\RdlCompile.cache
 C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Sistema de facturacion\Sistema_de_facturacion\Sistema_de_facturacion\obj\Debug\RdlCompile.compiled
 C:\Users\infotep\Documents\Diagrama cristian\PracticasPOO\practicaspoo2021\Sistema de facturacion\Sistema_de_facturacion\Sistema_de_facturacion\obj\Debug\Sistema_de_facturacion.csproj.AssemblyReference.cache
+C:\Users\Cristhian\Documents\practicaspoo2021\Sistema de facturacion\Sistema_de_facturacion\Sistema_de_facturacion\bin\Debug\Sistema_de_facturacion.exe.config
+C:\Users\Cristhian\Documents\practicaspoo2021\Sistema de facturacion\Sistema_de_facturacion\Sistema_de_facturacion\bin\Debug\Sistema_de_facturacion.exe
+C:\Users\Cristhian\Documents\practicaspoo2021\Sistema de facturacion\Sistema_de_facturacion\Sistema_de_facturacion\bin\Debug\Sistema_de_facturacion.pdb
+C:\Users\Cristhian\Documents\practicaspoo2021\Sistema de facturacion\Sistema_de_facturacion\Sistema_de_facturacion\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Cristhian\Documents\practicaspoo2021\Sistema de facturacion\Sistema_de_facturacion\Sistema_de_facturacion\obj\Debug\Sistema_de_facturacion.csproj.AssemblyReference.cache
+C:\Users\Cristhian\Documents\practicaspoo2021\Sistema de facturacion\Sistema_de_facturacion\Sistema_de_facturacion\obj\Debug\Sistema_de_facturacion.csproj.SuggestedBindingRedirects.cache
+C:\Users\Cristhian\Documents\practicaspoo2021\Sistema de facturacion\Sistema_de_facturacion\Sistema_de_facturacion\obj\Debug\Sistema_de_facturacion.Form1.resources
+C:\Users\Cristhian\Documents\practicaspoo2021\Sistema de facturacion\Sistema_de_facturacion\Sistema_de_facturacion\obj\Debug\Sistema_de_facturacion.Properties.Resources.resources
+C:\Users\Cristhian\Documents\practicaspoo2021\Sistema de facturacion\Sistema_de_facturacion\Sistema_de_facturacion\obj\Debug\Sistema_de_facturacion.csproj.GenerateResource.cache
+C:\Users\Cristhian\Documents\practicaspoo2021\Sistema de facturacion\Sistema_de_facturacion\Sistema_de_facturacion\obj\Debug\Sistema_de_facturacion.csproj.CoreCompileInputs.cache
+C:\Users\Cristhian\Documents\practicaspoo2021\Sistema de facturacion\Sistema_de_facturacion\Sistema_de_facturacion\obj\Debug\Sistema_de_facturacion.csproj.CopyComplete
+C:\Users\Cristhian\Documents\practicaspoo2021\Sistema de facturacion\Sistema_de_facturacion\Sistema_de_facturacion\obj\Debug\Sistema_de_facturacion.exe
+C:\Users\Cristhian\Documents\practicaspoo2021\Sistema de facturacion\Sistema_de_facturacion\Sistema_de_facturacion\obj\Debug\Sistema_de_facturacion.pdb
