@@ -35,3 +35,6 @@ C:\Users\Infotep2019\Documents\GitHub\practicaspoo2021\ProyectosPersonales\Proye
 C:\Users\Infotep2019\Documents\GitHub\practicaspoo2021\ProyectosPersonales\ProyectoTranslogic\ProyectoTranslogic\obj\Debug\ProyectoTranslogic.pdb
 C:\Users\Infotep2019\Documents\GitHub\practicaspoo2021\ProyectosPersonales\ProyectoTranslogic\ProyectoTranslogic\obj\Debug\ProyectoTranslogic.Formularios.Coordinacion.resources
 C:\Users\Infotep2019\Documents\GitHub\practicaspoo2021\ProyectosPersonales\ProyectoTranslogic\ProyectoTranslogic\obj\Debug\ProyectoTranslogic.Formularios.CompaniasRegistros.resources
+C:\Users\Cristhian\Documents\practicaspoo2021\ProyectosPersonales\ProyectoTranslogic\ProyectoTranslogic\obj\Debug\ProyectoTranslogic.Formularios.CompaniasRegistros.resources
+C:\Users\Cristhian\Documents\practicaspoo2021\ProyectosPersonales\ProyectoTranslogic\ProyectoTranslogic\obj\Debug\ProyectoTranslogic.Formularios.Coordinacion.resources
+C:\Users\Cristhian\Documents\practicaspoo2021\ProyectosPersonales\ProyectoTranslogic\ProyectoTranslogic\obj\Debug\ProyectoTranslogic.csproj.SuggestedBindingRedirects.cache

@@ -12,7 +12,7 @@ namespace ProyectoTranslogic.Formularios
 {
     public partial class Evento : Form
     {
-        Modelo.db_TranslogicEntities8 db = new Modelo.db_TranslogicEntities8();
+        Modelo.dbTransloEntities1 db = new Modelo.dbTransloEntities1();
 
         public Evento()
         {
@@ -30,10 +30,9 @@ namespace ProyectoTranslogic.Formularios
                                   {
                                       even.id_evento,
                                       even.nombre_evento,
-                                      even.ciudad_evento,
-                                      even.tipo_de_evento,
+                                      even.ciudad_evento,                                   
                                       even.fecha_de_evento,
-                                      even.fecha_registro_de_event,
+                                      even.fecha_registro_de_evento,
                                       even.fecha_hacia_evento,
                                       even.fecha_hacia_casa,
                                       cli.id_cliente,
@@ -79,9 +78,9 @@ namespace ProyectoTranslogic.Formularios
 
             eve.nombre_evento = textBoxEventoNombre.Text;
             eve.ciudad_evento = textBoxEventociudad.Text;
-            eve.tipo_de_evento = comboBoxEventos.Text;
+           // eve. = comboBoxEventos.Text;
             eve.fecha_de_evento = dateTimePicker1.Text;
-            eve.fecha_registro_de_event = DateTime.Now;
+            eve.fecha_registro_de_evento = DateTime.Now;
             eve.fecha_hacia_evento = textBoxHS.Text;
             eve.fecha_hacia_casa = textBoxHLL.Text;
             eve.id_cliente = int.Parse(this.comboBoxClientes.SelectedValue.ToString());
@@ -100,7 +99,7 @@ namespace ProyectoTranslogic.Formularios
             Modelo.eventos evento = db.eventos.Find(id);
             evento.nombre_evento = textBoxEventoNombre.Text;
             evento.ciudad_evento = textBoxEventociudad.Text;
-            evento.tipo_de_evento = comboBoxEventos.Text;
+           // evento.tipo_de_evento = comboBoxEventos.Text;
             evento.fecha_hacia_evento = textBoxHS.Text;
             evento.fecha_hacia_casa = textBoxHLL.Text;
 

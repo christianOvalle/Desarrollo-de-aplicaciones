@@ -14,7 +14,7 @@ namespace ProyectoTranslogic.Formularios
 
       
     {
-        Modelo.db_TranslogicEntities8 db_Translogic = new Modelo.db_TranslogicEntities8();  
+        Modelo.dbTransloEntities1 db_Translogic = new Modelo.dbTransloEntities1();  
 
         public Cliente()
         {
@@ -46,7 +46,7 @@ namespace ProyectoTranslogic.Formularios
                                        clien.cedula_cliente,
                                        clien.direccion_cliente,
                                        clien.numero_de_tarjeta,
-                                       clien.banco
+                                       
                                        
                                    }).ToList();
 
@@ -64,7 +64,7 @@ namespace ProyectoTranslogic.Formularios
             cliente.cedula_cliente = this.textBoxcedula.Text;
             cliente.direccion_cliente = this.textBoxdireccion.Text;
             cliente.numero_de_tarjeta = this.textBoxtarjeta.Text;
-            cliente.fecha_registro = DateTime.Now;
+            //cliente.fe = DateTime.Now;
             if (this.comboBoxBanco.Text == "Eliga su banco" || this.comboBoxBanco.Text == "Eliga su banco")
             {
 
@@ -72,7 +72,7 @@ namespace ProyectoTranslogic.Formularios
             }
             else
             {
-                cliente.banco = this.comboBoxBanco.SelectedItem.ToString();
+               // cliente.banco = this.comboBoxBanco.SelectedItem.ToString();
 
                 db_Translogic.cliente.Add(cliente);
                 db_Translogic.SaveChanges();
@@ -90,7 +90,7 @@ namespace ProyectoTranslogic.Formularios
             clienteE.cedula_cliente = this.textBoxcedula.Text;
             clienteE.direccion_cliente = this.textBoxdireccion.Text;
             clienteE.numero_de_tarjeta = this.textBoxtarjeta.Text;
-            clienteE.fecha_registro = DateTime.Now;
+            //clienteE.fecha_registro = DateTime.Now;
             if (this.comboBoxBanco.Text == "Eliga su banco" || this.comboBoxBanco.Text == "Eliga su banco")
             {
 
@@ -98,7 +98,7 @@ namespace ProyectoTranslogic.Formularios
             }
             else
             {
-                clienteE.banco = this.comboBoxBanco.SelectedItem.ToString();
+               // clienteE.banco = this.comboBoxBanco.SelectedItem.ToString();
 
 
 
@@ -144,7 +144,7 @@ namespace ProyectoTranslogic.Formularios
             this.textBoxcedula.Text = clienteLlenar.cedula_cliente;
             this.textBoxdireccion.Text = clienteLlenar.direccion_cliente;
             this.textBoxtarjeta.Text = clienteLlenar.numero_de_tarjeta;
-            this.comboBoxBanco.Text = clienteLlenar.banco;
+           // this.comboBoxBanco.Text = clienteLlenar.banco;
                 
         }
 
