@@ -3,6 +3,7 @@
     margin: 2rem 0; 
     border-radius: 40%
 }
+
 .seccion-bienvenido {
     margin: 5rem 0 10rem 0;
     color: white;
@@ -18,9 +19,8 @@
      font-family: sans-serif;
      line-height: 1.5;
      font-size: 1.25rem;
-
-
     }
+
 #FotoNet {
     width: 300px;
 }
@@ -29,14 +29,17 @@
 
     font-weight: bold;
 }
+
 .habilidades ul {
     list-style: none;
     padding-left: 0;
 }
+
 .B-icon {
     color: blue;
     font-size: 40px
 }
+
 .F-icon {
     color: blue;
     font-size: 40px
